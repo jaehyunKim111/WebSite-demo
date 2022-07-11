@@ -1,0 +1,27 @@
+#container {
+    margin:10px 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    overflow-x: hidden;
+  }
+#graph{
+  grid-column: 2/3;
+  grid-row-start: 1;
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  justify-content: left;
+}
+#trial{
+  grid-column: 1/2;
+  grid-row-start: 1;
+  height: 800px;
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+}

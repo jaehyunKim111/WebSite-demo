@@ -1,72 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
-  <!-- bootstrap -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
-  <!-- frame -->
-  <link href="{% static 'img/moseekcon.png' %}" rel="icon" />
-  <!-- fabicon -->
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  <!-- bootstrap -->
-  <!-- CSS only -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" /> -->
-  <title>Moseek</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"><!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link href="{% static 'img/icon.png' %}" rel="icon">   <!-- fabicon -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script><!-- bootstrap -->
+    <title>Moseek</title>
 </head>
-
 <body>
   <div id="container">
     <div id="iconbox">
-      <a href="{% url 'home' %}"><img src="{% static 'img/moseekcon.png' %}" id="icon" /></a>
+      <a href="{% url 'home' %}"><img src="{% static 'img/icon.png' %}" id="icon"></a>
     </div>
     <div id="urlbox">
       <form action="{% url 'create' %}" method="POST">
-        {% csrf_token %}
-        <div class="input-group mb-3">
-          <div class="interactive">
-            <input type="text" class="form-control" placeholder="URL 입력" name="url" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="urlbar" />
-            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
-              모식도 생성
-            </button>
-          </div>
-        </div>
-      </form>
+        {% csrf_token  %}
+            <div class="input-group mb-3">
+              <div class="interactive">
+                <input type="text" class="form-control" placeholder="URL 입력" name="url" aria-label="Recipient's username" aria-describedby="button-addon2" id="urlbar">  
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">모식도 생성</button>
+              </div>
+            </div>      
+          </form>
     </div>
-    <form action="{% url 'example' %}" method="POST" class="examplebox">
-      {% csrf_token %}
-      <ul id="list">
-        <li>
-          <input type="radio" name="ex_url"
-            value="https://clinicaltrials.gov/ct2/show/NCT05446467?term=pembrolizumab+in+combination+with+low-dose+pfas&draw=2&rank=1" />
-          single 예시
-        </li>
-        <li>
-          <input type="radio" name="ex_url" value="https://www.clinicaltrials.gov/ct2/show/NCT00482833" />
-          parallel 예시
-        </li>
-        <li>
-          <input type="radio" name="ex_url" value="https://clinicaltrials.gov/ct2/show/NCT02040376" />
-          crossover 예시
-        </li>
-      </ul>
-      <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
-        예시 모식도 생성
-      </button>
-    </form>
+      <form action="{% url 'example' %}" method="POST" class="examplebox">
+        {% csrf_token  %}
+          <ul id="list">
+            <li><input type="radio" name="ex_url" value="https://clinicaltrials.gov/ct2/show/NCT05446467?term=pembrolizumab+in+combination+with+low-dose+pfas&draw=2&rank=1"> single 예시</li>
+            <li><input type="radio" name="ex_url" value="https://www.clinicaltrials.gov/ct2/show/NCT00482833"> parallel 예시</li>
+            <li><input type="radio" name="ex_url" value="https://clinicaltrials.gov/ct2/show/NCT02040376"> crossover 예시</li>
+          </ul>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">예시 모식도 생성</button>
+      </form>
+      <div id="wrapper">
+        <footer>
+          <a href="https://www.flaticon.com/free-icons/medical-report" title="medical-report icons"
+            style="font-size: 1px;">Medical-report icons created by Triangle Squad - Flaticon</a>
+        </footer>
+      </div>
   </div>
-  <div id="wrapper">
-    <footer>
-      <a href="https://www.flaticon.com/free-icons/medical-report" title="medical-report icons"
-        style="font-size: 1px;">Medical-report icons created by Triangle Squad - Flaticon</a>
-    </footer>
-  </div>
+      
 </body>
-
 </html>
+
+
+

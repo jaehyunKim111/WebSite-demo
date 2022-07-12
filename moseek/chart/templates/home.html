@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"><!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"><!-- frame -->
-    <link href="{% static 'img/moseekcon.png' %}" rel="icon">   <!-- fabicon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link href="{% static 'img/icon.png' %}" rel="icon">   <!-- fabicon -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script><!-- bootstrap -->
     <title>Moseek</title>
 </head>
 <body>
   <div id="container">
     <div id="iconbox">
-      <a href="{% url 'home' %}"><img src="{% static 'img/moseekcon.png' %}" id="icon"></a>
+      <a href="{% url 'home' %}"><img src="{% static 'img/icon.png' %}" id="icon"></a>
     </div>
     <div id="urlbox">
       <form action="{% url 'create' %}" method="POST">
@@ -36,6 +36,12 @@
           </ul>
           <button class="btn btn-outline-secondary" type="submit" id="button-addon2">예시 모식도 생성</button>
       </form>
+      <div id="wrapper">
+        <footer>
+          <a href="https://www.flaticon.com/free-icons/medical-report" title="medical-report icons"
+            style="font-size: 1px;">Medical-report icons created by Triangle Squad - Flaticon</a>
+        </footer>
+      </div>
   </div>
       
 </body>

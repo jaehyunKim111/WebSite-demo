@@ -1,76 +1,44 @@
 {
-    "Allocation": "Randomized",
+    "Allocation": "N/A",
     "CompleteTime": 36,
-    "DesignModel": "Crossover Assignment",
+    "DesignModel": "Single Group Assignment",
     "DrugInformation": {
         "ArmGroupList": [
             {
-                "ArmGroupDescription": "eplerenone 50mg/day (cross over design): 50mg/day 6 months , period without eplerenone (cross over design):  6-month , ",
-                "ArmGroupLabel": "Eplerenone group A (cross over design)",
+                "ArmGroupDescription": "pembrolizumab+cisplatin + 5-fluorouracil: 3000mg/m  ivgtt, ",
+                "ArmGroupLabel": "pembrolizumab+cisplatin + 5-fluorouracil",
                 "ArmGroupType": "Experimental",
                 "InterventionDescription": [
                     {
-                        "Dosage": "50mg/day",
-                        "DrugName": "eplerenone 50mg/day (cross over design)",
-                        "Duration": "6 months",
-                        "HowToTake": ""
-                    },
-                    {
-                        "Dosage": "",
-                        "DrugName": "period without eplerenone (cross over design)",
-                        "Duration": "6-month",
-                        "HowToTake": ""
+                        "Dosage": "3000mg/m",
+                        "DrugName": "pembrolizumab+cisplatin + 5-fluorouracil",
+                        "Duration": "",
+                        "HowToTake": "ivgtt"
                     }
                 ],
                 "InterventionList": {
                     "ArmGroupInterventionName": [
-                        "Drug: Eplerenone 50mg/day (cross over design)",
-                        "Other: Period without eplerenone (cross over design)"
-                    ]
-                }
-            },
-            {
-                "ArmGroupDescription": "eplerenone 50mg/day (cross over design): 50mg/day 6 months , period without eplerenone (cross over design):  6-month , ",
-                "ArmGroupLabel": "Eplerenone group B (cross over design)",
-                "ArmGroupType": "Active Comparator",
-                "InterventionDescription": [
-                    {
-                        "Dosage": "50mg/day",
-                        "DrugName": "eplerenone 50mg/day (cross over design)",
-                        "Duration": "6 months",
-                        "HowToTake": ""
-                    },
-                    {
-                        "Dosage": "",
-                        "DrugName": "period without eplerenone (cross over design)",
-                        "Duration": "6-month",
-                        "HowToTake": ""
-                    }
-                ],
-                "InterventionList": {
-                    "ArmGroupInterventionName": [
-                        "Drug: Eplerenone 50mg/day (cross over design)",
-                        "Other: Period without eplerenone (cross over design)"
+                        "Drug: pembrolizumab+cisplatin + 5-fluorouracil"
                     ]
                 }
             }
         ]
     },
-    "Enrollment": "36",
-    "InterventionName": "Eplerenone, Period without eplerenone (cross over design)",
+    "Enrollment": "60",
+    "InterventionName": "pembrolizumab+cisplatin + 5-fluorouracil",
     "Masking": "None (Open Label)",
-    "NCTID": "NCT04450953",
-    "Objective": "The Effect of Eplerenone on the Evolution of Vasculopathy in Renal Transplant Patients.",
-    "OfficialTitle": "A Randomized Crossover Clinical Trial Regarding the Blockage of the Mineralocorticoid Receptor Using Eplerenone on the Evolution of Arterial Stiffness in Kidney Patients One Year After Transplant",
+    "NCTID": "NCT05446467",
+    "Objective": "Pembrolizumab in Combination With Low-dose PFas Neoadjuvant Treatment for Locally Advanced HNSCC",
+    "OfficialTitle": "Safety and Efficacy of Pembrolizumab in Combination With Low-dose PF (Cisplatin and 5-Fluorouracil) as Neoadjuvant Treatment for Locally Advanced Head and Neck Squamous Cell Carcinoma: a Multi-center, Single-arm Clinical Study Trial",
     "PopulationBox": {
-        "Condition": "Kidney Transplantation for More Than One YearPatients With a Kidney Transplantation on Cyclosporine",
+        "Condition": "Head and Neck Squamous Cell Carcinoma",
         "Gender": "All",
         "HealthyCondition": "No",
-        "MaxAge": "",
-        "MinAge": "50 Years",
-        "Participant": "36"
+        "MaxAge": "85 Years",
+        "MinAge": "18 Years",
+        "Participant": "60"
     },
     "PopulationRatio": "",
-    "Title": "The Effect of Eplerenone on the Evolution of Vasculopathy in Renal Transplant Patients.",
-    "WashoutPeriod": "2-month"
+    "Title": "Pembrolizumab in Combination With Low-dose PFas Neoadjuvant Treatment for Locally Advanced HNSCC",
+    "WashoutPeriod": ""
 }

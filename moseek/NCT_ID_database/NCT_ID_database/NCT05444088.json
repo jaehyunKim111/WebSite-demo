@@ -1,0 +1,115 @@
+{
+    "Allocation": "Randomized",
+    "CompleteTime": 48,
+    "DesignModel": "Parallel Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "adebrelimab:   , bevacizumab:   , ",
+                "ArmGroupLabel": "Adebrelimab in combination with Bevacizumab",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "adebrelimab",
+                        "Duration": "",
+                        "HowToTake": ""
+                    },
+                    {
+                        "Dosage": "",
+                        "DrugName": "bevacizumab",
+                        "Duration": "",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: Adebrelimab",
+                        "Drug: Bevacizumab"
+                    ]
+                }
+            },
+            {
+                "ArmGroupDescription": "adebrelimab:   , bevacizumab:   , shr-8068:   , ",
+                "ArmGroupLabel": "Adebrelimab in combination with Bevacizumab and SHR-8068 RP2D1",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "adebrelimab",
+                        "Duration": "",
+                        "HowToTake": ""
+                    },
+                    {
+                        "Dosage": "",
+                        "DrugName": "bevacizumab",
+                        "Duration": "",
+                        "HowToTake": ""
+                    },
+                    {
+                        "Dosage": "",
+                        "DrugName": "shr-8068",
+                        "Duration": "",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: Adebrelimab",
+                        "Drug: Bevacizumab",
+                        "Drug: SHR-8068"
+                    ]
+                }
+            },
+            {
+                "ArmGroupDescription": "adebrelimab:   , bevacizumab:   , shr-8068:   , ",
+                "ArmGroupLabel": "Adebrelimab in combination with Bevacizumab and SHR-8068 RP2D2",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "adebrelimab",
+                        "Duration": "",
+                        "HowToTake": ""
+                    },
+                    {
+                        "Dosage": "",
+                        "DrugName": "bevacizumab",
+                        "Duration": "",
+                        "HowToTake": ""
+                    },
+                    {
+                        "Dosage": "",
+                        "DrugName": "shr-8068",
+                        "Duration": "",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: Adebrelimab",
+                        "Drug: Bevacizumab",
+                        "Drug: SHR-8068"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "129",
+    "InterventionName": "adebrelimab, bevacizumab",
+    "Masking": "None (Open Label)",
+    "NCTID": "NCT05444088",
+    "Objective": "Study of SHR-8068 Combined With Adebrelimab and Bevacizumab in the Treatment of Advanced Hepatocellular Carcinoma",
+    "OfficialTitle": "An Open-label, Multicenter Phase Ib/II Clinical Study of SHR-8068 Combined With Adebrelimab and Bevacizumab in the Treatment of Advanced Hepatocellular Carcinoma",
+    "PopulationBox": {
+        "Condition": "Advanced Hepatocellular Carcinoma",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "75 Years",
+        "MinAge": "18 Years",
+        "Participant": "129"
+    },
+    "PopulationRatio": "",
+    "Title": "Study of SHR-8068 Combined With Adebrelimab and Bevacizumab in the Treatment of Advanced Hepatocellular Carcinoma",
+    "WashoutPeriod": ""
+}

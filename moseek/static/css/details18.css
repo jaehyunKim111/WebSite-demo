@@ -1,0 +1,44 @@
+/* #content {
+    margin:10px 10px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    overflow-x: hidden;
+  }
+#graph{
+  /* display: flex; */
+  /* width:100%; */
+  /* flex-direction: row;
+  justify-content: left; */
+/* }
+#trial{ */
+  /* height: 800px;
+  width: 700px; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  /* overflow-y: auto;
+  overflow-x: hidden;
+  width: 97%;
+  height: 1080px; */
+  
+/* } */
+#content {
+    margin:10px 10px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 130vh;
+    overflow-x: hidden;
+  }
+
+#trial{
+  height: 100%;
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  resize: horizontal;
+}
+#graph{
+  position: static;
+  overflow-x: auto;
+}

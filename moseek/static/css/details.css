@@ -33,8 +33,6 @@
   }
 
 #trial{
-  display: flex;
-  justify-content: left;
   height: 100%;
   width: 20vw;
   overflow-y: auto;

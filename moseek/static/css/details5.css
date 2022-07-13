@@ -27,16 +27,19 @@
     margin:10px 10px auto;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: left;
     height: 130vh;
     overflow-x: hidden;
   }
 
 #trial{
+  display: flex;
+  justify-content: left;
   height: 100%;
-  width: 300px;
+  width: 20vw;
   overflow-y: auto;
   overflow-x: hidden;
-  resize: horizontal;
+  resize:horizontal;
 }
 #graph{
   position: static;

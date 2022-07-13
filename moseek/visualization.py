@@ -455,8 +455,9 @@ def visualization(info):
   intervention = info.intervention
 
   plt.style.use('default') #스타일 설정: https://hong-yp-ml-records.tistory.com/88
-  plt.rcParams['figure.figsize'] = (9, 8) # 차트의 기본 크기 설정
+  plt.rcParams['figure.figsize'] = (12, 8) # 차트의 기본 크기 설정
   plt.rcParams['font.size'] = 10 # fontsize
+
 
 
   fig, ax = plt.subplots()
@@ -513,7 +514,7 @@ def visualization(info):
 def chartpage(fig):
 
   startInherit = "{% extends 'chartbase.html' %} \n {% load static %} \n {% block content %}\n"
-  styleLink = '<link rel="stylesheet" type="text/css" href="{% static \'css/details18.css\' %}">\n'
+  styleLink = '<link rel="stylesheet" type="text/css" href="{% static \'css/details5.css\' %}">\n'
   # dtemplate2 = "{% endblock %}"
   styleStart='<div id="content">\n'
   graphTag1 = '<div id="graph">\n'

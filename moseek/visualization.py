@@ -117,7 +117,7 @@ def stringGoDown(ax,inString, ea, x,y,fontSize, delta):
     ax.text(x, y-delta*i, st, size=fontSize)
   return n # 몇줄 짜리 문자열인지 반환
   
-def stringGoUp(ax,inString, ea, x,y, fontSize, delta):
+def stringGoUp(ax,inString, ea, x,y, fontDic, delta):
   point = 0
   slist=[]
   while len(inString)>ea:
@@ -131,7 +131,7 @@ def stringGoUp(ax,inString, ea, x,y, fontSize, delta):
   slist.append(inString)
   n=len(slist)
   for i,st in enumerate(slist):
-    ax.text(x, y-delta*i+n*delta, st, size=fontSize)
+    ax.text(x, y-delta*i+n*delta, st, fontdict=fontDic)
   return n # 몇줄 짜리 문자열인지 반환
 
 def countLine(inString, ea): # 라인 개수 반환
@@ -232,15 +232,17 @@ def drawPopulation(ax, startPoint, startW, box, population):
 
 def drawInfo_Trial(ax, durationPoint, startPoint, startH, legendPoint, numArm,info_trial):
       #objective
+      fontdict = {'size': 20, 'fontweight': 'bold'}
+      font15 = {'size': 15}
       objPoint = Point(startPoint.x, startPoint.y+startH +0.7)
       # bboxString(ax, objPoint.x, objPoint.y, "Objective: " + info_trial.objective, 130, 15, 1)
-      stringGoUp(ax, "Objective: " + info_trial.objective, 90, objPoint.x, objPoint.y, 15, 0.1)
+      stringGoUp(ax, "Objective: " + info_trial.objective, 90, objPoint.x, objPoint.y, font15, 0.1)
       objective_line = bboxStringLine("Objective: " + info_trial.objective, 100) # objective 줄 개수
 
       # info_trial.title
       titlePoint = Point(objPoint.x, objPoint.y+objective_line/10+0.1)
       # bboxString(ax, titlePoint.x, titlePoint.y, "Title: "+ info_trial.title, 100, 20, 1)
-      stringGoUp(ax, "Title: "+ info_trial.title, 70, titlePoint.x, titlePoint.y, 20, 0.12)
+      stringGoUp(ax, "Title: "+ info_trial.title, 70, titlePoint.x, titlePoint.y, fontdict, 0.12)
 
       #complete_time
       ax.plot([durationPoint.x, durationPoint.x], [durationPoint.y, durationPoint.y + startH*2], color = "black", lw = "1")
@@ -275,7 +277,8 @@ def drawPreIntervention(ax, startH, numberPoint, numberW, allocationPoint, radiu
 
 def writeIntervention(ax, startPoint, startH, armGLinePoint1, armGW, armGArrowW, designModel, armG, intervention):
   numBranch = len(armG.interventionDescription)
-  fontArm = {'size': 13}
+  font13 = {'size': 13}
+  font12 = {'size': 12}
   deltaOfLetter = 0.08
   #도형의 영역 내에 글자 적히게 하기
   if designModel == "Crossover Assignment":
@@ -291,20 +294,20 @@ def writeIntervention(ax, startPoint, startH, armGLinePoint1, armGW, armGArrowW,
         drugdescription += drugInfo[j]["DrugName"] +"(" + drugInfo[j]["Dosage"] + ") "
       
       #꼬기 전
-      stringGoUp(ax, drugdescription, 25, armGLinePoint1.x+armGW + 0.1, startPoint.y+startH-i*((startH)/(numBranch-1)), 12, deltaOfLetter)
-      ax.text(armGLinePoint1.x+armGW+0.6, startPoint.y+startH-i*((startH)/(numBranch-1))-0.1, drugInfo[0]['Duration'], fontdict=fontArm)
+      stringGoUp(ax, drugdescription, 25, armGLinePoint1.x+armGW + 0.1, startPoint.y+startH-i*((startH)/(numBranch-1)), font12, deltaOfLetter)
+      ax.text(armGLinePoint1.x+armGW+0.6, startPoint.y+startH-i*((startH)/(numBranch-1))-0.1, drugInfo[0]['Duration'], fontdict=font13)
       #꼰 후
-      stringGoUp(ax, drugdescription, 25, armGLinePoint1.x + armGArrowW/3*2+0.1, startPoint.y+  i*((startH)/(numBranch-1)), 12, deltaOfLetter)
-      ax.text(armGLinePoint1.x + armGArrowW/3*2+0.6, startPoint.y+i*((startH)/(numBranch-1))-0.1, drugInfo[0]["Duration"], fontdict=fontArm)
+      stringGoUp(ax, drugdescription, 25, armGLinePoint1.x + armGArrowW/3*2+0.1, startPoint.y+  i*((startH)/(numBranch-1)), font12, deltaOfLetter)
+      ax.text(armGLinePoint1.x + armGArrowW/3*2+0.6, startPoint.y+i*((startH)/(numBranch-1))-0.1, drugInfo[0]["Duration"], fontdict=font13)
     
     bfWashPoint = armGLinePoint1.x + armGW+armGArrowW/3
     afWashPoint = armGLinePoint1.x + armGArrowW/3*2
     ##crossover 약 먹는 기간 텍스트
-    ax.text((armGLinePoint1.x+bfWashPoint)/2-0.8, washH-0.1, armG.interventionDescription[0][0]['Duration'], fontdict=fontArm)
-    ax.text((bfWashPoint+afWashPoint)/2-0.56, washH+0.1, "Washout", fontdict=fontArm)
-    ax.text((bfWashPoint+afWashPoint)/2-0.56, washH+0.03, "period", fontdict=fontArm)
-    ax.text((bfWashPoint+afWashPoint)/2-0.4, washH-0.08, intervention.washout_period, fontdict=fontArm)
-    ax.text((afWashPoint+armGLinePoint1.x+armGW+armGArrowW)/2-0.8, washH-0.1, armG.interventionDescription[1][0]['Duration'], fontdict=fontArm)
+    ax.text((armGLinePoint1.x+bfWashPoint)/2-0.8, washH-0.1, armG.interventionDescription[0][0]['Duration'], fontdict=font13)
+    ax.text((bfWashPoint+afWashPoint)/2-0.56, washH+0.1, "Washout", fontdict=font13)
+    ax.text((bfWashPoint+afWashPoint)/2-0.56, washH+0.03, "period", fontdict=font13)
+    ax.text((bfWashPoint+afWashPoint)/2-0.4, washH-0.08, intervention.washout_period, fontdict=font13)
+    ax.text((afWashPoint+armGLinePoint1.x+armGW+armGArrowW)/2-0.8, washH-0.1, armG.interventionDescription[1][0]['Duration'], fontdict=font13)
     
   elif ((designModel == "Single Group Assignment" and numBranch == 1) or numBranch==1): # numBranch 추가한 이유: single 이지만 군이 여러개인 경우 때문.
     drugInfo = armG.interventionDescription[0]
@@ -314,8 +317,8 @@ def writeIntervention(ax, startPoint, startH, armGLinePoint1, armGW, armGArrowW,
     
     textStartX = armGLinePoint1.x+armGW + 0.1
     testStartY = startPoint.y+startH/2
-    stringGoUp(ax, drugdescription, 50, textStartX, testStartY, 13, deltaOfLetter)
-    ax.text(textStartX+armGArrowW-0.3 , testStartY-0.2, drugInfo[0]["Duration"], fontdict=fontArm)
+    stringGoUp(ax, drugdescription, 50, textStartX, testStartY, font13, deltaOfLetter)
+    ax.text(textStartX+armGArrowW-0.3 , testStartY-0.2, drugInfo[0]["Duration"], fontdict=font13)
   
   else: # parallel and sequential design
     for i in range(numBranch):
@@ -327,10 +330,10 @@ def writeIntervention(ax, startPoint, startH, armGLinePoint1, armGW, armGArrowW,
         drugdescription = ""
         for q in range(len(drugInfo)):
           drugdescription += drugInfo[q]["DrugName"]+"(" + drugInfo[q]["Dosage"] + ") "
-        stringGoUp(ax, drugdescription, 50, textStartX, startPoint.y+startH-i*((startH)/(numBranch-1)), 13, deltaOfLetter)
-        ax.text(textStartX+armGArrowW-0.3 , testStartY-i*((startH)/(numBranch-1))-0.01, drugInfo[0]["Duration"], fontdict=fontArm)
+        stringGoUp(ax, drugdescription, 50, textStartX, startPoint.y+startH-i*((startH)/(numBranch-1)), font13, deltaOfLetter)
+        ax.text(textStartX+armGArrowW-0.3 , testStartY-i*((startH)/(numBranch-1))-0.01, drugInfo[0]["Duration"], fontdict=font13)
       except: #no intervention인 경우만 있음
-        ax.text(textStartX, testStartY-i*((startH)/(numBranch))+0.1, "No intervention", fontdict=fontArm)
+        ax.text(textStartX, testStartY-i*((startH)/(numBranch))+0.1, "No intervention", fontdict=font13)
   
   
 def drawBranch(ax, armGLinePoint1, armGW, armGArrowW, startPoint, startH, legendPoint, intervention, designModel, armG):
@@ -528,3 +531,4 @@ def giveMeURL(url):
   case = get_info(url)
   return visualization(case)
 
+giveMeURL('https://www.clinicaltrials.gov/ct2/show/NCT05434234')

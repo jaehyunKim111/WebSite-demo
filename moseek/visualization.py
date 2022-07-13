@@ -221,7 +221,7 @@ def drawPopulation(ax, startPoint, startW, box, population):
 
   fontArm = {'size': 13}
   #populaton 박스에 정보 쓰기 
-  n = stringGoDown(ax,population.condition, 30, startPoint.x+dx, startPoint.y+height-dy-0.05, 13, 0.1,) #condition
+  n = stringGoDown(ax,population.condition, 25, startPoint.x+dx, startPoint.y+height-dy-0.05, 13, 0.1,) #condition
   ax.text(startPoint.x+dx, startPoint.y+height-n*dy-0.05-dy, "Gender: "+ gender, fontdict=fontArm) #gender
   ax.text(startPoint.x+dx, startPoint.y+height-n*dy-0.05-dy*2, "Healthy condition: "+ healthy_condition, fontdict=fontArm) #healthy_condition
   ax.text(startPoint.x+dx, startPoint.y+height-n*dy-0.05-dy*3, "minAge: "+ minAge, fontdict=fontArm) #minAge
@@ -267,10 +267,10 @@ def drawPreIntervention(ax, startH, numberPoint, numberW, allocationPoint, radiu
   # allocation
   ax.add_patch(
       patches.Circle(
-          (allocationPoint.x, allocationPoint.y), radius
+          (allocationPoint.x, allocationPoint.y), radius, color="grey"
       )
   )
-  ax.text(allocationPoint.x-0.1, allocationPoint.y, intervention.allocation[0])
+  ax.text(allocationPoint.x-0.1, allocationPoint.y, intervention.allocation[0], color="white")
   ax.text(allocationPoint.x-radius, allocationPoint.y+radius+0.1, intervention.ratio)
 
 def writeIntervention(ax, startPoint, startH, armGLinePoint1, armGW, armGArrowW, designModel, armG, intervention):
@@ -513,9 +513,9 @@ def visualization(info):
 def chartpage(fig):
 
   startInherit = "{% extends 'chartbase.html' %} \n {% load static %} \n {% block content %}\n"
-  styleLink = '<link rel="stylesheet" type="text/css" href="{% static \'css/detail.css\' %}">\n'
+  styleLink = '<link rel="stylesheet" type="text/css" href="{% static \'css/details18.css\' %}">\n'
   # dtemplate2 = "{% endblock %}"
-  styleStart='<div id="container">\n'
+  styleStart='<div id="content">\n'
   graphTag1 = '<div id="graph">\n'
   graphTag2 = '</div>\n'
   Html_str = mpld3.fig_to_html(fig)

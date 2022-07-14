@@ -30,9 +30,9 @@
       <form action="{% url 'example' %}" method="POST" class="examplebox">
         {% csrf_token  %}
           <ul id="list">
-            <li><input type="radio" name="ex_url" value="https://clinicaltrials.gov/ct2/show/NCT05446467?term=pembrolizumab+in+combination+with+low-dose+pfas&draw=2&rank=1"> single 예시</li>
-            <li><input type="radio" name="ex_url" value="https://www.clinicaltrials.gov/ct2/show/NCT00482833"> parallel 예시</li>
-            <li><input type="radio" name="ex_url" value="https://clinicaltrials.gov/ct2/show/NCT02040376"> crossover 예시</li>
+            <li><input type="radio" name="ex_url" value="single"> single 예시</li>
+            <li><input type="radio" name="ex_url" value="parallel"> parallel 예시</li>
+            <li><input type="radio" name="ex_url" value="crossover"> crossover 예시</li>
           </ul>
           <button class="btn btn-outline-secondary" type="submit" id="button-addon2">예시 모식도 생성</button>
       </form>

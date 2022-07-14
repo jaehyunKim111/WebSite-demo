@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"><!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/detailbase.css' %}"><!-- frame -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detailbase1.css' %}"><!-- frame -->
     <link href="{% static 'img/icon.png' %}" rel="icon">   <!-- fabicon -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- bootstrap -->
     <title>Moseek</title>
@@ -24,6 +24,15 @@
                 <button class="btn btn-outline-secondary" type="submit" id="button-addon2">모식도 생성</button>
               </div>
             </div> 
+          </form>
+          <form action="{% url 'example' %}" method="POST" class="examplebox">
+            {% csrf_token  %}
+              <ul id="list">
+                <li><input type="radio" name="ex_url" value="single"> single 예시</li>
+                <li><input type="radio" name="ex_url" value="parallel"> parallel 예시</li>
+                <li><input type="radio" name="ex_url" value="crossover"> crossover 예시</li>
+              </ul>
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">예시 모식도 생성</button>
           </form>
     </div>
     <hr>

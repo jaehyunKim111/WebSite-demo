@@ -1,0 +1,90 @@
+{
+    "Allocation": "Randomized",
+    "CompleteTime": 180,
+    "DesignModel": "Parallel Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "arsenic trioxide: 0.15 mg/Kg 4 weeks(twice daily) , all-trans retinoic acid (atra): 10 mg 2 weeks , ",
+                "ArmGroupLabel": "ARM A - ATO/ATRA",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "0.15 mg/Kg",
+                        "DrugName": "arsenic trioxide",
+                        "Duration": "4 weeks(twice daily)",
+                        "HowToTake": ""
+                    },
+                    {
+                        "Dosage": "10 mg",
+                        "DrugName": "all-trans retinoic acid (atra)",
+                        "Duration": "2 weeks",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: arsenic trioxide",
+                        "Drug: all-trans retinoic acid (ATRA)"
+                    ]
+                }
+            },
+            {
+                "ArmGroupDescription": "idarubicin: 12 mg/m2 days 1(3rd cycle) infusion, mercaptopurine: 50 mg/m2 50 mg/m2/day(once daily)(every 3 months) orally, methotrexate: 15 mg/m2 weekly(once weekly)(every 3 months)(once daily) intramuscularly, all-trans retinoic acid: 45 mg/m2/day two year , ",
+                "ArmGroupLabel": "ARM B - ATRA",
+                "ArmGroupType": "Active Comparator",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "12 mg/m2",
+                        "DrugName": "idarubicin",
+                        "Duration": "days 1(3rd cycle)",
+                        "HowToTake": "infusion"
+                    },
+                    {
+                        "Dosage": "50 mg/m2",
+                        "DrugName": "mercaptopurine",
+                        "Duration": "50 mg/m2/day(once daily)(every 3 months)",
+                        "HowToTake": "orally"
+                    },
+                    {
+                        "Dosage": "15 mg/m2",
+                        "DrugName": "methotrexate",
+                        "Duration": "weekly(once weekly)(every 3 months)(once daily)",
+                        "HowToTake": "intramuscularly"
+                    },
+                    {
+                        "Dosage": "45 mg/m2/day",
+                        "DrugName": "all-trans retinoic acid",
+                        "Duration": "two year",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: idarubicin",
+                        "Drug: mercaptopurine",
+                        "Drug: methotrexate",
+                        "Drug: all-trans retinoic acid"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "276",
+    "InterventionName": "methotrexate",
+    "Masking": "None (Open Label)",
+    "NCTID": "NCT00482833",
+    "Objective": "Phase III Trial in Acute Promyelocytic Leukemia Patients",
+    "OfficialTitle": "A Randomised Phase III Study to Compare Arsenic Trioxide (ATO) Combined to ATRA Versus Standard ATRA and Anthracycline-Based Chemotherapy (AIDA Regimen) for Newly Diagnosed, Non High-Risk Acute Promyelocytic Leukemia",
+    "PopulationBox": {
+        "Condition": "Leukemia",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "70 Years",
+        "MinAge": "18 Years",
+        "Participant": "276"
+    },
+    "PopulationRatio": "",
+    "Title": "Phase III Trial in Acute Promyelocytic Leukemia Patients",
+    "WashoutPeriod": ""
+}

@@ -1,0 +1,62 @@
+{
+    "Allocation": "Randomized",
+    "CompleteTime": 0,
+    "DesignModel": "Crossover Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "brv vs lev in randomized double blinded, crossover fashion: 100 mg approximately 2 weeks later , ",
+                "ArmGroupLabel": "Part 1",
+                "ArmGroupType": "Active Comparator",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "100 mg",
+                        "DrugName": "brv vs lev in randomized double blinded, crossover fashion",
+                        "Duration": "approximately 2 weeks later",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: BRV vs LEV in randomized double blinded, crossover fashion"
+                    ]
+                }
+            },
+            {
+                "ArmGroupDescription": "brv vs lev in randomized double blinded, crossover fashion: 100 mg approximately 2 weeks later , ",
+                "ArmGroupLabel": "Part 2",
+                "ArmGroupType": "Active Comparator",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "100 mg",
+                        "DrugName": "brv vs lev in randomized double blinded, crossover fashion",
+                        "Duration": "approximately 2 weeks later",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: BRV vs LEV in randomized double blinded, crossover fashion"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "16",
+    "InterventionName": "",
+    "Masking": "Triple",
+    "NCTID": "NCT03580707",
+    "Objective": "Does BRV Have Faster Onset Time & Greater Effect Than LEV in Epilepsy Pts Using PPR Pharmacodynamic Efficacy Endpoint",
+    "OfficialTitle": "Does BRV Have a Faster Onset Time and Greater Effect Than LEV in Epilepsy Patients?: A Prospective, Randomized, Crossover, Double-blind, Controlled Intravenous Study Using the PPR as a Pharmacodynamic Efficacy Endpoint",
+    "PopulationBox": {
+        "Condition": "Photosensitive Epilepsy",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "65 Years",
+        "MinAge": "18 Years",
+        "Participant": "16"
+    },
+    "PopulationRatio": "",
+    "Title": "Does BRV Have Faster Onset Time & Greater Effect Than LEV in Epilepsy Pts Using PPR Pharmacodynamic Efficacy Endpoint",
+    "WashoutPeriod": ""
+}

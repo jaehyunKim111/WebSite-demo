@@ -1,0 +1,44 @@
+{
+    "Allocation": "N/A",
+    "CompleteTime": 36,
+    "DesignModel": "Single Group Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "pembrolizumab+cisplatin + 5-fluorouracil: 3000mg/m (qd d1-d3) ivgtt, ",
+                "ArmGroupLabel": "pembrolizumab+cisplatin + 5-fluorouracil",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "3000mg/m",
+                        "DrugName": "pembrolizumab+cisplatin + 5-fluorouracil",
+                        "Duration": "(qd d1-d3)",
+                        "HowToTake": "ivgtt"
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: pembrolizumab+cisplatin + 5-fluorouracil"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "60",
+    "InterventionName": "pembrolizumab+cisplatin + 5-fluorouracil",
+    "Masking": "None (Open Label)",
+    "NCTID": "NCT05446467",
+    "Objective": "Pembrolizumab in Combination With Low-dose PFas Neoadjuvant Treatment for Locally Advanced HNSCC",
+    "OfficialTitle": "Safety and Efficacy of Pembrolizumab in Combination With Low-dose PF (Cisplatin and 5-Fluorouracil) as Neoadjuvant Treatment for Locally Advanced Head and Neck Squamous Cell Carcinoma: a Multi-center, Single-arm Clinical Study Trial",
+    "PopulationBox": {
+        "Condition": "Head and Neck Squamous Cell Carcinoma",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "85 Years",
+        "MinAge": "18 Years",
+        "Participant": "60"
+    },
+    "PopulationRatio": "",
+    "Title": "Pembrolizumab in Combination With Low-dose PFas Neoadjuvant Treatment for Locally Advanced HNSCC",
+    "WashoutPeriod": ""
+}

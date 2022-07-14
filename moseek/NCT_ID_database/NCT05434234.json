@@ -1,0 +1,62 @@
+{
+    "Allocation": "Non-Randomized",
+    "CompleteTime": 36,
+    "DesignModel": "Sequential Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "yl201:  once every 3 weeks , ",
+                "ArmGroupLabel": "Dose escalation",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "yl201",
+                        "Duration": "once every 3 weeks",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: YL201"
+                    ]
+                }
+            },
+            {
+                "ArmGroupDescription": "yl201:  once every 3 weeks , ",
+                "ArmGroupLabel": "Dose expansion",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "yl201",
+                        "Duration": "once every 3 weeks",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: YL201"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "196",
+    "InterventionName": "",
+    "Masking": "None (Open Label)",
+    "NCTID": "NCT05434234",
+    "Objective": "A Study of YL201 in Patients With Advanced Solid Tumors",
+    "OfficialTitle": "A Phase 1, Multicenter, Nonrandomized, Open-Label, First-in-Human Study to Evaluate the Safety, Tolerability, Pharmacokinetics, and Efficacy of YL201 in Patients With Advanced Solid Tumors",
+    "PopulationBox": {
+        "Condition": "Advanced Solid Tumor",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "",
+        "MinAge": "18 Years",
+        "Participant": "196"
+    },
+    "PopulationRatio": "",
+    "Title": "A Study of YL201 in Patients With Advanced Solid Tumors",
+    "WashoutPeriod": ""
+}

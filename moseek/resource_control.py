@@ -3,11 +3,24 @@ import requests
 import re
 import boto3
 import json
+#pip install sumy
+# Importing the parser and tokenizer
+from sumy.parsers.plaintext import PlaintextParser
+from sumy.nlp.tokenizers import Tokenizer
+# Import the LexRank summarizer
+from sumy.summarizers.lex_rank import LexRankSummarizer
+#pip install nltk
+import nltk
+#download only once 
+#nltk.download('punkt')
 import math
 import sys
 #multithreading part, no need for extra pip install
 from threading import Thread
 from queue import Queue
+import os, json
+from pathlib import Path
+from django.core.exceptions import ImproperlyConfigured
 
 ###############################################
 ################## IMPORTANT ##################
@@ -15,6 +28,19 @@ from queue import Queue
 # MOVE ALL THE WAY DOWN TO CHECK HOW TO CALLL #
 ###############################################
 
+############### Versions 1.5.2 ################
+# fixed format matching to frontend team
+############### Versions 1.5.1 ################
+# created a directory that is used to save
+# created database folder using relative url, where NCT~.json is saved
+# fixed error in acm_Entities code where error happen when none returns
+# modified washout period
+############### Versions 1.5.0 ################
+# from using acm from amazon server, changed to the server acm from MedAIPlus
+# allowed to create database according to NCT ID, if exist bring, not create
+# fixed acm id to secret
+############### Versions 1.4.3 ################
+# modified aws_drugtime code, catching out error cases
 ############### Versions 1.4.2 ################
 # fixed get_title, json changes depending on search by name or by NCT ID
 ############### Versions 1.4.1 ################
@@ -64,10 +90,6 @@ from queue import Queue
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
-import os, json
-from pathlib import Path
-from django.core.exceptions import ImproperlyConfigured
-
 BASE_DIR = Path(__file__).resolve().parent
 
 secret_file = os.path.join(BASE_DIR, 'secrets.json') # secrets.json 파일 위치를 명시
@@ -86,15 +108,21 @@ def get_secret(setting, secrets=secrets):
 accessKey = get_secret("aws_access_key_id")
 accessSecretKey = get_secret("aws_secret_access_key")
 region = get_secret("region_name")
-# from decouple import config
-# accessKey = config('aws_access_key_id')
-# accessSecretKey = config('aws_secret_access_key')
-# region = config('region_name')
-
-
 comprehend = boto3.client('comprehend', aws_access_key_id=accessKey, aws_secret_access_key=accessSecretKey, region_name= region)
-comprehend_med = boto3.client('comprehendmedical', aws_access_key_id=accessKey,aws_secret_access_key=accessSecretKey, region_name= region)
 
+
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+def acm_Entities(Text):
+    try:
+        url1 = 'http://61.77.42.239:8100/asp/get_entitiesv2/?query=' + Text
+        response = requests.get(url1)
+        a = json.loads(response.content)
+        return a
+    except:
+        b = {'Entities' : ''}
+        return b
 
 #################################################################################################################################################
 #################################################################################################################################################
@@ -189,20 +217,20 @@ def get_drug_time(response):
     arm_name = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['ArmsInterventionsModule']['ArmGroupList']['ArmGroup']
 
     try:
-        detail_description = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DescriptionModule']["BriefSummary"]
+        detail_description = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DescriptionModule']['BriefSummary']
     except KeyError:
         pass
     try:
-        brief_description = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DescriptionModule']["DetailedDescription"]
+        brief_description = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DescriptionModule']['DetailedDescription']
     except KeyError:
         pass
 
     drug = []
-    time_label = [' day',' days',' week',' weeks',' month',' year']
+    time_label = ['day','days','week','weeks','month','months','year','years']
     time_label2 = ['day','week','month','year']
-    amount = ['mg','g ', 'mcg', 'dose']
+    amount = ['mg','g ', 'mcg', 'milligram']
+    #dose는 어떻게 넣을지 생각해 봐야할 듯.
     drug_date = []
-    dosage_que = Queue()
     
     left = 0
     right = 0
@@ -230,14 +258,14 @@ def get_drug_time(response):
         drug.append(drug_list[i]['InterventionName'])
         drug_dict[drug_list[i]['InterventionName'].lower()] = {'DrugName' : '','Duration' : '', 'Dosage' : '', 'HowToTake' : ''}
 
-    slpit = detail_description.replace(",", "").split(". ") + brief_description.replace(",", "").split(".")
+    slpit = detail_description.replace(",",".").split(".") + brief_description.replace(",",".").split(".")
  ########################################################################################
  # 밑에 코드는 description부분에 약물 복용 주기, 약물 복용량을 찾아서 넣는 코드를 작성함#
- #########################################################################################    
+ ######################################################################################## 
     for i1 in range(len(slpit)):     #시간 관련된 내용
         temp = slpit[i1].split()
         for i2 in range(len(drug)):
-            if drug[i2]+ ' ' in slpit[i1]:
+            if drug[i2] in slpit[i1] or drug[i2] + ' ' in slpit[i1]:
                 drug_index = temp.index(drug[i2].split()[0])
                 for i5 in range(len(time_label)):
                     for i3 in range(drug_index-1, -1, -1):
@@ -262,17 +290,17 @@ def get_drug_time(response):
                 if left != 0 or right != 0:
                     if left == 0 or abs(drug_index - left) >= abs(drug_index - right):
                         drug_date.append(temp[drug_index : right + 1])
-                        drug_dict[temp[drug_index].lower()]['Duration'] = temp[right - 1] + " " + temp[right]
+                        drug_dict[drug[i2].lower()]['Duration'] = temp[right - 1] + " " + temp[right]
                     elif right == 0 or abs(drug_index - left) < abs(drug_index - right):
                         drug_date.append(temp[left-1 :drug_index  + 1])
-                        drug_dict[temp[drug_index].lower()]['Duration'] = temp[left - 1] + " " + temp[left]
+                        drug_dict[drug[i2].lower()]['Duration'] = temp[left - 1] + " " + temp[left]
                 if d_left != 0 or d_right != 0:
                     if d_left == 0 or abs(drug_index - d_left) >= abs(drug_index - d_right):
                         drug_date.append(temp[drug_index : d_right + 1]) # 복용량 관련 내용
-                        drug_dict[temp[drug_index].lower()]['Dosage'] = temp[d_right - 1] + "  " + temp[d_right]
+                        drug_dict[drug[i2].lower()]['Dosage'] = temp[d_right - 1] + "  " + temp[d_right]
                     elif d_right == 0 or abs(drug_index - d_left) < abs(drug_index - d_right):
                         drug_date.append(temp[d_left-1 :drug_index  + 1])
-                        drug_dict[temp[drug_index].lower()]['Dosage'] = temp[d_left - 1] + " " + temp[d_left]
+                        drug_dict[drug[i2].lower()]['Dosage'] = temp[d_left - 1] + " " + temp[d_left]
 
                 d_left = 0 
                 d_right = 0 
@@ -304,33 +332,30 @@ def get_drug_time(response):
                 if left != 0 or right != 0:
                     if left == 0 or abs(drug_index - left) >= abs(drug_index - right):
                         drug_date.append(temp[drug_index : right + 1])
-                        drug_dict[temp[drug_index]]['Duration'] = temp[right - 1] + " " + temp[right]
+                        drug_dict[drug[i2].lower()]['Duration'] = temp[right - 1] + " " + temp[right]
                     elif right == 0 or abs(drug_index - left) < abs(drug_index - right):
                         drug_date.append(temp[left-1 :drug_index  + 1])
-                        drug_dict[temp[drug_index]]['Duration'] = temp[left - 1] + " " + temp[left]
+                        drug_dict[drug[i2].lower()]['Duration'] = temp[left - 1] + " " + temp[left]
                 if d_left != 0 or d_right != 0:
                     if d_left == 0 or abs(drug_index - d_left) >= abs(drug_index - d_right):
                         drug_date.append(temp[drug_index : d_right + 1])
-                        drug_dict[temp[drug_index].lower()]['Dosage'] = temp[d_right - 1] + "  " + temp[d_right]
+                        drug_dict[drug[i2].lower()]['Dosage'] = temp[d_right - 1] + "  " + temp[d_right]
                     elif d_right == 0 or abs(drug_index - d_left) < abs(drug_index - d_right):
                         drug_date.append(temp[d_left-1 :drug_index  + 1])
-                        drug_dict[temp[drug_index]]['Dosage'] = temp[d_left - 1] + " " + temp[d_left]
+                        drug_dict[drug[i2].lower()]['Dosage'] = temp[d_left - 1] + " " + temp[d_left]
 
                 d_left = 0
                 d_right = 0
                 left = 0
                 right = 0
     #print(drug_dict)
-######################################################################
-#밑에 코드는 queue써서 ArmgroupDescription쪽에서 기간관련 내용 찾는 코드(폐기각)
-######################################################################
+#################################################################################
+#밑에 코드는 queue써서 ArmgroupDescription쪽에서 기간관련 내용 찾는 코드(폐기각)#
+#################################################################################
 
-
-
-
-######################################################################
-#밑에 코드는 queue써서 intervention쪽에서 기간관련 내용 찾는 코드(폐기각)
-######################################################################
+##########################################################################
+#밑에 코드는 queue써서 intervention쪽에서 기간관련 내용 찾는 코드(폐기각)#
+##########################################################################
 
     # protocolsection = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']
 
@@ -348,14 +373,12 @@ def get_drug_time(response):
     # for i in range(dosage_que.qsize()):
     #     print(dosage_que.get())
 
-
 ######################################################################
 #밑에 코드는 comprehend써서 intervention쪽에서 복용량, 기간 찾는 코드#
-######################################################################
+####################################################################
     #comprehend = boto3.client('comprehend')
 
     protocolsection = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']
-
 
     for value in protocolsection['ArmsInterventionsModule']['InterventionList']['Intervention']:
         for i in drug_dict:
@@ -389,32 +412,103 @@ def get_drug_time(response):
             if i == value["InterventionName"].lower():
                 try:
                     DetectEntitiestext = value['InterventionDescription']
-                    test = (comprehend_med.detect_entities(Text=DetectEntitiestext)) 
+                    test = acm_Entities(DetectEntitiestext) 
                     for i2 in range(len(test['Entities'])):
                         try:
                             for i3 in range(len(test['Entities'][i2]['Attributes'])):
                                 if test['Entities'][i2]['Attributes'][i3]['Type'] == "ROUTE_OR_MODE":
                                     drug_dict[i.lower()]['HowToTake'] = test['Entities'][i2]['Attributes'][i3]['Text'] 
-                                elif test['Entities'][i2]['Attributes'][i3]['Type'] == "Duration":
+                                elif test['Entities'][i2]['Attributes'][i3]['Type'] == "DURATION":
                                     drug_dict[i.lower()]['Duration'] = test['Entities'][i2]['Attributes'][i3]['Text']
+                                elif test['Entities'][i2]['Attributes'][i3]['Type'] == "DOSAGE":
+                                    drug_dict[i.lower()]['Dosage'] = test['Entities'][i2]['Attributes'][i3]['Text']
                         except KeyError:
                             pass
                 except KeyError:
                     pass
+
+########################################################################################
+#밑에 코드는 ACM써서 ArmGroupdescription 부분에서 약물 복용법, 복용 주기 관련 내용 추출#
+########################################################################################
+    for value in protocolsection['ArmsInterventionsModule']['ArmGroupList']['ArmGroup']:
+        try:
+            DetectEntitiestext = value['ArmGroupDescription']
+            test = acm_Entities(DetectEntitiestext)
+            for i in drug_dict:
+                for i2 in range(len(test['Entities'])):
+                    if test['Entities'][i2]['Text'].lower() in i:
+                        try:
+                            for i3 in range(len(test['Entities'][i2]['Attributes'])):
+                                if test['Entities'][i2]['Attributes'][i3]['Type'] == "DOSAGE":
+                                    drug_dict[i.lower()]['Dosage'] = test['Entities'][i2]['Attributes'][i3]['Text']
+                            
+                                    break
+                            for i3 in range(len(test['Entities'][i2]['Attributes'])): 
+                                if test['Entities'][i2]['Attributes'][i3]['Type'] == "DURATION":
+                                    drug_dict[i.lower()]['Duration'] = test['Entities'][i2]['Attributes'][i3]['Text']
+                                    break
+                        except KeyError:
+                            pass                    
+
+                #print(json.dumps(test,sort_keys=True, indent=4)) 
+        except KeyError:
+            pass    
+
+##################################################################################
+#밑에 코드는 ACM써서 ArmGroupLabel 부분에서 약물 복용법, 복용 주기 관련 내용 추출#
+##################################################################################
+
+
+
+
 #################################################################################################
 #밑에 코드는 ACM써서 디스크립션 부분에서 약물 복용 주기 내용 찾는 코드(무조건 마지막에 나와야함)#
 #################################################################################################
     #comprehend_med = boto3.client(service_name='comprehendmedical')
 
+    for value in protocolsection['ArmsInterventionsModule']['InterventionList']['Intervention']:
+        for i in drug_dict:
+            if i == value["InterventionName"].lower():
+                try:
+                    DetectEntitiestext = value['InterventionDescription']
+                    test = acm_Entities(DetectEntitiestext) 
+                    for i2 in range(len(test['Entities'])):
+                        try:
+                            for i3 in range(len(test['Entities'][i2]['Attributes'])):
+                                if test['Entities'][i2]['Attributes'][i3]['Type'] == "FREQUENCY" and test['Entities'][i2]['Attributes'][i3]['Text'] not in drug_dict[i.lower()]['Duration']:
+                                    drug_dict[i.lower()]['Duration'] = drug_dict[i.lower()]['Duration'] + "(" + test['Entities'][i2]['Attributes'][i3]['Text'] + ")"
+                        except KeyError:
+                            pass
+                except KeyError:
+                    pass
+
+    for value in protocolsection['ArmsInterventionsModule']['ArmGroupList']['ArmGroup']:
+        try:
+            DetectEntitiestext = value['ArmGroupDescription']
+            test = acm_Entities(DetectEntitiestext)
+            for i in drug_dict:
+                for i2 in range(len(test['Entities'])):
+                    if test['Entities'][i2]['Text'].lower() in i:
+                        try:
+                            for i3 in range(len(test['Entities'][i2]['Attributes'])):
+                                if test['Entities'][i2]['Attributes'][i3]['Type'] == "FREQUENCY" and test['Entities'][i2]['Attributes'][i3]['Text'] not in drug_dict[i.lower()]['Duration']:
+                                    drug_dict[i.lower()]['Duration'] = drug_dict[i.lower()]['Duration'] + "(" + test['Entities'][i2]['Attributes'][i3]['Text'] + ")"
+
+                        except KeyError:
+                            pass                    
+        except KeyError:
+            pass    
+
+
     DetectEntitiestext = brief_description + ' ' + detail_description
-    result = comprehend_med.detect_entities(Text=DetectEntitiestext)
+    result = acm_Entities(DetectEntitiestext)
     entities = result['Entities']
     for value in entities:
         try:
             for content in value['Attributes']:
                 if content['RelationshipType'] == "FREQUENCY":
                     for content2 in drug_dict:
-                        if value["Text"] in content2:
+                        if value["Text"] in content2 and content['Text'] not in drug_dict[content2]['Duration']:
                             drug_dict[content2]['Duration'] = drug_dict[content2]['Duration'] +"("+ content['Text'] + ")"
         except KeyError:
             pass
@@ -427,17 +521,12 @@ def get_drug_time(response):
                     # print(temp)
                     # print(" ".join(temp[1:]))
 
-
-
-
-
                     if DrugInList == " ".join(temp[1:]).lower():
-                        Arm_group[arm]['InterventionDescription'].append(drug_dict[DrugInList]) 
+                        Arm_group[arm]['InterventionDescription'].append(drug_dict[DrugInList])
         except TypeError:
             pass
                     #Arm_group[arm]['InteventionDescription'][DrugInList] = ("'" + DrugInList + "'" + ": "+  "{" + drug_dict[DrugInList] + "}")
                     #Arm_group[arm]['InteventionDescription'][DrugInList] = drug_dict[DrugInList]
-
     for arm in Arm_group:
         try:
             for Drugidx in range(len(Arm_group[arm]['InterventionDescription'])):
@@ -451,6 +540,48 @@ def get_drug_time(response):
         InterventionDrug['ArmGroupList'].append(Arm_group[key])
 
     return_dictionary = {"DrugInformation" : InterventionDrug}
+    for value1 in return_dictionary['DrugInformation']['ArmGroupList']:
+        medi_loc = 0
+        dosa_loc = 0
+        abs_s = 100
+        dosa = ""
+        DetectEntitiestext = value1['ArmGroupLabel']
+        # print(DetectEntitiestext)
+        result = acm_Entities(DetectEntitiestext)
+        result2 = comprehend.detect_entities(Text=DetectEntitiestext, LanguageCode='en')
+        # print(json.dumps(result,sort_keys=True, indent=4))
+        #print(json.dumps(result2,sort_keys=True, indent=4))
+        entities = result['Entities']
+        entities2 =  result2['Entities']
+        for value in entities:
+            try:
+                for content in value['Attributes']:
+                    if content['RelationshipType'] == "Dosage":
+                        for i in range(len(value1['InterventionDescription'])):
+                            if value["Text"] in value1['InterventionDescription'][i]["DrugName"]:
+                                if content['Text'] != value1['InterventionDescription'][i]['Dosage']:
+                                    value1['InterventionDescription'].append({"Dosage" : content['Text'], "DrugName" : value1['InterventionDescription'][i]["DrugName"], "Duration" : value1['InterventionDescription'][i]["Dosage"], "HowToTake" : value1['InterventionDescription'][i]["HowToTake"]})
+                                    del value1['InterventionDescription'][i]
+
+            except KeyError:
+                for value in entities2:
+                    for i in range(len(value1['InterventionDescription'])):
+                        if value["Text"].lower() in value1['InterventionDescription'][i]["DrugName"]:
+                            medi_loc =  (value["BeginOffset"] + value["EndOffset"])/2
+                            # print(medi_loc)
+                            for value3 in entities2:
+                                for value2 in amount:
+                                    if value2 in value3["Text"]:
+                                        #print(value3["Text"])
+                                        dosa_loc = (value3["BeginOffset"] + value3["EndOffset"])/2
+                                        if abs_s > abs(medi_loc - dosa_loc):
+                                            abs_s = abs(medi_loc - dosa_loc)
+                                            dosa = value3["Text"]
+                        if dosa != "" and dosa != value1['InterventionDescription'][i]['Dosage']:                    
+                            value1['InterventionDescription'].append({"Dosage" : dosa, "DrugName" : value1['InterventionDescription'][i]["DrugName"], "Duration" : value1['InterventionDescription'][i]["Duration"], "HowToTake" : value1['InterventionDescription'][i]["HowToTake"]})
+                            del value1['InterventionDescription'][i]
+        # for value2 in value1['InterventionDescription']:
+
     return return_dictionary
 
 
@@ -513,7 +644,7 @@ def get_population_ratio(response):
 #################################################################################################################################################
 #################################################################################################################################################
 def get_washout(response):
-    period = ['washout','wash-out','recovery','run-in']
+    period = ['washout','wash-out','recovery','run-in','taper']
     times = ['day','days','week','weeks','month','months','year','years']
     line = ""
     index, value = [], []
@@ -558,6 +689,15 @@ def get_washout(response):
                    content_list = content.split('\n')
                    hasWash += 1
                    break
+            try:
+                content = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DescriptionModule']["DetailedDescription"]
+                content = content.lower()
+                if(period[i] in content):
+                   content_list = content.split('.')
+                   hasWash += 1
+                   break
+            except:
+                pass
 
     # washout 없는 경우
     if(hasWash == 0):
@@ -652,7 +792,6 @@ def get_objective(response):
 
 #################################################################################################################################################
 #################################################################################################################################################
-#################################################################################################################################################
 def get_maksing(response):
     masking = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DesignModule']['DesignInfo']['DesignMaskingInfo']['DesignMasking']
     string_result = masking
@@ -661,7 +800,6 @@ def get_maksing(response):
     return(result_dictionary)
 
 
-#################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
 def get_allocation(response):
@@ -674,7 +812,6 @@ def get_allocation(response):
 
 #################################################################################################################################################
 #################################################################################################################################################
-#################################################################################################################################################
 def get_enrollment(response):
     enrollment = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DesignModule']['EnrollmentInfo']['EnrollmentCount']
     string_result = enrollment
@@ -684,8 +821,6 @@ def get_enrollment(response):
 
 
 #################################################################################################################################################
-#################################################################################################################################################
-#################################################################################################################################################
 def get_designModel(response):
     model = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DesignModule']['DesignInfo']['DesignInterventionModel']
     string_result = model
@@ -694,7 +829,6 @@ def get_designModel(response):
     return(result_dictionary)
 
 
-#################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
 def get_interventionName(response):
@@ -710,7 +844,7 @@ def get_interventionName(response):
             interventionName.append(name)
         elif(type=="Drug"):
             DetectEntitiestext = name
-            test = (comprehend_med.detect_entities(Text=DetectEntitiestext))
+            test = acm_Entities(DetectEntitiestext)
             convert = json.dumps(test,sort_keys=True, indent=4)
             data = json.loads(convert)
             for j in range(len(test['Entities'])):
@@ -729,61 +863,77 @@ def get_interventionName(response):
 
 #################################################################################################################################################
 #################################################################################################################################################
-#################################################################################################################################################
-#################################################################################################################################################
-#################################################################################################################################################
-#################################################################################################################################################
-#################################################################################################################################################
-#################################################################################################################################################
-#################################################################################################################################################
 def wrapper(func, arg, queue):
         queue.put(func(arg))
 
 def request_call(url):
 
     try:
-        expr = re.search("NCT[0-9]+", url)
-        expr = expr.group()
-        if((expr == None) or ("&fmt=json" in url)):
-            newURL = url
-        else:
-            newURL = "https://clinicaltrials.gov/api/query/full_studies?expr=" + expr + "&fmt=json"
+        try:
+            expr = re.search("NCT[0-9]+", url)
+            expr = expr.group()
+            if((expr == None) or ("&fmt=json" in url)):
+                newURL = url
+            else:
+                newURL = "https://clinicaltrials.gov/api/query/full_studies?expr=" + expr + "&fmt=json"
+        except:
+            newURL = url.replace(" ", "")
+
+        response = requests.get(newURL).json()
+        NCTId = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['IdentificationModule']['NCTId']
+
+        script_dir = os.path.dirname(__file__)
+        file_path = os.path.join(script_dir, f'NCT_ID_database/{NCTId}.json')
+
+        with open(file_path) as json_file:
+            data = json.load(json_file)
+            return data
+
     except:
-        newURL = url.replace(" ", "")
+        try:
+            expr = re.search("NCT[0-9]+", url)
+            expr = expr.group()
+            if((expr == None) or ("&fmt=json" in url)):
+                newURL = url
+            else:
+                newURL = "https://clinicaltrials.gov/api/query/full_studies?expr=" + expr + "&fmt=json"
+        except:
+            newURL = url.replace(" ", "")
 
-    response = requests.get(newURL).json()
+        response = requests.get(newURL).json()
 
-    NCTId = {"NCTID" : response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['IdentificationModule']['NCTId']}
+        NCTId = {"NCTID" : response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['IdentificationModule']['NCTId']}
 
-    washout, drug_time, population_box = Queue(), Queue(), Queue()
-    Thread(target=wrapper, args=(get_washout, response, washout)).start() 
-    Thread(target=wrapper, args=(get_drug_time, response, drug_time)).start() 
-    Thread(target=wrapper, args=(get_population_box, response, population_box)).start() 
+        washout, drug_time, population_box = Queue(), Queue(), Queue()
+        Thread(target=wrapper, args=(get_washout, response, washout)).start() 
+        Thread(target=wrapper, args=(get_drug_time, response, drug_time)).start() 
+        Thread(target=wrapper, args=(get_population_box, response, population_box)).start() 
 
-    #dictionary format
-    calc_date, population_ratio, official_title, objective, allocation, enrollment, design_model, masking, intervention_name, title = get_calc_date(response), get_population_ratio(response), get_officialTitle(response), get_objective(response), get_allocation(response), get_enrollment(response), get_designModel(response), get_maksing(response), get_interventionName(response), get_title(response)
+        #dictionary format
+        calc_date, population_ratio, official_title, objective, allocation, enrollment, design_model, masking, intervention_name, title = get_calc_date(response), get_population_ratio(response), get_officialTitle(response), get_objective(response), get_allocation(response), get_enrollment(response), get_designModel(response), get_maksing(response), get_interventionName(response), get_title(response)
 
-    request_call = {}
-    request_call.update(title)
-    request_call.update(population_box.get())
-    request_call.update(washout.get())
-    request_call.update(population_ratio)
-    request_call.update(calc_date)
-    request_call.update(drug_time.get())
-    request_call.update(official_title)
-    request_call.update(objective)
-    request_call.update(allocation)
-    request_call.update(enrollment)
-    request_call.update(design_model)
-    request_call.update(masking)
-    request_call.update(intervention_name)
-    request_call.update(NCTId)
+        request_call = {}
+        request_call.update(title)
+        request_call.update(population_box.get())
+        request_call.update(washout.get())
+        request_call.update(population_ratio)
+        request_call.update(calc_date)
+        request_call.update(drug_time.get())
+        request_call.update(official_title)
+        request_call.update(objective)
+        request_call.update(allocation)
+        request_call.update(enrollment)
+        request_call.update(design_model)
+        request_call.update(masking)
+        request_call.update(intervention_name)
+        request_call.update(NCTId)
 
 
 
-    #print(request_call['population_ratio'])
+        #print(request_call['population_ratio'])
+        script_dir = os.path.dirname(__file__)
+        file_path = os.path.join(script_dir, f"NCT_ID_database/{response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['IdentificationModule']['NCTId']}.json")
+        with open(file_path, 'w') as json_file:
+                json.dump(request_call, json_file,sort_keys=True, indent=4)
 
-    with open("resource_control.json", 'w') as json_file:
-            json.dump(request_call, json_file,sort_keys=True, indent=4)
-
-    return request_call
+        return request_call

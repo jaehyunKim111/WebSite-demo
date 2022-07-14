@@ -520,11 +520,13 @@ def chartpage(fig):
   styleLink = '<link rel="stylesheet" type="text/css" href="{% static \'css/details1.css\' %}">\n'
   # dtemplate2 = "{% endblock %}"
   styleStart='<div id="content">\n'
+  elementTag1 = '<div id="element">\n'
   graphTag1 = '<div id="graph">\n'
-  graphTag2 = '</div>\n'
+  endTag = '</div>\n'
+  handler = '<div class="handler"></div>\n'
   Html_str = mpld3.fig_to_html(fig)
   Html_file= open("./chart/templates/chart.html","w")
-  Html_file.write(startInherit + styleLink + styleStart + graphTag1 + Html_str + graphTag2)
+  Html_file.write(startInherit + styleLink + styleStart + elementTag1 + graphTag1 + Html_str + endTag + endTag + handler)
   Html_file.close()
 
 def giveMeURL(url):

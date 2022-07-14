@@ -31,15 +31,31 @@
     height: 130vh;
     overflow-x: hidden;
   }
+#element {
+  flex: 1 1 auto;
+}
 
 #trial{
   height: 100%;
-  width: 20vw;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  resize:horizontal;
 }
 #graph{
-  position: static;
   overflow-x: auto;
+}
+
+.handler {
+  width: 20px;
+  padding: 0;
+  cursor: ew-resize;
+  flex: 0 0 auto;
+}
+
+.handler::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 100%;
+  background: white;
 }

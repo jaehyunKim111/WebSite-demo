@@ -21,6 +21,7 @@ python3 manage.py runserver 0:8080
 
 ## SSH 닫아도 서버 가동되게 하기
 1. 서버 실행 
+*python3 --version 으로 3.8버전인지 확인. 아니라면 3.8로 실행시킬것
 ```
 python3 manage.py runserver 0:8080
 ```
@@ -47,5 +48,5 @@ kill -9 [PID]
 
 #### (가상환경 접속상태에서, 서버 가동 명령어 입력시 라이브러리 오류가 날 때)
 ```
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```

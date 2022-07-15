@@ -1,0 +1,76 @@
+{
+    "Allocation": "Randomized",
+    "CompleteTime": 36,
+    "DesignModel": "Crossover Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "metformin: 1000 mg/m2 one week(daily) po, placebo: 1000 mg/m2 one week(daily) po, ",
+                "ArmGroupLabel": "Group A (Crossover Group 1)",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "1000 mg/m2",
+                        "DrugName": "metformin",
+                        "Duration": "one week(daily)",
+                        "HowToTake": "po"
+                    },
+                    {
+                        "Dosage": "1000 mg/m2",
+                        "DrugName": "placebo",
+                        "Duration": "one week(daily)",
+                        "HowToTake": "po"
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: Metformin",
+                        "Drug: Placebo"
+                    ]
+                }
+            },
+            {
+                "ArmGroupDescription": "metformin: 1000 mg/m2 one week(daily) po, placebo: 1000 mg/m2 one week(daily) po, ",
+                "ArmGroupLabel": "Group B (Crossover Group 2)",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "1000 mg/m2",
+                        "DrugName": "metformin",
+                        "Duration": "one week(daily)",
+                        "HowToTake": "po"
+                    },
+                    {
+                        "Dosage": "1000 mg/m2",
+                        "DrugName": "placebo",
+                        "Duration": "one week(daily)",
+                        "HowToTake": "po"
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: Metformin",
+                        "Drug: Placebo"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "24",
+    "InterventionName": "metformin, Placebo",
+    "Masking": "Quadruple",
+    "NCTID": "NCT02040376",
+    "Objective": "Placebo Controlled Double Blind Crossover Trial of Metformin for Brain Repair in Children With Cranial-Spinal Radiation for Medulloblastoma",
+    "OfficialTitle": "Placebo Controlled Double Blind Crossover Trial of Metformin for Brain Repair in Children With Cranial-Spinal Radiation for Medulloblastoma",
+    "PopulationBox": {
+        "Condition": "Brain Tumor Treated With Cranial or Cranial-Spinal Radiation",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "21 Years",
+        "MinAge": "5 Years",
+        "Participant": "24"
+    },
+    "PopulationRatio": "",
+    "Title": "Placebo Controlled Double Blind Crossover Trial of Metformin for Brain Repair in Children With Cranial-Spinal Radiation for Medulloblastoma",
+    "WashoutPeriod": ""
+}

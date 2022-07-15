@@ -517,7 +517,7 @@ def visualization(info):
 def chartpage(fig):
 
   startInherit = "{% extends 'chartbase.html' %} \n {% load static %} \n {% block content %}\n"
-  styleLink = '<link rel="stylesheet" type="text/css" href="{% static \'css/details1.css\' %}">\n'
+  styleLink = '<link rel="stylesheet" type="text/css" href="{% static \'css/details.css\' %}">\n'
   # dtemplate2 = "{% endblock %}"
   styleStart='<div id="content">\n'
   elementTag1 = '<div id="element">\n'

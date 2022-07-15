@@ -1,6 +1,6 @@
 var handler = document.querySelector('.handler');
 var wrapper = handler.closest('#content');
-var boxA = wrapper.querySelector('#element'); // element #element <div id = "element">
+var boxA = wrapper.querySelectorAll('#element')[1]; // element #element <div id = "element">
 var isHandlerDragging = false;
 
 document.addEventListener('mousedown', function(e) {
@@ -22,11 +22,9 @@ document.addEventListener('mousemove', function(e) {
   // Get x-coordinate of pointer relative to container
   var pointerRelativeXpos = e.clientX - containerOffsetLeft;
   
-  // Arbitrary minimum width set on box A, otherwise its inner content will collapse to width of 0
-  var boxAminWidth = 30;
 
 
-  boxA.style.width = (Math.max(boxAminWidth, pointerRelativeXpos - 8)) + 'px';
+  boxA.style.width = pointerRelativeXpos - 8 + 'px';
   boxA.style.flexGrow = 0;
 });
 

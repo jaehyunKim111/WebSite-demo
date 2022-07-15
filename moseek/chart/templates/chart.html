@@ -1,0 +1,706 @@
+{% extends 'chartbase.html' %} 
+ {% load static %} 
+ {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/details.css' %}">
+<div id="content">
+<div id="element">
+<div id="graph">
+
+
+<style>
+
+</style>
+
+<div id="fig_el814826490192580323895326021"></div>
+<script>
+function mpld3_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
+   // already loaded: just create the figure
+   !function(mpld3){
+       
+       mpld3.draw_figure("fig_el814826490192580323895326021", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.566666666666666, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.566666666666666, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el81482649019268832", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649034930016", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649034931312", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035162048", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035163392", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035164736", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035166080", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035167424", "color": "#000000", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035168192", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 2, "yindex": 1, "coordinates": "data", "id": "el81482649035168912", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035327232", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el81482649019268928", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data08", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034924688", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data09", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el81482649034925888", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034932176", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data11", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035163056", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035164400", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035165744", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034920896"}, {"text": "Healthy, Male", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921664"}, {"text": "Gender: Male", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921616"}, {"text": "Healthy condition: Accepts Healthy Volunteers", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034922768"}, {"text": "minAge: 20 Years", "position": [10.1, 10.35], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923344"}, {"text": "maxAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923920"}, {"text": "N=42", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925312"}, {"text": "M=None ", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925936"}, {"text": "(Open ", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034926512"}, {"text": "Label)", "position": [14.3, 10.146666666666668], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034927088"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el81482649034927856"}, {"text": "Experimental", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034929632"}, {"text": "Active Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034930928"}, {"text": "syp-1512(1 tablet) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035169344"}, {"text": "(once daily)", "position": [18.0, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035168624"}, {"text": "syp-1512(1 tablet) ", "position": [21.166666666666668, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170400"}, {"text": "(once daily)", "position": [21.666666666666668, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170352"}, {"text": "revlimid cap(1 capsule) ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171552"}, {"text": "(once daily)", "position": [18.0, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171504"}, {"text": "revlimid cap(1 capsule) ", "position": [21.166666666666668, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172704"}, {"text": "(once daily)", "position": [21.666666666666668, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172656"}, {"text": "(once daily)", "position": [17.266666666666662, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035173808"}, {"text": "Washout", "position": [19.84, 9.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174384"}, {"text": "period", "position": [19.84, 9.629999999999999], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174960"}, {"text": "(once daily)", "position": [21.933333333333334, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176112"}, {"text": "Objective: Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176928"}, {"text": "Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035177504"}, {"text": "Title: Crossover Study to Compare Pharmacokinetic Property of ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325696"}, {"text": "SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035326272"}, {"text": "2 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325648"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328096"}, {"text": "Official Title: An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to ", "position": [10.0, 9.066666666666666], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328816"}, {"text": "Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male ", "position": [10.0, 8.966666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329392"}, {"text": "Volunteers", "position": [10.0, 8.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329968"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4], [17.4, 10.8, 10.0]], "data03": [[19.73333333333333, 10.8, 10.0], [21.066666666666666, 10.0, 10.8]], "data04": [[16.4, 9.6], [24.4, 9.6]], "data05": [[19.73333333333333, 9.5, 21.066666666666666], [19.73333333333333, 9.7, 21.066666666666666]], "data06": [[25.4, 9.6], [25.4, 11.2]], "data07": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data08": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data09": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data10": [[17.4, 10.805000000000001, 10.005, 21.066666666666666], [17.4, 10.795, 9.995, 21.066666666666666], [19.266666666666666, 10.795, 9.995, 22.933333333333334], [19.266666666666666, 10.785, 9.985, 22.933333333333334], [19.73333333333333, 10.8, 10.0, 23.4], [19.266666666666666, 10.815000000000001, 10.015, 22.933333333333334], [19.266666666666666, 10.805000000000001, 10.005, 22.933333333333334]], "data11": [[21.066666666666666, 10.005], [21.066666666666666, 9.995], [22.933333333333334, 9.995], [22.933333333333334, 9.985], [23.4, 10.0], [22.933333333333334, 10.015], [22.933333333333334, 10.005]]}, "id": "el81482649019258032", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+   }(mpld3);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/mpld3
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.8.js", function(){
+         
+         mpld3.draw_figure("fig_el814826490192580323895326021", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.566666666666666, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.566666666666666, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el81482649019268832", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649034930016", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649034931312", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035162048", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035163392", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035164736", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035166080", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035167424", "color": "#000000", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035168192", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 2, "yindex": 1, "coordinates": "data", "id": "el81482649035168912", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035327232", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el81482649019268928", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data08", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034924688", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data09", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el81482649034925888", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034932176", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data11", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035163056", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035164400", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035165744", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034920896"}, {"text": "Healthy, Male", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921664"}, {"text": "Gender: Male", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921616"}, {"text": "Healthy condition: Accepts Healthy Volunteers", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034922768"}, {"text": "minAge: 20 Years", "position": [10.1, 10.35], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923344"}, {"text": "maxAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923920"}, {"text": "N=42", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925312"}, {"text": "M=None ", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925936"}, {"text": "(Open ", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034926512"}, {"text": "Label)", "position": [14.3, 10.146666666666668], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034927088"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el81482649034927856"}, {"text": "Experimental", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034929632"}, {"text": "Active Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034930928"}, {"text": "syp-1512(1 tablet) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035169344"}, {"text": "(once daily)", "position": [18.0, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035168624"}, {"text": "syp-1512(1 tablet) ", "position": [21.166666666666668, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170400"}, {"text": "(once daily)", "position": [21.666666666666668, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170352"}, {"text": "revlimid cap(1 capsule) ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171552"}, {"text": "(once daily)", "position": [18.0, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171504"}, {"text": "revlimid cap(1 capsule) ", "position": [21.166666666666668, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172704"}, {"text": "(once daily)", "position": [21.666666666666668, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172656"}, {"text": "(once daily)", "position": [17.266666666666662, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035173808"}, {"text": "Washout", "position": [19.84, 9.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174384"}, {"text": "period", "position": [19.84, 9.629999999999999], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174960"}, {"text": "(once daily)", "position": [21.933333333333334, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176112"}, {"text": "Objective: Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176928"}, {"text": "Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035177504"}, {"text": "Title: Crossover Study to Compare Pharmacokinetic Property of ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325696"}, {"text": "SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035326272"}, {"text": "2 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325648"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328096"}, {"text": "Official Title: An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to ", "position": [10.0, 9.066666666666666], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328816"}, {"text": "Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male ", "position": [10.0, 8.966666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329392"}, {"text": "Volunteers", "position": [10.0, 8.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329968"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4], [17.4, 10.8, 10.0]], "data03": [[19.73333333333333, 10.8, 10.0], [21.066666666666666, 10.0, 10.8]], "data04": [[16.4, 9.6], [24.4, 9.6]], "data05": [[19.73333333333333, 9.5, 21.066666666666666], [19.73333333333333, 9.7, 21.066666666666666]], "data06": [[25.4, 9.6], [25.4, 11.2]], "data07": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data08": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data09": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data10": [[17.4, 10.805000000000001, 10.005, 21.066666666666666], [17.4, 10.795, 9.995, 21.066666666666666], [19.266666666666666, 10.795, 9.995, 22.933333333333334], [19.266666666666666, 10.785, 9.985, 22.933333333333334], [19.73333333333333, 10.8, 10.0, 23.4], [19.266666666666666, 10.815000000000001, 10.015, 22.933333333333334], [19.266666666666666, 10.805000000000001, 10.005, 22.933333333333334]], "data11": [[21.066666666666666, 10.005], [21.066666666666666, 9.995], [22.933333333333334, 9.995], [22.933333333333334, 9.985], [23.4, 10.0], [22.933333333333334, 10.015], [22.933333333333334, 10.005]]}, "id": "el81482649019258032", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & mpld3
+    mpld3_load_lib("https://d3js.org/d3.v5.js", function(){
+         mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.8.js", function(){
+                 
+                 mpld3.draw_figure("fig_el814826490192580323895326021", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.566666666666666, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.566666666666666, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el81482649019268832", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649034930016", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649034931312", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035162048", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035163392", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035164736", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035166080", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035167424", "color": "#000000", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035168192", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 2, "yindex": 1, "coordinates": "data", "id": "el81482649035168912", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035327232", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el81482649019268928", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data08", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034924688", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data09", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el81482649034925888", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034932176", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data11", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035163056", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035164400", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035165744", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034920896"}, {"text": "Healthy, Male", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921664"}, {"text": "Gender: Male", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921616"}, {"text": "Healthy condition: Accepts Healthy Volunteers", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034922768"}, {"text": "minAge: 20 Years", "position": [10.1, 10.35], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923344"}, {"text": "maxAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923920"}, {"text": "N=42", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925312"}, {"text": "M=None ", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925936"}, {"text": "(Open ", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034926512"}, {"text": "Label)", "position": [14.3, 10.146666666666668], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034927088"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el81482649034927856"}, {"text": "Experimental", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034929632"}, {"text": "Active Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034930928"}, {"text": "syp-1512(1 tablet) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035169344"}, {"text": "(once daily)", "position": [18.0, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035168624"}, {"text": "syp-1512(1 tablet) ", "position": [21.166666666666668, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170400"}, {"text": "(once daily)", "position": [21.666666666666668, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170352"}, {"text": "revlimid cap(1 capsule) ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171552"}, {"text": "(once daily)", "position": [18.0, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171504"}, {"text": "revlimid cap(1 capsule) ", "position": [21.166666666666668, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172704"}, {"text": "(once daily)", "position": [21.666666666666668, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172656"}, {"text": "(once daily)", "position": [17.266666666666662, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035173808"}, {"text": "Washout", "position": [19.84, 9.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174384"}, {"text": "period", "position": [19.84, 9.629999999999999], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174960"}, {"text": "(once daily)", "position": [21.933333333333334, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176112"}, {"text": "Objective: Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176928"}, {"text": "Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035177504"}, {"text": "Title: Crossover Study to Compare Pharmacokinetic Property of ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325696"}, {"text": "SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035326272"}, {"text": "2 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325648"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328096"}, {"text": "Official Title: An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to ", "position": [10.0, 9.066666666666666], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328816"}, {"text": "Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male ", "position": [10.0, 8.966666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329392"}, {"text": "Volunteers", "position": [10.0, 8.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329968"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4], [17.4, 10.8, 10.0]], "data03": [[19.73333333333333, 10.8, 10.0], [21.066666666666666, 10.0, 10.8]], "data04": [[16.4, 9.6], [24.4, 9.6]], "data05": [[19.73333333333333, 9.5, 21.066666666666666], [19.73333333333333, 9.7, 21.066666666666666]], "data06": [[25.4, 9.6], [25.4, 11.2]], "data07": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data08": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data09": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data10": [[17.4, 10.805000000000001, 10.005, 21.066666666666666], [17.4, 10.795, 9.995, 21.066666666666666], [19.266666666666666, 10.795, 9.995, 22.933333333333334], [19.266666666666666, 10.785, 9.985, 22.933333333333334], [19.73333333333333, 10.8, 10.0, 23.4], [19.266666666666666, 10.815000000000001, 10.015, 22.933333333333334], [19.266666666666666, 10.805000000000001, 10.005, 22.933333333333334]], "data11": [[21.066666666666666, 10.005], [21.066666666666666, 9.995], [22.933333333333334, 9.995], [22.933333333333334, 9.985], [23.4, 10.0], [22.933333333333334, 10.015], [22.933333333333334, 10.005]]}, "id": "el81482649019258032", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+            })
+         });
+}
+</script></div>
+</div>
+<div class="handler"></div>
+<link rel="stylesheet" href="../static/css/trial-record.css">
+
+<link rel="stylesheet" href="../static/css/w3-ct.css">
+
+<link rel="stylesheet" href="../static/css/print.css">
+<div id="element">
+<div id="trial">
+<div id="main-content" tabindex="-1">
+<div class="tr-indent2">
+<h1 class="tr-h1 ct-sans-serif tr-solo_record">Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers</h1>
+<div class="w3-row">
+<div class="w3-col m6"> <div class="usa-alert usa-alert-warning" style="clear:both;margin:2ex 2em;">
+<table>
+<tr>
+<td style="width:5%">
+<img alt="" src="/ct2/html/images/warning.png" style="width:1.3em;"/>
+</td>
+<td style="padding-right:2em;">
+              The safety and scientific validity of this study is the responsibility of the study sponsor and investigators. Listing a study does not mean it has been evaluated by the U.S. Federal Government.
+                            Read our <a href="/ct2/about-site/disclaimer">disclaimer</a> for details.
+            </td>
+</tr>
+</table>
+</div> </div>
+<!--
+  <div style="float:right;margin-right:4em">ClinicalTrials.gov Identifier: NCT03208218</div>
+-->
+<div class="w3-col m1"> </div>
+<div class="w3-col m5"> <table style="width:95%">
+<tr><td>ClinicalTrials.gov Identifier: NCT03208218</td>
+</tr>
+<tr><td>
+<div class="tr-status tr-not-recruiting-colors">
+<span class="term" data-term="Recruitment Status" style="display:inline;" title="Show definition">Recruitment Status <i aria-hidden="true" class="fa fa-info-circle term" data-term="Recruitment Status" style="border-bottom-style:none;"></i></span> : 
+                    Completed
+                  
+                
+  <div style="font-size:inherit">
+<span class="term" data-term="First Posted" style="display:inline;" title="Show definition">First Posted <i aria-hidden="true" class="fa fa-info-circle term" data-term="First Posted" style="border-bottom-style:none;"></i></span> : July 5, 2017</div>
+<div style="font-size:inherit">
+<span class="term" data-term="Last Update Posted" style="display:inline;" title="Show definition">Last Update Posted <i aria-hidden="true" class="fa fa-info-circle term" data-term="Last Update Posted" style="border-bottom-style:none;"></i></span> : July 6, 2017</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="tr-info-title">Sponsor:</div>
+<div class="tr-info-text" id="sponsor"> Samyang Biopharmaceuticals Corporation </div>
+<div class="tr-info-title">Collaborator:</div>
+<div class="tr-info-text" id="sponsor1">Chungnam National University Hospital</div>
+<div class="tr-info-title">Information provided by (Responsible Party):</div>
+<div class="tr-info-text" id="responsibleparty">Samyang Biopharmaceuticals Corporation</div>
+</div>
+<br/>
+<div id="tabs">
+<ul id="tab-links">
+<li class="current" id="full-text">Study Details     </li>
+<li id="tabular"><a href="/ct2/show/record/NCT03208218">Tabular View</a></li>
+<li id="results"><a href="/ct2/show/results/NCT03208218">No Results Posted</a></li>
+<li id="disclaimer"><a href="/ct2/about-site/disclaimer" onclick="openNewWindow('/ct2/about-site/disclaimer'); return false" title="Disclaimer - opens new window">Disclaimer</a></li>
+<li id="howtoread"><a href="/ct2/help/how-read-study" onclick="openNewWindow('/ct2/help/how-read-study'); return false" title="How to Read a Study Record - opens new window">How to Read a Study Record</a></li>
+</ul>
+</div> <!--
+<div style="background-color:#f6f6f6;margin-top:5.0ex;padding-bottom:1.5ex;"> </div>
+-->
+<div id="tab-body">
+<div class="tr-indent2" style="background-color:white;">
+<!-- purpose_section -->
+<div class="tr-indent1" style="margin-top:1ex">
+<div class="tr-subsection">
+<div class="ct-header2"><a id="studydesc"></a>Study Description</div>
+<div class="tr-underline"></div>
+<div class="tr-dropdown" style="padding-right:10em">
+Go to 
+<button class="tr-dropbtn" style="font-weight:bold; font-size:14px">
+<img alt="sections" src="/ct2/html/images/pulldown.png"/>
+</button>
+<div class="tr-dropdown-content">
+<a href="#wrapper">Top of Page</a>
+<a href="#studydesc">Study Description</a>
+<a href="#studydesign">Study Design</a>
+<!-- arms and groups table -->
+<a href="#armgroup">Arms and Interventions</a>
+<a href="#outcomemeasures">Outcome Measures</a>
+<a href="#eligibility">Eligibility Criteria</a>
+<a href="#contactlocation">Contacts and Locations</a>
+<a href="#moreinfo">More Information</a>
+</div>
+</div>
+</div>
+<div class="tr-indent2" style="margin-top:2ex">
+<div class="ct-body3">Brief Summary:</div>
+<div class="ct-body3 tr-indent2">The purpose of this study is to evaluate the pharmacokinetics equivalence and safety by comparing pharmacokinetics characteristics between the SYP-1512 Tab and Revlimid cap (25mg) when administered a single-dose to healthy male volunteers.</div><br/>
+<!-- condition, intervention, phase summary table -->
+<table border="1" class="ct-data_table tr-data_table" style="margin:auto;width:80%;">
+<tr style="text-align:left;">
+<th class="ct-header3 tr-pale_banner_color">
+<span class="term" data-term="Condition/disease" style="display:inline;" title="Show definition">Condition or disease <i aria-hidden="true" class="fa fa-info-circle term" data-term="Condition/disease" style="border-bottom-style:none;"></i></span> </th>
+<th class="ct-header3 tr-pale_banner_color">
+<span class="term" data-term="Intervention/treatment" style="display:inline;" title="Show definition">Intervention/treatment <i aria-hidden="true" class="fa fa-info-circle term" data-term="Intervention/treatment" style="border-bottom-style:none;"></i></span> </th>
+<th class="ct-header3 tr-pale_banner_color">
+<span class="term" data-term="Phase" style="display:inline;" title="Show definition">Phase <i aria-hidden="true" class="fa fa-info-circle term" data-term="Phase" style="border-bottom-style:none;"></i></span> </th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td class="ct-body3">
+<span style="display:block;margin-bottom:1ex;">Healthy, Male</span>
+</td>
+<td class="ct-body3">
+<span style="display:block;margin-bottom:1ex;">Drug: SYP-1512</span>
+<span style="display:block;margin-bottom:1ex;">Drug: Revlimid cap</span>
+</td>
+<td class="ct-body3" style="white-space:nowrap;">
+<span style="display:block;margin-bottom:1ex;">Phase 1</span>
+</td>
+</tr>
+</table>
+<br/>
+<a id="desc"></a>
+<!-- detailed description -->
+<div class="COLLAPSE" id="COLLAPSE-DetailedDesc" style="margin-bottom:2ex;">
+<div class="ct-body3"><a id="detaileddesc"></a>Detailed Description:</div>
+<div class="ct-body3 tr-indent2"><p style="margin-top:1ex; margin-bottom:1ex;">Healthy volunteers are administrated single-dose over the period I and II (crossover) of SYP-1512 Tab and Revlimid cap (25mg) as of lenalidomide 25mg.</p>
+<p style="margin-top:0ex; margin-bottom:1ex;">Every time before and after each medication, pharmacokinetic (PK) parameters and safety of SYP-1512 Tab and Revlimid cap (25mg) is performed using a blood sample and conducting some tests (vital signs, physical exam, ECG, laboratory test, etc.) respectively</p></div>
+</div>
+</div>
+<div class="tr-subsection">
+<div class="ct-header2"><a id="studydesign"></a>Study Design</div>
+<div class="tr-underline"></div>
+<div class="tr-dropdown" style="padding-right:10em">
+Go to 
+<button class="tr-dropbtn" style="font-weight:bold; font-size:14px">
+<img alt="sections" src="/ct2/html/images/pulldown.png"/>
+</button>
+<div class="tr-dropdown-content">
+<a href="#wrapper">Top of Page</a>
+<a href="#studydesc">Study Description</a>
+<a href="#studydesign">Study Design</a>
+<!-- arms and groups table -->
+<a href="#armgroup">Arms and Interventions</a>
+<a href="#outcomemeasures">Outcome Measures</a>
+<a href="#eligibility">Eligibility Criteria</a>
+<a href="#contactlocation">Contacts and Locations</a>
+<a href="#moreinfo">More Information</a>
+</div>
+</div>
+</div>
+<p>
+</p><table class="ct-layout_table tr-tableStyle tr-studyInfo" style="margin-bottom:2ex;">
+<caption>Layout table for study information</caption>
+<thead>
+<tr>
+<th id="studyInfoColTitle"></th>
+<th id="studyInfoColData"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td headers="studyInfoColTitle">
+<span class="term" data-term="Study Type" style="display:inline;" title="Show definition">Study Type <i aria-hidden="true" class="fa fa-info-circle term" data-term="Study Type" style="border-bottom-style:none;"></i></span> :</td>
+<td headers="studyInfoColData" style="padding-left:1em">
+        Interventional
+                 (Clinical Trial)
+                
+        
+      </td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">Actual
+<span class="term" data-term="Enrollment" style="display:inline;" title="Show definition">Enrollment <i aria-hidden="true" class="fa fa-info-circle term" data-term="Enrollment" style="border-bottom-style:none;"></i></span> :</td>
+<td headers="studyInfoColData" style="padding-left:1em">42 participants</td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">Allocation:</td>
+<td headers="studyInfoColData" style="padding-left:1em">Randomized</td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">Intervention Model:</td>
+<td headers="studyInfoColData" style="padding-left:1em">Crossover Assignment</td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">Masking:</td>
+<td headers="studyInfoColData" style="padding-left:1em"> None (Open Label)</td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">Primary Purpose:</td>
+<td headers="studyInfoColData" style="padding-left:1em"> Treatment</td>
+</tr>
+<tr>
+<!--
+      <td headers="studyInfoColTitle" style="padding-top:2ex;">Official Title:</td>
+-->
+<td headers="studyInfoColTitle">Official Title:</td>
+<td headers="studyInfoColData" style="padding-left:1em;">An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male Volunteers</td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">  Actual <span class="term" data-term="Study Start Date" style="display:inline;" title="Show definition">Study Start Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Study Start Date" style="border-bottom-style:none;"></i></span> :</td>
+<td headers="studyInfoColData" style="padding-left:1em">August 17, 2016</td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">  Actual <span class="term" data-term="Primary Completion Date" style="display:inline;" title="Show definition">Primary Completion Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Primary Completion Date" style="border-bottom-style:none;"></i></span> :</td>
+<td headers="studyInfoColData" style="padding-left:1em">August 25, 2016</td>
+</tr>
+<tr>
+<td headers="studyInfoColTitle">  Actual <span class="term" data-term="Study Completion Date" style="display:inline;" title="Show definition">Study Completion Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Study Completion Date" style="border-bottom-style:none;"></i></span> :</td>
+<td headers="studyInfoColData" style="padding-left:1em">October 31, 2016</td>
+</tr>
+</tbody>
+</table>
+<!-- NLM links -->
+<p>
+</p><div class="tr-indent2">
+<div class="usa-alert usa-alert-warning nlm-info">
+<strong>Resource links provided by the National Library of Medicine</strong>
+<img alt="" src="/ct2/html/images/NIH_NLM_ABRV_BLK_4.png" style="width:5em; float:right;"/>
+<p>
+</p><p>
+<!-- SIS links -->
+</p><div style="margin-bottom:2ex;">
+<a class="tr-study-link" href="https://druginfo.nlm.nih.gov/drugportal" onclick="openNewWindow('https://druginfo.nlm.nih.gov/drugportal'); return false" title="Drug Information Portal">Drug Information</a> available for:
+    	    	    	<a class="tr-study-link" href="https://druginfo.nlm.nih.gov/drugportal/name/Lenalidomide" onclick="openNewWindow('https://druginfo.nlm.nih.gov/drugportal/name/Lenalidomide'); return false" style="margin-left:0.5em;" title="Lenalidomide at Drug Information Portal">Lenalidomide</a>
+</div>
+<!-- Ropr Link -->
+<!-- Commented out RoPR
+  -->
+<div style="margin-bottom:2ex;">
+<a class="tr-study-link" href="/ct2/info/fdalinks" onclick="openNewWindow('/ct2/info/fdalinks'); return false" title="Show FDA resources page">U.S. FDA Resources</a>
+</div>
+</div>
+</div>
+<br/>
+</div>
+<!-- arms and groups table -->
+<div class="tr-subsection">
+<div class="ct-header2"><a id="armgroup"></a>Arms and Interventions</div>
+<div class="tr-underline"></div>
+<div class="tr-dropdown" style="padding-right:10em">
+Go to 
+<button class="tr-dropbtn" style="font-weight:bold; font-size:14px">
+<img alt="sections" src="/ct2/html/images/pulldown.png"/>
+</button>
+<div class="tr-dropdown-content">
+<a href="#wrapper">Top of Page</a>
+<a href="#studydesc">Study Description</a>
+<a href="#studydesign">Study Design</a>
+<!-- arms and groups table -->
+<a href="#armgroup">Arms and Interventions</a>
+<a href="#outcomemeasures">Outcome Measures</a>
+<a href="#eligibility">Eligibility Criteria</a>
+<a href="#contactlocation">Contacts and Locations</a>
+<a href="#moreinfo">More Information</a>
+</div>
+</div>
+</div>
+<div style="padding-left:.8em; padding-right:1.2em;text-align:left;">
+<p>
+</p><table class="ct-data_table tr-data_table" style="padding:5px;width:100%;border-width:1px;">
+<thead>
+<tr style="text-align:left;">
+<th class="ct-header3 tr-pale_banner_color" style="width:50%;">
+<span class="term" data-term="Arm" style="display:inline;" title="Show definition">Arm <i aria-hidden="true" class="fa fa-info-circle term" data-term="Arm" style="border-bottom-style:none;"></i></span> </th>
+<th class="ct-header3 tr-pale_banner_color">
+<span class="term" data-term="Intervention/treatment" style="display:inline;" title="Show definition">Intervention/treatment <i aria-hidden="true" class="fa fa-info-circle term" data-term="Intervention/treatment" style="border-bottom-style:none;"></i></span> </th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td class="ct-body3">
+          Experimental: SYP-1512
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/tablet, PO, 1 tablet once daily for I&amp;II D1(crossover)</div>
+</td>
+<td class="ct-body3">
+                      Drug: SYP-1512
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/tablet, PO, 1 tablet once daily for I&amp;II D1(crossover)</div>
+<div class="tr-indent2" style="margin-top:0.5ex">Other Name: Lenalidomide 25mg</div><br/>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td class="ct-body3">
+          Active Comparator: Revlimid cap.
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/capsule, po, 1 capsule once daily for period I&amp;II D1(crossover)</div>
+</td>
+<td class="ct-body3">
+                      Drug: Revlimid cap
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/capsule, po, 1 capsule once daily for period I&amp;II D1(crossover)</div>
+<div class="tr-indent2" style="margin-top:0.5ex">Other Name: Lenalidomide 25mg</div><br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+<!-- more details -->
+<br/>
+<div class="tr-subsection">
+<div class="ct-header2"><a id="outcomemeasures"></a>Outcome Measures</div>
+<div class="tr-underline"></div>
+<div class="tr-dropdown" style="padding-right:10em">
+Go to 
+<button class="tr-dropbtn" style="font-weight:bold; font-size:14px">
+<img alt="sections" src="/ct2/html/images/pulldown.png"/>
+</button>
+<div class="tr-dropdown-content">
+<a href="#wrapper">Top of Page</a>
+<a href="#studydesc">Study Description</a>
+<a href="#studydesign">Study Design</a>
+<!-- arms and groups table -->
+<a href="#armgroup">Arms and Interventions</a>
+<a href="#outcomemeasures">Outcome Measures</a>
+<a href="#eligibility">Eligibility Criteria</a>
+<a href="#contactlocation">Contacts and Locations</a>
+<a href="#moreinfo">More Information</a>
+</div>
+</div>
+</div>
+<br/>
+<div class="tr-indent3" style="margin-right:1em;">
+<!-- primary outcomes -->
+<div class="ct-body3">
+<span class="term" data-term="Primary Outcome Measure" style="display:inline;" title="Show definition">Primary Outcome Measures <i aria-hidden="true" class="fa fa-info-circle term" data-term="Primary Outcome Measure" style="border-bottom-style:none;"></i></span> :
+      <ol style="margin-top:1ex; margin-bottom:1ex;">
+<li style="margin-top:0.7ex;">Pharmacokinetics of the AUCt between SYP-1512 and Revlimid cap(25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the AUCt between SYP-1512 and Revlimid cap(25mg)</div><br/>
+</li><li style="margin-top:0.7ex;">Pharmacokinetics of the Cmax between SYP-1512 and Revlimid cap(25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the Cmax between SYP-1512 and Revlimid cap(25mg)</div><br/>
+</li></ol>
+</div>
+<br/>
+<!-- secondary outcomes -->
+<div class="ct-body3" style="margin-right:1em;">
+<span class="term" data-term="Secondary Outcome Measure" style="display:inline;" title="Show definition">Secondary Outcome Measures <i aria-hidden="true" class="fa fa-info-circle term" data-term="Secondary Outcome Measure" style="border-bottom-style:none;"></i></span> :
+      <ol style="margin-top:1ex; margin-bottom:1ex;">
+<li style="margin-top:0.7ex;">Pharmacokinetics of the AUCinf SYP-1512 and Revlimid cap (25mg) [ Time Frame: 0-inf ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the AUCinf SYP-1512 and Revlimid cap (25mg)</div><br/>
+</li><li style="margin-top:0.7ex;">Pharmacokinetics of the Tmax of SYP-1512 and Revlimid cap (25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the Tmax of SYP-1512 and Revlimid cap (25mg)</div><br/>
+</li><li style="margin-top:0.7ex;">Pharmacokinetics of the T1/2 of SYP-1512 and Revlimid cap (25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the T1/2 of SYP-1512 and Revlimid cap (25mg)</div><br/>
+</li></ol>
+</div>
+<br/>
+</div>
+<!-- eligibility_section -->
+<div class="tr-indent1" style="margin-top:3ex; border:1px solid white">
+<div class="tr-subsection">
+<div class="ct-header2"><a id="eligibility"></a>Eligibility Criteria</div>
+<div class="tr-underline"></div>
+<div class="tr-dropdown" style="padding-right:10em">
+Go to 
+<button class="tr-dropbtn" style="font-weight:bold; font-size:14px">
+<img alt="sections" src="/ct2/html/images/pulldown.png"/>
+</button>
+<div class="tr-dropdown-content">
+<a href="#wrapper">Top of Page</a>
+<a href="#studydesc">Study Description</a>
+<a href="#studydesign">Study Design</a>
+<!-- arms and groups table -->
+<a href="#armgroup">Arms and Interventions</a>
+<a href="#outcomemeasures">Outcome Measures</a>
+<a href="#eligibility">Eligibility Criteria</a>
+<a href="#contactlocation">Contacts and Locations</a>
+<a href="#moreinfo">More Information</a>
+</div>
+</div>
+</div>
+<br/>
+<p>
+</p><div class="tr-indent2 usa-alert usa-alert-warning nlm-info">
+<strong>Information from the National Library of Medicine</strong>
+<img alt="" src="/ct2/html/images/NIH_NLM_ABRV_BLK_4.png" style="width:5em; float:right;"/>
+<p>
+</p><p>
+<em>Choosing to participate in a study is an important personal decision. Talk with your doctor and family members or friends about deciding to join a study. To learn more about this study, you or your doctor may contact the study research staff using the contacts provided below. For general information, <a href="/ct2/about-studies/learn" title="Learn About Clinical Studies"><u>Learn About Clinical Studies.</u></a>
+</em>
+</p></div>
+<br/>
+<div class="tr-indent2">
+<table class="ct-layout_table tr-tableStyle tr-studyInfo">
+<caption>Layout table for eligibility information</caption>
+<thead>
+<tr>
+<th id="elgType"></th>
+<th id="elgData"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ct-nowrap" headers="elgType">Ages Eligible for Study:   </td>
+<td headers="elgData" style="padding-left:1em">20 Years to 50 Years   (Adult)</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="elgType">Sexes Eligible for Study:   </td>
+<td headers="elgData" style="padding-left:1em">Male</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="elgType">Accepts Healthy Volunteers:   </td>
+<td headers="elgData" style="padding-left:1em">Yes</td>
+</tr>
+</tbody>
+</table>
+<div class="ct-header3" style="margin-top:2ex">Criteria</div>
+<div class="tr-indent2"><p style="margin-top:1ex; margin-bottom:1ex;">Inclusion Criteria:</p>
+<ol style="margin-top:1ex; margin-bottom:1ex;">
+<li style="margin-top:0.7ex;">Over 20aged in healthy males</li>
+<li style="margin-top:0.7ex;">Those who do not have congenital or chronic diseases or pathological symptoms based on screening.</li>
+<li style="margin-top:0.7ex;">The person who is determined to be the subject of the clinical laboratory test results such as hematology test, blood chemistry test, urine test, etc. set by the person in charge of the examination of the medical institution</li>
+<li style="margin-top:0.7ex;">BMI : 18-30</li>
+<li style="margin-top:0.7ex;">Those who have not donated blood within 2 weeks</li>
+<li style="margin-top:0.7ex;">Those without a history of gastrointestinal resection</li>
+<li style="margin-top:0.7ex;">Those who have no history of mental illness within the last 5 years</li>
+<li style="margin-top:0.7ex;">Agreement with written informed consent</li>
+<li style="margin-top:0.7ex;">Anyone who can follow and follow all scheduled admission and outpatient visits, dosing, clinical laboratory testing and subject compliance</li>
+<li style="margin-top:0.7ex;">If the partner is a woman of childbearing age who does not use the appropriate method of contraception (even if the man has undergone a vasectomy), while taking lenalidomide, during the interruption, for consenting to use condoms for 28 days after the last dose</li>
+<li style="margin-top:0.7ex;">In the vital sign measured in a sitting position, the systolic blood pressure ≤145 mmHg and ≥100 mmHg, the diastolic blood pressure ≤95 mmHg and ≥60 mmHg, the pulse rate&gt; 40 and &lt;100 times / minute</li>
+<li style="margin-top:0.7ex;">Electrocardiogram (ECG) of the 12-electrode, QTc ≤ 450 msec</li>
+<li style="margin-top:0.7ex;">Those who have agreed not to donate blood or plasma and semen for at least 28 days after taking this drug</li>
+<li style="margin-top:0.7ex;">If the contraceptive is withdrawn due to contraception or partner's pregnancy confirmation during testing. Those who agree to respond to follow-up within 6 months after pregnancy and after delivery</li>
+</ol>
+<p style="margin-top:0ex; margin-bottom:1ex;">Exclusion Criteria:</p>
+<ol style="margin-top:1ex; margin-bottom:1ex;">
+<li style="margin-top:0.7ex;">Those taking drugs that significantly induce drug metabolizing enzymes within one month before screening (eg, barbiturate) or inhibit</li>
+<li style="margin-top:0.7ex;">Those taking medication that could affect the test within 10 days before screening</li>
+<li style="margin-top:0.7ex;">The person who is in charge of the examination of the medical institution (or the examining doctor who is delegated)</li>
+<li style="margin-top:0.7ex;">Those who have participated in the bioequivalence test or other clinical studies within 3 months prior to the administration of the test and administered the clinical trial drug</li>
+<li style="margin-top:0.7ex;">Persons with hypersensitivity to venous puncture</li>
+<li style="margin-top:0.7ex;">Screening Within the first 6 months, a person with a history of regular alcohol consumption as follows: 1 cup = 150 mL of wine or 360 mL of beer or 45 mL of distillate)</li>
+<li style="margin-top:0.7ex;">Patients with severe hepatic impairment</li>
+<li style="margin-top:0.7ex;">Patients who are hypersensitive to NSAIDs and other components of NSAID</li>
+<li style="margin-top:0.7ex;">Patients with genetic problems such as galactose intolerance, Lapp lactase deficiency or glucose-galactose malabsorption.</li>
+<li style="margin-top:0.7ex;">Patients with renal impairment (Cockcroft-Gault-type creatinine clearance &lt;50 mL / min)</li>
+<li style="margin-top:0.7ex;">Positive result of Serum test [RPR Ab (VDRL), HBsAg, HCV Ab, anti HIV (AIDS)]</li>
+</ol></div>
+</div>
+</div>
+<!-- location_section -->
+<a id="contacts"></a>
+<div class="tr-indent1" style="margin-top:3ex">
+<div class="tr-subsection">
+<div class="ct-header2"><a id="contactlocation"></a>Contacts and Locations</div>
+<div class="tr-underline"></div>
+<div class="tr-dropdown" style="padding-right:10em">
+Go to 
+<button class="tr-dropbtn" style="font-weight:bold; font-size:14px">
+<img alt="sections" src="/ct2/html/images/pulldown.png"/>
+</button>
+<div class="tr-dropdown-content">
+<a href="#wrapper">Top of Page</a>
+<a href="#studydesc">Study Description</a>
+<a href="#studydesign">Study Design</a>
+<!-- arms and groups table -->
+<a href="#armgroup">Arms and Interventions</a>
+<a href="#outcomemeasures">Outcome Measures</a>
+<a href="#eligibility">Eligibility Criteria</a>
+<a href="#contactlocation">Contacts and Locations</a>
+<a href="#moreinfo">More Information</a>
+</div>
+</div>
+</div>
+<br/>
+<div class="tr-indent2" style="margin-top:2ex">
+<!--
+Choosing to participate in a study is an important personal decision. Talk with your doctor and family members or friends about deciding to join a study. 
+To learn more about this study, you or your doctor may contact the study research staff using the Contacts provided below. 
+For general information, see <a href="/ct2/about-studies/learn" target="def_win" onClick="openNewWindow('/ct2/about-studies/learn'); return false;" title="Learn About Clinical Studies - opens new window"><u>Learn About Clinical Studies.</u></a>
+<br/>
+-->
+
+    No Contacts or Locations Provided
+
+  
+</div>
+</div>
+<!-- more_info_section -->
+<!-- Large docs section -->
+<!-- More info section -->
+<div class="tr-indent1" style="margin-top:3ex; border:1px solid white">
+<div class="tr-subsection">
+<div class="ct-header2"><a id="moreinfo"></a>More Information</div>
+<div class="tr-underline"></div>
+<div class="tr-dropdown" style="padding-right:10em">
+Go to 
+<button class="tr-dropbtn" style="font-weight:bold; font-size:14px">
+<img alt="sections" src="/ct2/html/images/pulldown.png"/>
+</button>
+<div class="tr-dropdown-content">
+<a href="#wrapper">Top of Page</a>
+<a href="#studydesc">Study Description</a>
+<a href="#studydesign">Study Design</a>
+<!-- arms and groups table -->
+<a href="#armgroup">Arms and Interventions</a>
+<a href="#outcomemeasures">Outcome Measures</a>
+<a href="#eligibility">Eligibility Criteria</a>
+<a href="#contactlocation">Contacts and Locations</a>
+<a href="#moreinfo">More Information</a>
+</div>
+</div>
+</div>
+<div class="tr-indent2" style="margin-top:1em;">
+<!-- Additional Information -->
+<!-- Available Study Data/Document -->
+<!-- References -->
+<!-- Derived References -->
+<table class="ct-layout_table tr-tableStyle tr-moreInfo" style="margin-top:1ex;">
+<caption>Layout table for additonal information</caption>
+<thead>
+<tr>
+<th id="colTitle1"></th>
+<th id="colData1"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ct-nowrap" headers="colTitle1">Responsible Party:</td>
+<td headers="colData1" style="padding-left:1em">Samyang Biopharmaceuticals Corporation</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="colTitle1">ClinicalTrials.gov Identifier:</td>
+<td headers="colData1" style="padding-left:1em">
+<a class="tr-study-link" href="https://clinicaltrials.gov/show/NCT03208218" title="Current version of study NCT03208218 on ClinicalTrials.gov">NCT03208218</a>    
+
+  <script type="text/javascript">
+    <!--
+    // Scramble access to archive site -
+    // don't want crawlers directing users to outdated versions of the study
+    // this should be opaque to crawlers that don't execute javascript
+    var yyy=new Array(
+      ['<','a clas','s="tr-study','-link c', 't-now','rap" t','itle="Hist','orical vers','ions of '],
+      ['study ','NCT03208218',' on Clin','icalTrials.','go'],
+      ['v Ar','chive',' Sit','e" ','onc','lick="','openN','ewWin', 'dow(','\'/ct2/', 'history/'],
+      ['NCT03208218','\'); return', ' false;" '],
+      ['href','="/ct2/','history/','NCT03208218"','>'],
+      ['Histo','ry of C','hange','s<','/','a>']);
+    var i=0;
+    var j=0;
+    var xxx='';
+    for (i=0; i<yyy.length; i++)
+      for (j=0; j<yyy[i].length; j++)
+        xxx+=yyy[i][j];
+    document.write(xxx)
+    -->
+  </script>
+</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="colTitle1">Other Study ID Numbers:</td>
+<td headers="colData1" style="padding-left:1em">
+                                    BIBE2016-02 <br/>
+</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="colTitle1">First Posted:</td>
+<td headers="colData1" style="padding-left:1em">July 5, 2017
+            
+          <a class="tr-study-link ct-nowrap" href="/ct2/keydates/NCT03208218" onclick="openNewWindow('/ct2/keydates/NCT03208218'); return false;" title="View key record dates for NCT03208218">Key Record Dates</a>
+</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="colTitle1">Last Update Posted:</td>
+<td headers="colData1" style="padding-left:1em">July 6, 2017
+      </td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="colTitle1">Last Verified:</td>
+<td headers="colData1" style="padding-left:1em">July 2017
+      </td>
+</tr>
+<!-- Plan to Share Data -->
+<tr>
+<td class="ct-nowrap" colspan="2" headers="colTitle1" style="padding-top:3ex;">Individual Participant Data (IPD) Sharing Statement:</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="colTitle1" style="padding-left:1em;">Plan to Share IPD:</td>
+<td headers="colData1" style="padding-left:1em">No</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<table class="ct-layout_table tr-tableStyle tr-moreInfo" style="margin-top:1ex">
+<caption>Layout table for additional information</caption>
+<thead>
+<tr>
+<th id="colTitle2"></th>
+<th id="colData2"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ct-nowrap" headers="colTitle2">Studies a U.S. FDA-regulated Drug Product:</td>
+<td headers="colData2" style="padding-left:1em">No</td>
+</tr>
+<tr>
+<td class="ct-nowrap" headers="colTitle2">Studies a U.S. FDA-regulated Device Product:</td>
+<td headers="colData2" style="padding-left:1em">No</td>
+</tr>
+</tbody>
+</table>
+<!-- keywords -->
+<div class="tr-tableLabel">Keywords provided by Samyang Biopharmaceuticals Corporation:</div>
+<div class="tr-indent3">
+<table class="ct-layout_table tr-moreInfo" style="width:100%;">
+<thead>
+<tr>
+<th id="keywordCol1" style="width:50%;"></th>
+<th id="keywordCol2" style="width:50%;"></th>
+</tr>
+</thead>
+<tr>
+<td headers="keywordCol1" style="padding-left:1em;">
+    	              	          Evaluation of the pharmacokinetics equivalence<br/>
+    	              	          Healthy volunteers<br/>
+    	              	          Single dose over the period I and II(crossover)<br/>
+    	              	          Healthy male volunteers<br/>
+</td>
+<td></td>
+</tr>
+</table>
+</div>
+<!-- mesh terms -->
+<div class="tr-tableLabel">Additional relevant MeSH terms:</div>
+<div class="tr-indent3">
+<table class="ct-layout_table tr-meshTerms" style="width:100%;">
+<caption>Layout table for MeSH terms</caption>
+<thead>
+<tr>
+<th id="meshTermCol1" style="width:50%;"></th>
+<th id="meshTermCol2"></th>
+</tr>
+</thead>
+<tr>
+<td headers="meshTermCol1" style="padding-left:1em;">
+                            Lenalidomide<br/>
+                            Immunologic Factors<br/>
+                            Physiological Effects of Drugs<br/>
+                            Angiogenesis Inhibitors<br/>
+</td>
+<td headers="meshTermCol1" style="padding-left:1em;">
+                            Angiogenesis Modulating Agents<br/>
+                            Growth Substances<br/>
+                            Growth Inhibitors<br/>
+                            Antineoplastic Agents<br/>
+</td>
+</tr>
+</table>
+</div>
+<br/>
+<!--
+        <span class="ct-body3">ClinicalTrials.gov processed this record on July 14, 2022</span><br/>
+      -->
+<br/>
+</div>
+</div>
+<div id="to-top"><a href="#wrapper">To Top</a></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<script src="{% static 'js/resize.js' %}"></script>{% endblock %}

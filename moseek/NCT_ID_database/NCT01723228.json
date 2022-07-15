@@ -1,0 +1,62 @@
+{
+    "Allocation": "Randomized",
+    "CompleteTime": 36,
+    "DesignModel": "Parallel Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "rasagiline: 1 mg for 24 weeks(once daily) , ",
+                "ArmGroupLabel": "Rasagiline 1.0 mg/day",
+                "ArmGroupType": "Experimental",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "1 mg",
+                        "DrugName": "rasagiline",
+                        "Duration": "for 24 weeks(once daily)",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: Rasagiline"
+                    ]
+                }
+            },
+            {
+                "ArmGroupDescription": "placebo:   , ",
+                "ArmGroupLabel": "Placebo",
+                "ArmGroupType": "Placebo Comparator",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "placebo",
+                        "Duration": "",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: Placebo"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "170",
+    "InterventionName": "Placebo",
+    "Masking": "Double",
+    "NCTID": "NCT01723228",
+    "Objective": "Parallel-Group Study to Assess the Effect of Rasagiline on Cognition in Patients With Parkinson's Disease",
+    "OfficialTitle": "A 24-Week, Multicenter, Randomized, Double-blind, Placebo-Controlled, Add-on, Parallel-Group Study to Assess the Effect of Rasagiline on Cognition in Patients With Parkinson's Disease",
+    "PopulationBox": {
+        "Condition": "Parkinson's Disease",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "80 Years",
+        "MinAge": "45 Years",
+        "Participant": "170"
+    },
+    "PopulationRatio": "",
+    "Title": "Parallel-Group Study to Assess the Effect of Rasagiline on Cognition in Patients With Parkinson's Disease",
+    "WashoutPeriod": ""
+}

@@ -1,8 +1,9 @@
 {% extends 'chartbase.html' %} 
  {% load static %} 
  {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/details1.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/details.css' %}">
 <div id="content">
+<div id="element">
 <div id="graph">
 
 
@@ -10,7 +11,7 @@
 
 </style>
 
-<div id="fig_el284971406677086246082120506977"></div>
+<div id="fig_el814826490192580323895326021"></div>
 <script>
 function mpld3_load_lib(url, callback){
   var s = document.createElement('script');
@@ -25,7 +26,7 @@ if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
    // already loaded: just create the figure
    !function(mpld3){
        
-       mpld3.draw_figure("fig_el284971406677086246082120506977", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.466666666666667, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.466666666666667, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el28497140667707467328", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707939664", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el28497140667707534544", "color": "#32CD32", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707533584", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el28497140667707533536", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 3, "coordinates": "data", "id": "el28497140667707289072", "color": "#32CD32", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707877840", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el28497140667707467136", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707613968", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el28497140667707613536", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707940384", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707531664", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 3, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707285664", "dasharray": "none", "alpha": 1, "facecolor": "#32CD32", "edgecolor": "#32CD32", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708294000"}, {"text": "Mild to Moderate ", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708358864"}, {"text": "Alzheimer's Disease", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708361408"}, {"text": "Gender: All", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708360064"}, {"text": "Healthy condition: No", "position": [10.1, 10.350000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614160"}, {"text": "minAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707616896"}, {"text": "maxAge: 85 Years", "position": [10.1, 10.15], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707616224"}, {"text": "N=144", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614016"}, {"text": "M=Quadrupl", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614640"}, {"text": "e", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707940576"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el28497140667707939376"}, {"text": "1.0 : 1.0 : 1.0", "position": [16.0, 10.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707937840"}, {"text": "Active Comparator", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707939856"}, {"text": "Placebo Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707535168"}, {"text": "ct1812(100 mg) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707287008"}, {"text": "6 months(once daily)", "position": [24.2, 10.690000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707532336"}, {"text": "ct1812(300 mg) ", "position": [17.5, 10.48], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707699888"}, {"text": "6 months(once daily)", "position": [24.2, 10.290000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707699264"}, {"text": "placebo() ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707703152"}, {"text": "182 days", "position": [24.2, 9.89], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707700560"}, {"text": "Objective: A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707877360"}, {"text": "Moderate Alzheimer's Disease.", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707876688"}, {"text": "Title: A Study to Evaluate the Safety and Efficacy of CT1812 in ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707878704"}, {"text": "Subjects With Mild to Moderate Alzheimer's Disease.", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707879376"}, {"text": "60 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707876832"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707879088"}, {"text": "Official Title: A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Phase 2 ", "position": [10.0, 8.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707910992"}, {"text": "Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate ", "position": [10.0, 8.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707910848"}, {"text": "Alzheimer's Disease.", "position": [10.0, 8.600000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707908352"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4, 10.4], [17.4, 10.8, 10.4, 10.0]], "data03": [[25.4, 9.6], [25.4, 11.2]], "data04": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data05": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data06": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data07": [[17.4, 10.805000000000001, 10.405000000000001, 10.005], [17.4, 10.795, 10.395, 9.995], [23.0, 10.795, 10.395, 9.995], [23.0, 10.785, 10.385, 9.985], [24.4, 10.8, 10.4, 10.0], [23.0, 10.815000000000001, 10.415000000000001, 10.015], [23.0, 10.805000000000001, 10.405000000000001, 10.005]]}, "id": "el28497140667708624608", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+       mpld3.draw_figure("fig_el814826490192580323895326021", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.566666666666666, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.566666666666666, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el81482649019268832", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649034930016", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649034931312", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035162048", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035163392", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035164736", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035166080", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035167424", "color": "#000000", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035168192", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 2, "yindex": 1, "coordinates": "data", "id": "el81482649035168912", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035327232", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el81482649019268928", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data08", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034924688", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data09", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el81482649034925888", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034932176", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data11", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035163056", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035164400", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035165744", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034920896"}, {"text": "Healthy, Male", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921664"}, {"text": "Gender: Male", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921616"}, {"text": "Healthy condition: Accepts Healthy Volunteers", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034922768"}, {"text": "minAge: 20 Years", "position": [10.1, 10.35], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923344"}, {"text": "maxAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923920"}, {"text": "N=42", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925312"}, {"text": "M=None ", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925936"}, {"text": "(Open ", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034926512"}, {"text": "Label)", "position": [14.3, 10.146666666666668], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034927088"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el81482649034927856"}, {"text": "Experimental", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034929632"}, {"text": "Active Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034930928"}, {"text": "syp-1512(1 tablet) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035169344"}, {"text": "(once daily)", "position": [18.0, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035168624"}, {"text": "syp-1512(1 tablet) ", "position": [21.166666666666668, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170400"}, {"text": "(once daily)", "position": [21.666666666666668, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170352"}, {"text": "revlimid cap(1 capsule) ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171552"}, {"text": "(once daily)", "position": [18.0, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171504"}, {"text": "revlimid cap(1 capsule) ", "position": [21.166666666666668, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172704"}, {"text": "(once daily)", "position": [21.666666666666668, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172656"}, {"text": "(once daily)", "position": [17.266666666666662, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035173808"}, {"text": "Washout", "position": [19.84, 9.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174384"}, {"text": "period", "position": [19.84, 9.629999999999999], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174960"}, {"text": "(once daily)", "position": [21.933333333333334, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176112"}, {"text": "Objective: Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176928"}, {"text": "Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035177504"}, {"text": "Title: Crossover Study to Compare Pharmacokinetic Property of ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325696"}, {"text": "SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035326272"}, {"text": "2 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325648"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328096"}, {"text": "Official Title: An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to ", "position": [10.0, 9.066666666666666], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328816"}, {"text": "Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male ", "position": [10.0, 8.966666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329392"}, {"text": "Volunteers", "position": [10.0, 8.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329968"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4], [17.4, 10.8, 10.0]], "data03": [[19.73333333333333, 10.8, 10.0], [21.066666666666666, 10.0, 10.8]], "data04": [[16.4, 9.6], [24.4, 9.6]], "data05": [[19.73333333333333, 9.5, 21.066666666666666], [19.73333333333333, 9.7, 21.066666666666666]], "data06": [[25.4, 9.6], [25.4, 11.2]], "data07": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data08": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data09": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data10": [[17.4, 10.805000000000001, 10.005, 21.066666666666666], [17.4, 10.795, 9.995, 21.066666666666666], [19.266666666666666, 10.795, 9.995, 22.933333333333334], [19.266666666666666, 10.785, 9.985, 22.933333333333334], [19.73333333333333, 10.8, 10.0, 23.4], [19.266666666666666, 10.815000000000001, 10.015, 22.933333333333334], [19.266666666666666, 10.805000000000001, 10.005, 22.933333333333334]], "data11": [[21.066666666666666, 10.005], [21.066666666666666, 9.995], [22.933333333333334, 9.995], [22.933333333333334, 9.985], [23.4, 10.0], [22.933333333333334, 10.015], [22.933333333333334, 10.005]]}, "id": "el81482649019258032", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
    }(mpld3);
 }else if(typeof define === "function" && define.amd){
    // require.js is available: use it to load d3/mpld3
@@ -34,7 +35,7 @@ if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
       window.d3 = d3;
       mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.8.js", function(){
          
-         mpld3.draw_figure("fig_el284971406677086246082120506977", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.466666666666667, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.466666666666667, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el28497140667707467328", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707939664", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el28497140667707534544", "color": "#32CD32", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707533584", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el28497140667707533536", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 3, "coordinates": "data", "id": "el28497140667707289072", "color": "#32CD32", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707877840", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el28497140667707467136", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707613968", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el28497140667707613536", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707940384", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707531664", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 3, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707285664", "dasharray": "none", "alpha": 1, "facecolor": "#32CD32", "edgecolor": "#32CD32", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708294000"}, {"text": "Mild to Moderate ", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708358864"}, {"text": "Alzheimer's Disease", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708361408"}, {"text": "Gender: All", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708360064"}, {"text": "Healthy condition: No", "position": [10.1, 10.350000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614160"}, {"text": "minAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707616896"}, {"text": "maxAge: 85 Years", "position": [10.1, 10.15], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707616224"}, {"text": "N=144", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614016"}, {"text": "M=Quadrupl", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614640"}, {"text": "e", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707940576"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el28497140667707939376"}, {"text": "1.0 : 1.0 : 1.0", "position": [16.0, 10.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707937840"}, {"text": "Active Comparator", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707939856"}, {"text": "Placebo Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707535168"}, {"text": "ct1812(100 mg) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707287008"}, {"text": "6 months(once daily)", "position": [24.2, 10.690000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707532336"}, {"text": "ct1812(300 mg) ", "position": [17.5, 10.48], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707699888"}, {"text": "6 months(once daily)", "position": [24.2, 10.290000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707699264"}, {"text": "placebo() ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707703152"}, {"text": "182 days", "position": [24.2, 9.89], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707700560"}, {"text": "Objective: A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707877360"}, {"text": "Moderate Alzheimer's Disease.", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707876688"}, {"text": "Title: A Study to Evaluate the Safety and Efficacy of CT1812 in ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707878704"}, {"text": "Subjects With Mild to Moderate Alzheimer's Disease.", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707879376"}, {"text": "60 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707876832"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707879088"}, {"text": "Official Title: A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Phase 2 ", "position": [10.0, 8.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707910992"}, {"text": "Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate ", "position": [10.0, 8.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707910848"}, {"text": "Alzheimer's Disease.", "position": [10.0, 8.600000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707908352"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4, 10.4], [17.4, 10.8, 10.4, 10.0]], "data03": [[25.4, 9.6], [25.4, 11.2]], "data04": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data05": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data06": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data07": [[17.4, 10.805000000000001, 10.405000000000001, 10.005], [17.4, 10.795, 10.395, 9.995], [23.0, 10.795, 10.395, 9.995], [23.0, 10.785, 10.385, 9.985], [24.4, 10.8, 10.4, 10.0], [23.0, 10.815000000000001, 10.415000000000001, 10.015], [23.0, 10.805000000000001, 10.405000000000001, 10.005]]}, "id": "el28497140667708624608", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+         mpld3.draw_figure("fig_el814826490192580323895326021", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.566666666666666, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.566666666666666, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el81482649019268832", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649034930016", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649034931312", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035162048", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035163392", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035164736", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035166080", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035167424", "color": "#000000", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035168192", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 2, "yindex": 1, "coordinates": "data", "id": "el81482649035168912", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035327232", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el81482649019268928", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data08", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034924688", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data09", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el81482649034925888", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034932176", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data11", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035163056", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035164400", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035165744", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034920896"}, {"text": "Healthy, Male", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921664"}, {"text": "Gender: Male", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921616"}, {"text": "Healthy condition: Accepts Healthy Volunteers", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034922768"}, {"text": "minAge: 20 Years", "position": [10.1, 10.35], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923344"}, {"text": "maxAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923920"}, {"text": "N=42", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925312"}, {"text": "M=None ", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925936"}, {"text": "(Open ", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034926512"}, {"text": "Label)", "position": [14.3, 10.146666666666668], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034927088"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el81482649034927856"}, {"text": "Experimental", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034929632"}, {"text": "Active Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034930928"}, {"text": "syp-1512(1 tablet) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035169344"}, {"text": "(once daily)", "position": [18.0, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035168624"}, {"text": "syp-1512(1 tablet) ", "position": [21.166666666666668, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170400"}, {"text": "(once daily)", "position": [21.666666666666668, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170352"}, {"text": "revlimid cap(1 capsule) ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171552"}, {"text": "(once daily)", "position": [18.0, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171504"}, {"text": "revlimid cap(1 capsule) ", "position": [21.166666666666668, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172704"}, {"text": "(once daily)", "position": [21.666666666666668, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172656"}, {"text": "(once daily)", "position": [17.266666666666662, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035173808"}, {"text": "Washout", "position": [19.84, 9.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174384"}, {"text": "period", "position": [19.84, 9.629999999999999], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174960"}, {"text": "(once daily)", "position": [21.933333333333334, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176112"}, {"text": "Objective: Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176928"}, {"text": "Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035177504"}, {"text": "Title: Crossover Study to Compare Pharmacokinetic Property of ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325696"}, {"text": "SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035326272"}, {"text": "2 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325648"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328096"}, {"text": "Official Title: An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to ", "position": [10.0, 9.066666666666666], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328816"}, {"text": "Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male ", "position": [10.0, 8.966666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329392"}, {"text": "Volunteers", "position": [10.0, 8.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329968"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4], [17.4, 10.8, 10.0]], "data03": [[19.73333333333333, 10.8, 10.0], [21.066666666666666, 10.0, 10.8]], "data04": [[16.4, 9.6], [24.4, 9.6]], "data05": [[19.73333333333333, 9.5, 21.066666666666666], [19.73333333333333, 9.7, 21.066666666666666]], "data06": [[25.4, 9.6], [25.4, 11.2]], "data07": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data08": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data09": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data10": [[17.4, 10.805000000000001, 10.005, 21.066666666666666], [17.4, 10.795, 9.995, 21.066666666666666], [19.266666666666666, 10.795, 9.995, 22.933333333333334], [19.266666666666666, 10.785, 9.985, 22.933333333333334], [19.73333333333333, 10.8, 10.0, 23.4], [19.266666666666666, 10.815000000000001, 10.015, 22.933333333333334], [19.266666666666666, 10.805000000000001, 10.005, 22.933333333333334]], "data11": [[21.066666666666666, 10.005], [21.066666666666666, 9.995], [22.933333333333334, 9.995], [22.933333333333334, 9.985], [23.4, 10.0], [22.933333333333334, 10.015], [22.933333333333334, 10.005]]}, "id": "el81482649019258032", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
       });
     });
 }else{
@@ -42,20 +43,23 @@ if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
     mpld3_load_lib("https://d3js.org/d3.v5.js", function(){
          mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.8.js", function(){
                  
-                 mpld3.draw_figure("fig_el284971406677086246082120506977", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.466666666666667, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.466666666666667, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el28497140667707467328", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707939664", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el28497140667707534544", "color": "#32CD32", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707533584", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el28497140667707533536", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 3, "coordinates": "data", "id": "el28497140667707289072", "color": "#32CD32", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el28497140667707877840", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el28497140667707467136", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707613968", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el28497140667707613536", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707940384", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707531664", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data07", "xindex": 0, "yindex": 3, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el28497140667707285664", "dasharray": "none", "alpha": 1, "facecolor": "#32CD32", "edgecolor": "#32CD32", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708294000"}, {"text": "Mild to Moderate ", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708358864"}, {"text": "Alzheimer's Disease", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708361408"}, {"text": "Gender: All", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667708360064"}, {"text": "Healthy condition: No", "position": [10.1, 10.350000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614160"}, {"text": "minAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707616896"}, {"text": "maxAge: 85 Years", "position": [10.1, 10.15], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707616224"}, {"text": "N=144", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614016"}, {"text": "M=Quadrupl", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707614640"}, {"text": "e", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707940576"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el28497140667707939376"}, {"text": "1.0 : 1.0 : 1.0", "position": [16.0, 10.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707937840"}, {"text": "Active Comparator", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707939856"}, {"text": "Placebo Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707535168"}, {"text": "ct1812(100 mg) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707287008"}, {"text": "6 months(once daily)", "position": [24.2, 10.690000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707532336"}, {"text": "ct1812(300 mg) ", "position": [17.5, 10.48], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707699888"}, {"text": "6 months(once daily)", "position": [24.2, 10.290000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707699264"}, {"text": "placebo() ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707703152"}, {"text": "182 days", "position": [24.2, 9.89], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707700560"}, {"text": "Objective: A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707877360"}, {"text": "Moderate Alzheimer's Disease.", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707876688"}, {"text": "Title: A Study to Evaluate the Safety and Efficacy of CT1812 in ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707878704"}, {"text": "Subjects With Mild to Moderate Alzheimer's Disease.", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707879376"}, {"text": "60 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707876832"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707879088"}, {"text": "Official Title: A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Phase 2 ", "position": [10.0, 8.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707910992"}, {"text": "Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate ", "position": [10.0, 8.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707910848"}, {"text": "Alzheimer's Disease.", "position": [10.0, 8.600000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el28497140667707908352"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4, 10.4], [17.4, 10.8, 10.4, 10.0]], "data03": [[25.4, 9.6], [25.4, 11.2]], "data04": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data05": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data06": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data07": [[17.4, 10.805000000000001, 10.405000000000001, 10.005], [17.4, 10.795, 10.395, 9.995], [23.0, 10.795, 10.395, 9.995], [23.0, 10.785, 10.385, 9.985], [24.4, 10.8, 10.4, 10.0], [23.0, 10.815000000000001, 10.415000000000001, 10.015], [23.0, 10.805000000000001, 10.405000000000001, 10.005]]}, "id": "el28497140667708624608", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+                 mpld3.draw_figure("fig_el814826490192580323895326021", {"width": 1200.0, "height": 800.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [8.0, 26.0], "ylim": [8.566666666666666, 12.799999999999999], "xdomain": [8.0, 26.0], "ydomain": [8.566666666666666, 12.799999999999999], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 0, "tickvalues": [], "tickformat_formatter": "", "tickformat": "", "scale": "linear", "fontsize": null, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el81482649019268832", "lines": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649034930016", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data01", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649034931312", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035162048", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035163392", "color": "#F08080", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data02", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035164736", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data03", "xindex": 0, "yindex": 2, "coordinates": "data", "id": "el81482649035166080", "color": "#FFD700", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data04", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035167424", "color": "#000000", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035168192", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data05", "xindex": 2, "yindex": 1, "coordinates": "data", "id": "el81482649035168912", "color": "#FFC0CB", "linewidth": 1.5, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}, {"data": "data06", "xindex": 0, "yindex": 1, "coordinates": "data", "id": "el81482649035327232", "color": "#000000", "linewidth": 1.0, "dasharray": "none", "alpha": 1, "zorder": 2, "drawstyle": "default"}], "paths": [{"data": "data07", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el81482649019268928", "dasharray": "none", "alpha": 1, "facecolor": "none", "edgecolor": "#0000FF", "edgewidth": 1.0, "zorder": 1}, {"data": "data08", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034924688", "dasharray": "none", "alpha": 1, "facecolor": "#1F77B4", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data09", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "C", "C", "C", "C", "C", "C", "C", "C", "Z"], "id": "el81482649034925888", "dasharray": "none", "alpha": 1, "facecolor": "#808080", "edgecolor": "#808080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649034932176", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data11", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035163056", "dasharray": "none", "alpha": 1, "facecolor": "#F08080", "edgecolor": "#F08080", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 0, "yindex": 2, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035164400", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}, {"data": "data10", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "L", "L", "L", "Z"], "id": "el81482649035165744", "dasharray": "none", "alpha": 1, "facecolor": "#FFD700", "edgecolor": "#FFD700", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Population", "position": [11.0, 10.8], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034920896"}, {"text": "Healthy, Male", "position": [10.1, 10.65], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921664"}, {"text": "Gender: Male", "position": [10.1, 10.55], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034921616"}, {"text": "Healthy condition: Accepts Healthy Volunteers", "position": [10.1, 10.450000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034922768"}, {"text": "minAge: 20 Years", "position": [10.1, 10.35], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923344"}, {"text": "maxAge: 50 Years", "position": [10.1, 10.25], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034923920"}, {"text": "N=42", "position": [14.3, 10.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925312"}, {"text": "M=None ", "position": [14.3, 10.266666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034925936"}, {"text": "(Open ", "position": [14.3, 10.206666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034926512"}, {"text": "Label)", "position": [14.3, 10.146666666666668], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034927088"}, {"text": "R", "position": [16.099999999999998, 10.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#FFFFFF", "alpha": 1, "zorder": 3, "id": "el81482649034927856"}, {"text": "Experimental", "position": [11.1, 9.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034929632"}, {"text": "Active Comparator", "position": [11.1, 9.766666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649034930928"}, {"text": "syp-1512(1 tablet) ", "position": [17.5, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035169344"}, {"text": "(once daily)", "position": [18.0, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035168624"}, {"text": "syp-1512(1 tablet) ", "position": [21.166666666666668, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170400"}, {"text": "(once daily)", "position": [21.666666666666668, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035170352"}, {"text": "revlimid cap(1 capsule) ", "position": [17.5, 10.08], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171552"}, {"text": "(once daily)", "position": [18.0, 9.9], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035171504"}, {"text": "revlimid cap(1 capsule) ", "position": [21.166666666666668, 10.88], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172704"}, {"text": "(once daily)", "position": [21.666666666666668, 10.700000000000001], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035172656"}, {"text": "(once daily)", "position": [17.266666666666662, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035173808"}, {"text": "Washout", "position": [19.84, 9.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174384"}, {"text": "period", "position": [19.84, 9.629999999999999], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035174960"}, {"text": "(once daily)", "position": [21.933333333333334, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 13.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176112"}, {"text": "Objective: Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and ", "position": [10.0, 11.7], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035176928"}, {"text": "Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.6], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035177504"}, {"text": "Title: Crossover Study to Compare Pharmacokinetic Property of ", "position": [10.0, 12.04], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325696"}, {"text": "SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers", "position": [10.0, 11.92], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 20.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035326272"}, {"text": "2 months", "position": [24.9, 9.5], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035325648"}, {"text": "required to complete", "position": [24.4, 9.4], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328096"}, {"text": "Official Title: An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to ", "position": [10.0, 9.066666666666666], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035328816"}, {"text": "Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male ", "position": [10.0, 8.966666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329392"}, {"text": "Volunteers", "position": [10.0, 8.866666666666667], "coordinates": "data", "h_anchor": "start", "v_baseline": "auto", "rotation": -0.0, "fontsize": 15.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el81482649035329968"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[10.0, 9.866666666666667, 9.766666666666667], [11.0, 9.866666666666667, 9.766666666666667]], "data02": [[16.4, 10.4, 10.4], [17.4, 10.8, 10.0]], "data03": [[19.73333333333333, 10.8, 10.0], [21.066666666666666, 10.0, 10.8]], "data04": [[16.4, 9.6], [24.4, 9.6]], "data05": [[19.73333333333333, 9.5, 21.066666666666666], [19.73333333333333, 9.7, 21.066666666666666]], "data06": [[25.4, 9.6], [25.4, 11.2]], "data07": [[10.0, 10.0], [14.0, 10.0], [14.0, 10.8], [10.0, 10.8]], "data08": [[14.0, 10.41], [14.0, 10.39], [15.6, 10.39], [15.6, 10.370000000000001], [16.0, 10.4], [15.6, 10.43], [15.6, 10.41]], "data09": [[16.2, 10.200000000000001], [16.25304062, 10.200000000000001], [16.30391597415697, 10.221073261682353], [16.34142135623731, 10.258578643762691], [16.37892673831765, 10.29608402584303], [16.4, 10.34695938], [16.4, 10.4], [16.4, 10.453040620000001], [16.37892673831765, 10.503915974156971], [16.34142135623731, 10.54142135623731], [16.30391597415697, 10.578926738317648], [16.25304062, 10.6], [16.2, 10.6], [16.14695938, 10.6], [16.09608402584303, 10.578926738317648], [16.05857864376269, 10.54142135623731], [16.02107326168235, 10.503915974156971], [16.0, 10.453040620000001], [16.0, 10.4], [16.0, 10.34695938], [16.02107326168235, 10.29608402584303], [16.05857864376269, 10.258578643762691], [16.09608402584303, 10.221073261682353], [16.14695938, 10.200000000000001], [16.2, 10.200000000000001]], "data10": [[17.4, 10.805000000000001, 10.005, 21.066666666666666], [17.4, 10.795, 9.995, 21.066666666666666], [19.266666666666666, 10.795, 9.995, 22.933333333333334], [19.266666666666666, 10.785, 9.985, 22.933333333333334], [19.73333333333333, 10.8, 10.0, 23.4], [19.266666666666666, 10.815000000000001, 10.015, 22.933333333333334], [19.266666666666666, 10.805000000000001, 10.005, 22.933333333333334]], "data11": [[21.066666666666666, 10.005], [21.066666666666666, 9.995], [22.933333333333334, 9.995], [22.933333333333334, 9.985], [23.4, 10.0], [22.933333333333334, 10.015], [22.933333333333334, 10.005]]}, "id": "el81482649019258032", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
             })
          });
 }
 </script></div>
+</div>
+<div class="handler"></div>
 <link rel="stylesheet" href="../static/css/trial-record.css">
 
 <link rel="stylesheet" href="../static/css/w3-ct.css">
 
 <link rel="stylesheet" href="../static/css/print.css">
+<div id="element">
 <div id="trial">
 <div id="main-content" tabindex="-1">
 <div class="tr-indent2">
-<h1 class="tr-h1 ct-sans-serif tr-solo_record">A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate Alzheimer's Disease.</h1>
+<h1 class="tr-h1 ct-sans-serif tr-solo_record">Crossover Study to Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap in Healthy Male Volunteers</h1>
 <div class="w3-row">
 <div class="w3-col m6"> <div class="usa-alert usa-alert-warning" style="clear:both;margin:2ex 2em;">
 <table>
@@ -65,33 +69,28 @@ if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
 </td>
 <td style="padding-right:2em;">
               The safety and scientific validity of this study is the responsibility of the study sponsor and investigators. Listing a study does not mean it has been evaluated by the U.S. Federal Government.
-                              <a href="/ct2/about-studies/learn#Considerations">Know the risks and potential benefits</a> of clinical studies and talk to your health care provider before participating.
                             Read our <a href="/ct2/about-site/disclaimer">disclaimer</a> for details.
             </td>
 </tr>
 </table>
 </div> </div>
 <!--
-  <div style="float:right;margin-right:4em">ClinicalTrials.gov Identifier: NCT03507790</div>
+  <div style="float:right;margin-right:4em">ClinicalTrials.gov Identifier: NCT03208218</div>
 -->
 <div class="w3-col m1"> </div>
 <div class="w3-col m5"> <table style="width:95%">
-<tr><td>ClinicalTrials.gov Identifier: NCT03507790</td>
+<tr><td>ClinicalTrials.gov Identifier: NCT03208218</td>
 </tr>
 <tr><td>
-<div class="tr-status tr-recruiting-colors">
+<div class="tr-status tr-not-recruiting-colors">
 <span class="term" data-term="Recruitment Status" style="display:inline;" title="Show definition">Recruitment Status <i aria-hidden="true" class="fa fa-info-circle term" data-term="Recruitment Status" style="border-bottom-style:none;"></i></span> : 
-                    Recruiting
-                          
+                    Completed
+                  
                 
   <div style="font-size:inherit">
-<span class="term" data-term="First Posted" style="display:inline;" title="Show definition">First Posted <i aria-hidden="true" class="fa fa-info-circle term" data-term="First Posted" style="border-bottom-style:none;"></i></span> : April 25, 2018</div>
+<span class="term" data-term="First Posted" style="display:inline;" title="Show definition">First Posted <i aria-hidden="true" class="fa fa-info-circle term" data-term="First Posted" style="border-bottom-style:none;"></i></span> : July 5, 2017</div>
 <div style="font-size:inherit">
-<span class="term" data-term="Last Update Posted" style="display:inline;" title="Show definition">Last Update Posted <i aria-hidden="true" class="fa fa-info-circle term" data-term="Last Update Posted" style="border-bottom-style:none;"></i></span> : June 27, 2022</div>
-<div style="margin-top:1ex; font-size:14px">
-<span style="color:black;">See </span><a href="#contacts">
-<span class="ct-header2" style="font-size:inherit;"> Contacts and Locations</span></a>
-</div>
+<span class="term" data-term="Last Update Posted" style="display:inline;" title="Show definition">Last Update Posted <i aria-hidden="true" class="fa fa-info-circle term" data-term="Last Update Posted" style="border-bottom-style:none;"></i></span> : July 6, 2017</div>
 </div>
 </td>
 </tr>
@@ -99,16 +98,18 @@ if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
 </div>
 </div>
 <div class="tr-info-title">Sponsor:</div>
-<div class="tr-info-text" id="sponsor"> Cognition Therapeutics </div>
+<div class="tr-info-text" id="sponsor"> Samyang Biopharmaceuticals Corporation </div>
+<div class="tr-info-title">Collaborator:</div>
+<div class="tr-info-text" id="sponsor1">Chungnam National University Hospital</div>
 <div class="tr-info-title">Information provided by (Responsible Party):</div>
-<div class="tr-info-text" id="responsibleparty">Cognition Therapeutics</div>
+<div class="tr-info-text" id="responsibleparty">Samyang Biopharmaceuticals Corporation</div>
 </div>
 <br/>
 <div id="tabs">
 <ul id="tab-links">
 <li class="current" id="full-text">Study Details     </li>
-<li id="tabular"><a href="/ct2/show/record/NCT03507790">Tabular View</a></li>
-<li id="results"><a href="/ct2/show/results/NCT03507790">No Results Posted</a></li>
+<li id="tabular"><a href="/ct2/show/record/NCT03208218">Tabular View</a></li>
+<li id="results"><a href="/ct2/show/results/NCT03208218">No Results Posted</a></li>
 <li id="disclaimer"><a href="/ct2/about-site/disclaimer" onclick="openNewWindow('/ct2/about-site/disclaimer'); return false" title="Disclaimer - opens new window">Disclaimer</a></li>
 <li id="howtoread"><a href="/ct2/help/how-read-study" onclick="openNewWindow('/ct2/help/how-read-study'); return false" title="How to Read a Study Record - opens new window">How to Read a Study Record</a></li>
 </ul>
@@ -142,7 +143,7 @@ Go to 
 </div>
 <div class="tr-indent2" style="margin-top:2ex">
 <div class="ct-body3">Brief Summary:</div>
-<div class="ct-body3 tr-indent2">This is a multi-center, randomized, double-blind, placebo-controlled, parallel group 36 week multicenter Phase 2 study of two doses of CT1812 in adults with mild to moderate Alzheimer's Disease (AD).</div><br/>
+<div class="ct-body3 tr-indent2">The purpose of this study is to evaluate the pharmacokinetics equivalence and safety by comparing pharmacokinetics characteristics between the SYP-1512 Tab and Revlimid cap (25mg) when administered a single-dose to healthy male volunteers.</div><br/>
 <!-- condition, intervention, phase summary table -->
 <table border="1" class="ct-data_table tr-data_table" style="margin:auto;width:80%;">
 <tr style="text-align:left;">
@@ -155,14 +156,14 @@ Go to 
 </tr>
 <tr style="text-align:left;vertical-align:top;">
 <td class="ct-body3">
-<span style="display:block;margin-bottom:1ex;">Mild to Moderate Alzheimer's Disease</span>
+<span style="display:block;margin-bottom:1ex;">Healthy, Male</span>
 </td>
 <td class="ct-body3">
-<span style="display:block;margin-bottom:1ex;">Drug: CT1812</span>
-<span style="display:block;margin-bottom:1ex;">Drug: Placebo</span>
+<span style="display:block;margin-bottom:1ex;">Drug: SYP-1512</span>
+<span style="display:block;margin-bottom:1ex;">Drug: Revlimid cap</span>
 </td>
 <td class="ct-body3" style="white-space:nowrap;">
-<span style="display:block;margin-bottom:1ex;">Phase 2</span>
+<span style="display:block;margin-bottom:1ex;">Phase 1</span>
 </td>
 </tr>
 </table>
@@ -171,8 +172,8 @@ Go to 
 <!-- detailed description -->
 <div class="COLLAPSE" id="COLLAPSE-DetailedDesc" style="margin-bottom:2ex;">
 <div class="ct-body3"><a id="detaileddesc"></a>Detailed Description:</div>
-<div class="ct-body3 tr-indent2"><p style="margin-top:1ex; margin-bottom:1ex;">This is a multi-center, randomized, double-blind, placebo-controlled, parallel group 36 week multicenter Phase 2 study of two doses of CT1812 in adults with mild to moderate Alzheimer's Disease (AD).</p>
-<p style="margin-top:0ex; margin-bottom:1ex;">This Phase 2 study is designed to evaluate the safety of two doses of CT1812 administered once daily for 6 months in adults aged 50 to 85 who have been diagnosed with mild to moderate Alzheimer's disease (the targeted clinical indication for CT1812). Randomized participants will receive 100 mg of CT1812, 300 mg of CT1812, or placebo once daily for 182 days. Exploratory endpoints that evaluate the effect of CT1812 on biomarkers are also included.</p></div>
+<div class="ct-body3 tr-indent2"><p style="margin-top:1ex; margin-bottom:1ex;">Healthy volunteers are administrated single-dose over the period I and II (crossover) of SYP-1512 Tab and Revlimid cap (25mg) as of lenalidomide 25mg.</p>
+<p style="margin-top:0ex; margin-bottom:1ex;">Every time before and after each medication, pharmacokinetic (PK) parameters and safety of SYP-1512 Tab and Revlimid cap (25mg) is performed using a blood sample and conducting some tests (vital signs, physical exam, ECG, laboratory test, etc.) respectively</p></div>
 </div>
 </div>
 <div class="tr-subsection">
@@ -209,17 +210,17 @@ Go to 
 <tr>
 <td headers="studyInfoColTitle">
 <span class="term" data-term="Study Type" style="display:inline;" title="Show definition">Study Type <i aria-hidden="true" class="fa fa-info-circle term" data-term="Study Type" style="border-bottom-style:none;"></i></span> :</td>
-<td headers="studyInfoColData" style="padding-left:1em">
-        Interventional
-                 (Clinical Trial)
-                
-        
+<td headers="studyInfoColData" style="padding-left:1em">
+        Interventional
+                 (Clinical Trial)
+                
+        
       </td>
 </tr>
 <tr>
-<td headers="studyInfoColTitle">Estimated
+<td headers="studyInfoColTitle">Actual
 <span class="term" data-term="Enrollment" style="display:inline;" title="Show definition">Enrollment <i aria-hidden="true" class="fa fa-info-circle term" data-term="Enrollment" style="border-bottom-style:none;"></i></span> :</td>
-<td headers="studyInfoColData" style="padding-left:1em">144 participants</td>
+<td headers="studyInfoColData" style="padding-left:1em">42 participants</td>
 </tr>
 <tr>
 <td headers="studyInfoColTitle">Allocation:</td>
@@ -227,38 +228,34 @@ Go to 
 </tr>
 <tr>
 <td headers="studyInfoColTitle">Intervention Model:</td>
-<td headers="studyInfoColData" style="padding-left:1em">Parallel Assignment</td>
-</tr>
-<tr>
-<td headers="studyInfoColTitle">Intervention Model Description:</td>
-<td headers="studyInfoColData" style="padding-left:1em"> This is a multi-center Phase 2, randomized, double-blind, placebo-controlled, parallel-group study.</td>
+<td headers="studyInfoColData" style="padding-left:1em">Crossover Assignment</td>
 </tr>
 <tr>
 <td headers="studyInfoColTitle">Masking:</td>
-<td headers="studyInfoColData" style="padding-left:1em"> Quadruple (Participant, Care Provider, Investigator, Outcomes Assessor)</td>
+<td headers="studyInfoColData" style="padding-left:1em"> None (Open Label)</td>
 </tr>
 <tr>
 <td headers="studyInfoColTitle">Primary Purpose:</td>
 <td headers="studyInfoColData" style="padding-left:1em"> Treatment</td>
 </tr>
 <tr>
-<!--
-      <td headers="studyInfoColTitle" style="padding-top:2ex;">Official Title:</td>
+<!--
+      <td headers="studyInfoColTitle" style="padding-top:2ex;">Official Title:</td>
 -->
 <td headers="studyInfoColTitle">Official Title:</td>
-<td headers="studyInfoColData" style="padding-left:1em;">A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Phase 2 Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate Alzheimer's Disease.</td>
+<td headers="studyInfoColData" style="padding-left:1em;">An Open-label, Randomized, Single Dose, Crossover Bioequivalent Study to Compare Pharmacokinetic Property of SYP-1512 Tab and Revlimid Cap, 25mg in Healthy Male Volunteers</td>
 </tr>
 <tr>
 <td headers="studyInfoColTitle">  Actual <span class="term" data-term="Study Start Date" style="display:inline;" title="Show definition">Study Start Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Study Start Date" style="border-bottom-style:none;"></i></span> :</td>
-<td headers="studyInfoColData" style="padding-left:1em">October 2, 2018</td>
+<td headers="studyInfoColData" style="padding-left:1em">August 17, 2016</td>
 </tr>
 <tr>
-<td headers="studyInfoColTitle">  Estimated <span class="term" data-term="Primary Completion Date" style="display:inline;" title="Show definition">Primary Completion Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Primary Completion Date" style="border-bottom-style:none;"></i></span> :</td>
-<td headers="studyInfoColData" style="padding-left:1em">September 24, 2023</td>
+<td headers="studyInfoColTitle">  Actual <span class="term" data-term="Primary Completion Date" style="display:inline;" title="Show definition">Primary Completion Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Primary Completion Date" style="border-bottom-style:none;"></i></span> :</td>
+<td headers="studyInfoColData" style="padding-left:1em">August 25, 2016</td>
 </tr>
 <tr>
-<td headers="studyInfoColTitle">  Estimated <span class="term" data-term="Study Completion Date" style="display:inline;" title="Show definition">Study Completion Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Study Completion Date" style="border-bottom-style:none;"></i></span> :</td>
-<td headers="studyInfoColData" style="padding-left:1em">October 24, 2023</td>
+<td headers="studyInfoColTitle">  Actual <span class="term" data-term="Study Completion Date" style="display:inline;" title="Show definition">Study Completion Date <i aria-hidden="true" class="fa fa-info-circle term" data-term="Study Completion Date" style="border-bottom-style:none;"></i></span> :</td>
+<td headers="studyInfoColData" style="padding-left:1em">October 31, 2016</td>
 </tr>
 </tbody>
 </table>
@@ -270,23 +267,13 @@ Go to 
 <img alt="" src="/ct2/html/images/NIH_NLM_ABRV_BLK_4.png" style="width:5em; float:right;"/>
 <p>
 </p><p>
-<!-- ghr links -->
-</p><div style="margin-bottom:2ex">
-<a class="tr-study-link" href="https://medlineplus.gov/genetics/" onclick="openNewWindow('https://medlineplus.gov/genetics/'); return false" title="MedlinePlus Genetics">MedlinePlus Genetics</a> related topics:
-    	    	    	<a class="tr-study-link" href="https://medlineplus.gov/genetics/condition/alzheimer-disease" onclick="openNewWindow('https://medlineplus.gov/genetics/condition/alzheimer-disease'); return false" style="margin-left:0.5em;" title="Alzheimer disease at Genetics Home Reference">Alzheimer disease</a>
-</div>
-<!-- medline links -->
-<div style="margin-bottom:2ex;">
-<a class="tr-study-link" href="https://medlineplus.gov/" onclick="openNewWindow('https://medlineplus.gov/'); return false" title="MedlinePlus">MedlinePlus</a> related topics:
-    	    	    	<a class="tr-study-link" href="https://medlineplus.gov/alzheimersdisease.html" onclick="openNewWindow('https://medlineplus.gov/alzheimersdisease.html'); return false" style="margin-left:0.5em;" title="Alzheimer's Disease at MedlinePlus">Alzheimer's Disease</a>
-</div>
-<!-- ORD links -->
-<div style="margin-bottom:2ex;">
-<a class="tr-study-link" href="https://rarediseases.info.nih.gov/gard" onclick="openNewWindow('https://rarediseases.info.nih.gov/gard'); return false" title="Genetic and Rare Diseases Information Center">Genetic and Rare Diseases Information Center</a> resources:
-    	    	    	<a class="tr-study-link" href="https://rarediseases.info.nih.gov/diseases/632/familial-alzheimer-disease" onclick="openNewWindow('https://rarediseases.info.nih.gov/diseases/632/familial-alzheimer-disease'); return false" style="margin-left:0.5em;" title="Familial Alzheimer Disease at Genetic and Rare Diseases Information Center">Familial Alzheimer Disease</a>
+<!-- SIS links -->
+</p><div style="margin-bottom:2ex;">
+<a class="tr-study-link" href="https://druginfo.nlm.nih.gov/drugportal" onclick="openNewWindow('https://druginfo.nlm.nih.gov/drugportal'); return false" title="Drug Information Portal">Drug Information</a> available for:
+    	    	    	<a class="tr-study-link" href="https://druginfo.nlm.nih.gov/drugportal/name/Lenalidomide" onclick="openNewWindow('https://druginfo.nlm.nih.gov/drugportal/name/Lenalidomide'); return false" style="margin-left:0.5em;" title="Lenalidomide at Drug Information Portal">Lenalidomide</a>
 </div>
 <!-- Ropr Link -->
-<!-- Commented out RoPR
+<!-- Commented out RoPR
   -->
 <div style="margin-bottom:2ex;">
 <a class="tr-study-link" href="/ct2/info/fdalinks" onclick="openNewWindow('/ct2/info/fdalinks'); return false" title="Show FDA resources page">U.S. FDA Resources</a>
@@ -330,36 +317,25 @@ Go to 
 </thead>
 <tbody>
 <tr style="text-align:left;vertical-align:top;">
-<td class="ct-body3">
-          Active Comparator: Active Treatment- CT1812 100 mg
-<div class="tr-indent2" style="margin-top:0.5ex">CT1812 at a dose of 100 n=48 group</div>
+<td class="ct-body3">
+          Experimental: SYP-1512
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/tablet, PO, 1 tablet once daily for I&amp;II D1(crossover)</div>
 </td>
-<td class="ct-body3">
-                      Drug: CT1812
-<div class="tr-indent2" style="margin-top:0.5ex">Active Study Drug</div>
-<div class="tr-indent2" style="margin-top:0.5ex">Other Name: Study Drug</div><br/>
-</td>
-</tr>
-<tr style="text-align:left;vertical-align:top;">
-<td class="ct-body3">
-          Active Comparator: Active Treatment- CT1812 300 mg
-<div class="tr-indent2" style="margin-top:0.5ex">CT1812 at a dose of 300mg, n=48 group</div>
-</td>
-<td class="ct-body3">
-                      Drug: CT1812
-<div class="tr-indent2" style="margin-top:0.5ex">Active Study Drug</div>
-<div class="tr-indent2" style="margin-top:0.5ex">Other Name: Study Drug</div><br/>
+<td class="ct-body3">
+                      Drug: SYP-1512
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/tablet, PO, 1 tablet once daily for I&amp;II D1(crossover)</div>
+<div class="tr-indent2" style="margin-top:0.5ex">Other Name: Lenalidomide 25mg</div><br/>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
-<td class="ct-body3">
-          Placebo Comparator: Placebo Comparator - Placebo
-<div class="tr-indent2" style="margin-top:0.5ex">Placebo, n=48 group</div>
+<td class="ct-body3">
+          Active Comparator: Revlimid cap.
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/capsule, po, 1 capsule once daily for period I&amp;II D1(crossover)</div>
 </td>
-<td class="ct-body3">
-                      Drug: Placebo
-<div class="tr-indent2" style="margin-top:0.5ex">Non-active study drug</div>
-<div class="tr-indent2" style="margin-top:0.5ex">Other Name: Matching Placebo</div><br/>
+<td class="ct-body3">
+                      Drug: Revlimid cap
+<div class="tr-indent2" style="margin-top:0.5ex">Lenalidomide 25mg/capsule, po, 1 capsule once daily for period I&amp;II D1(crossover)</div>
+<div class="tr-indent2" style="margin-top:0.5ex">Other Name: Lenalidomide 25mg</div><br/>
 </td>
 </tr>
 </tbody>
@@ -393,9 +369,20 @@ Go to 
 <div class="tr-indent3" style="margin-right:1em;">
 <!-- primary outcomes -->
 <div class="ct-body3">
-<span class="term" data-term="Primary Outcome Measure" style="display:inline;" title="Show definition">Primary Outcome Measures <i aria-hidden="true" class="fa fa-info-circle term" data-term="Primary Outcome Measure" style="border-bottom-style:none;"></i></span> :
+<span class="term" data-term="Primary Outcome Measure" style="display:inline;" title="Show definition">Primary Outcome Measures <i aria-hidden="true" class="fa fa-info-circle term" data-term="Primary Outcome Measure" style="border-bottom-style:none;"></i></span> :
       <ol style="margin-top:1ex; margin-bottom:1ex;">
-<li style="margin-top:0.7ex;">Number of study participants with treatment related adverse events and serious adverse events [ Time Frame: 210 Days ]<div class="tr-indent2" style="margin-top:1ex;">Adverse events will be collected starting at Day 1 through Day 210 to evaluate safety.</div><br/>
+<li style="margin-top:0.7ex;">Pharmacokinetics of the AUCt between SYP-1512 and Revlimid cap(25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the AUCt between SYP-1512 and Revlimid cap(25mg)</div><br/>
+</li><li style="margin-top:0.7ex;">Pharmacokinetics of the Cmax between SYP-1512 and Revlimid cap(25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the Cmax between SYP-1512 and Revlimid cap(25mg)</div><br/>
+</li></ol>
+</div>
+<br/>
+<!-- secondary outcomes -->
+<div class="ct-body3" style="margin-right:1em;">
+<span class="term" data-term="Secondary Outcome Measure" style="display:inline;" title="Show definition">Secondary Outcome Measures <i aria-hidden="true" class="fa fa-info-circle term" data-term="Secondary Outcome Measure" style="border-bottom-style:none;"></i></span> :
+      <ol style="margin-top:1ex; margin-bottom:1ex;">
+<li style="margin-top:0.7ex;">Pharmacokinetics of the AUCinf SYP-1512 and Revlimid cap (25mg) [ Time Frame: 0-inf ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the AUCinf SYP-1512 and Revlimid cap (25mg)</div><br/>
+</li><li style="margin-top:0.7ex;">Pharmacokinetics of the Tmax of SYP-1512 and Revlimid cap (25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the Tmax of SYP-1512 and Revlimid cap (25mg)</div><br/>
+</li><li style="margin-top:0.7ex;">Pharmacokinetics of the T1/2 of SYP-1512 and Revlimid cap (25mg) [ Time Frame: 0-24hours ]<div class="tr-indent2" style="margin-top:1ex;">Bioequivalance of the T1/2 of SYP-1512 and Revlimid cap (25mg)</div><br/>
 </li></ol>
 </div>
 <br/>
@@ -446,91 +433,49 @@ Go to 
 <tbody>
 <tr>
 <td class="ct-nowrap" headers="elgType">Ages Eligible for Study:   </td>
-<td headers="elgData" style="padding-left:1em">50 Years to 85 Years   (Adult, Older Adult)</td>
+<td headers="elgData" style="padding-left:1em">20 Years to 50 Years   (Adult)</td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="elgType">Sexes Eligible for Study:   </td>
-<td headers="elgData" style="padding-left:1em">All</td>
+<td headers="elgData" style="padding-left:1em">Male</td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="elgType">Accepts Healthy Volunteers:   </td>
-<td headers="elgData" style="padding-left:1em">No</td>
+<td headers="elgData" style="padding-left:1em">Yes</td>
 </tr>
 </tbody>
 </table>
 <div class="ct-header3" style="margin-top:2ex">Criteria</div>
-<div class="tr-indent2"><ol style="margin-top:1ex; margin-bottom:1ex;">
-<li style="margin-top:0.7ex;">
-<p style="margin-top:0ex; margin-bottom:1ex;">Men, and women of non-childbearing potential, 50-85 years of age inclusively, with a diagnosis of mild to moderate Alzheimer's disease according to the 2011 NIA-AA criteria and at least a 6 month decline in cognitive function documented in the medical record.</p>
-<p style="margin-top:0ex; margin-bottom:1ex;">i) Non-childbearing potential for women is defined as postmenopausal (last natural menses greater than 24 months) or undergone a documented bilateral tubal ligation or hysterectomy. If last natural menses less than 24 months, a serum FSH value confirming post-menopausal status can be employed.</p>
-<p style="margin-top:0ex; margin-bottom:1ex;">ii) Male participants who are sexually active with a woman of child-bearing potential must agree to use condoms during the trial and for 3 months after last dose unless the woman is using an acceptable means of birth control. Acceptable forms of birth control include abstinence, birth control pills, or any double combination of: intrauterine device (IUD), male or female condom, diaphragm, sponge, and cervical cap.</p>
-</li>
-<li style="margin-top:0.7ex;">Diagnostic confirmation by amyloid PET with florbetaben or another approved amyloid PET ligand. Previous amyloid imaging study with a positive result will be accepted. If none is available, then amyloid PET will be conducted during screening. Diagnostic confirmation by a CSF sample collected at the screening visit lumbar puncture in place of amyloid PET will also be acceptable</li>
-<li style="margin-top:0.7ex;">Neuroimaging (MRI) obtained during screening consistent with the clinical diagnosis of Alzheimer's disease and without findings of significant exclusionary abnormalities (see exclusion criteria, number 4). An historical MRI, up to 1 year prior to screening, may be used as long as there is no history of intervening neurologic disease or clinical events (such as a stroke, head trauma etc.) and the subject is without clinical symptoms or signs suggestive of such intervening events.).</li>
-<li style="margin-top:0.7ex;">MMSE 18-26 inclusive.</li>
-<li style="margin-top:0.7ex;">No active depression and a GDS ≤6 (see exclusion criteria number 6).</li>
-<li style="margin-top:0.7ex;">Modified Hachinski ≤ 4.</li>
-<li style="margin-top:0.7ex;">Formal education of eight or more years.</li>
-<li style="margin-top:0.7ex;">Subjects must have a caregiver/ study partner who in the opinion of the site principal investigator, has contact with the study subject for a sufficient number of hours per week to provide informative responses on the protocol assessments, oversee the administration of study drug, and is willing and able to participate in all clinic visits and some study assessments. The caregiver/ study partner must provide written informed consent to participate in the study.</li>
-<li style="margin-top:0.7ex;">Subjects living at home or in the community (assisted living acceptable).</li>
-<li style="margin-top:0.7ex;">Ability to swallow CT1812 capsules.</li>
-<li style="margin-top:0.7ex;">Stable pharmacological treatment of any other chronic conditions for at least 30 days prior to screening.</li>
-<li style="margin-top:0.7ex;">Subjects must be capable of providing written informed consent to the study procedures and for use of protected health information [Health Insurance Portability and Accountability Act (HIPAA), if applicable]. Written informed consent also shall be obtained from the responsible caregiver. All consent processes must be undertaken in the presence of a witness and prior to any study procedures.</li>
-<li style="margin-top:0.7ex;">Must consent to apolipoprotein E (ApoE) genotyping for data analysis stratification.</li>
-<li style="margin-top:0.7ex;">Subjects shall be generally healthy with mobility (ambulatory or ambulatory-aided, i.e., walker or cane), vision and hearing (hearing aid permissible) sufficient for compliance with testing procedures.</li>
-<li style="margin-top:0.7ex;">Must be able to complete all screening evaluations.</li>
-</ol>
-<p style="margin-top:0ex; margin-bottom:1ex;">EXCLUSION CRITERIA:</p>
-<p style="margin-top:0ex; margin-bottom:1ex;">Participants will be excluded from the study if any of the following conditions apply:</p>
+<div class="tr-indent2"><p style="margin-top:1ex; margin-bottom:1ex;">Inclusion Criteria:</p>
 <ol style="margin-top:1ex; margin-bottom:1ex;">
-<li style="margin-top:0.7ex;">Hospitalization (except for planned procedures) or change of chronic concomitant medication within one month prior to screening.</li>
-<li style="margin-top:0.7ex;">Subjects living in a continuous care nursing facility.</li>
-<li style="margin-top:0.7ex;">Contraindication to the MRI examination for any reason.</li>
-<li style="margin-top:0.7ex;">Screening MRI (or historical MRI, if applicable) of the brain indicative of significant abnormality, including, but not limited to, prior hemorrhage or infarct &gt;1 cm3, &gt;3 lacunar infarcts, cerebral contusion, encephalomalacia, aneurysm, vascular malformation, subdural hematoma, hydrocephalus, space-occupying lesion (e.g. abscess or brain tumor such as meningioma). If a small incidental meningioma is observed, the medical monitor may be contacted to discuss eligibility..</li>
-<li style="margin-top:0.7ex;">
-<p style="margin-top:0ex; margin-bottom:1ex;">Clinical or laboratory findings consistent with:</p>
-<ol style="margin-top:1ex; margin-bottom:1ex;">
-<li style="margin-top:0.7ex;">Other primary degenerative dementia, (dementia with Lewy bodies, fronto-temporal dementia, Huntington's disease, Creutzfeldt-Jakob Disease, Down syndrome, etc.).</li>
-<li style="margin-top:0.7ex;">Other neurodegenerative condition (Parkinson's disease, amyotrophic lateral sclerosis, etc.).</li>
-<li style="margin-top:0.7ex;">Seizure disorder.</li>
-<li style="margin-top:0.7ex;">Other infectious, metabolic or systemic diseases affecting the central nervous system (syphilis, present hypothyroidism, present vitamin B12 or folate deficiency, other laboratory values etc.).</li>
+<li style="margin-top:0.7ex;">Over 20aged in healthy males</li>
+<li style="margin-top:0.7ex;">Those who do not have congenital or chronic diseases or pathological symptoms based on screening.</li>
+<li style="margin-top:0.7ex;">The person who is determined to be the subject of the clinical laboratory test results such as hematology test, blood chemistry test, urine test, etc. set by the person in charge of the examination of the medical institution</li>
+<li style="margin-top:0.7ex;">BMI : 18-30</li>
+<li style="margin-top:0.7ex;">Those who have not donated blood within 2 weeks</li>
+<li style="margin-top:0.7ex;">Those without a history of gastrointestinal resection</li>
+<li style="margin-top:0.7ex;">Those who have no history of mental illness within the last 5 years</li>
+<li style="margin-top:0.7ex;">Agreement with written informed consent</li>
+<li style="margin-top:0.7ex;">Anyone who can follow and follow all scheduled admission and outpatient visits, dosing, clinical laboratory testing and subject compliance</li>
+<li style="margin-top:0.7ex;">If the partner is a woman of childbearing age who does not use the appropriate method of contraception (even if the man has undergone a vasectomy), while taking lenalidomide, during the interruption, for consenting to use condoms for 28 days after the last dose</li>
+<li style="margin-top:0.7ex;">In the vital sign measured in a sitting position, the systolic blood pressure ≤145 mmHg and ≥100 mmHg, the diastolic blood pressure ≤95 mmHg and ≥60 mmHg, the pulse rate&gt; 40 and &lt;100 times / minute</li>
+<li style="margin-top:0.7ex;">Electrocardiogram (ECG) of the 12-electrode, QTc ≤ 450 msec</li>
+<li style="margin-top:0.7ex;">Those who have agreed not to donate blood or plasma and semen for at least 28 days after taking this drug</li>
+<li style="margin-top:0.7ex;">If the contraceptive is withdrawn due to contraception or partner's pregnancy confirmation during testing. Those who agree to respond to follow-up within 6 months after pregnancy and after delivery</li>
 </ol>
-</li>
-<li style="margin-top:0.7ex;">A current DSM-V diagnosis of active major depression, schizophrenia or bipolar disorder. Subjects with depressive symptoms successfully managed by a stable dose of an antidepressant are allowed entry.</li>
-<li style="margin-top:0.7ex;">
-<p style="margin-top:0ex; margin-bottom:1ex;">Clinically significant, advanced or unstable disease that may interfere with outcome evaluations, such as:</p>
+<p style="margin-top:0ex; margin-bottom:1ex;">Exclusion Criteria:</p>
 <ol style="margin-top:1ex; margin-bottom:1ex;">
-<li style="margin-top:0.7ex;">Chronic liver disease, liver function test abnormalities or other signs of hepatic insufficiency (ALT, AST, alkaline phosphatase &gt; 1.5 ULN, lactate dehydrogenase (LDH) &gt; 1.5 x ULN).</li>
-<li style="margin-top:0.7ex;">Respiratory insufficiency.</li>
-<li style="margin-top:0.7ex;">Renal insufficiency eGFR &lt; 50 mL/min based on the CKD-EPI formula, https://www.mdcalc.com/ckd-epi-equations-glomerular-filtration-rate-gfr</li>
-<li style="margin-top:0.7ex;">Heart disease (myocardial infarction, unstable angina, heart failure, cardiomyopathy within six months before screening).</li>
-<li style="margin-top:0.7ex;">Bradycardia (&lt;50/min.) or tachycardia (&gt;100/min.).</li>
-<li style="margin-top:0.7ex;">Poorly managed hypertension (systolic &gt;160 mm Hg and/or diastolic &gt;95 mm Hg) or hypotension (systolic &lt;90 mm Hg and/or diastolic &lt;60 mm Hg).</li>
-<li style="margin-top:0.7ex;">Uncontrolled diabetes defined by HbA1c &gt;7.5.</li>
-</ol>
-</li>
-<li style="margin-top:0.7ex;">History of cancer within 3 years of screening with the exception of fully excised non-melanoma skin cancers or non-metastatic prostate cancer that has been stable for at least 6 months.</li>
-<li style="margin-top:0.7ex;">Seropositive for human immunodeficiency virus (HIV).</li>
-<li style="margin-top:0.7ex;">History of acute/chronic hepatitis B or C and/or carriers of hepatitis B (seropositive for hepatitis B surface antigen [HbsAg] or anti-hepatitis C [HCV] antibody).</li>
-<li style="margin-top:0.7ex;">
-<p style="margin-top:0ex; margin-bottom:1ex;">Clinically significant abnormalities in screening laboratory tests, including:</p>
-<p style="margin-top:0ex; margin-bottom:1ex;">a. Hematocrit less than 35% for males and less than 32% for females, absolute neutrophil cell count of 1500/uL (with the exception of a documented history of a chronic benign neutropenia), or platelet cell count of &lt; 120,000/uL; INR &gt;1.4 or other coagulopathy, confirmed by repeat assessment of: i. Hematocrit ii. Neutrophil count iii. Platelet count</p>
-</li>
-<li style="margin-top:0.7ex;">Disability that may prevent the subject from completing all study requirements (e.g. blindness, deafness, severe language difficulty, etc.).</li>
-<li style="margin-top:0.7ex;">
-<p style="margin-top:0ex; margin-bottom:1ex;">Within 4 weeks of screening visit or during the course of the study, concurrent treatment with antipsychotic agents, antiepileptics, centrally active anti-hypertensive drugs (e.g., clonidine, l-methyl dopa, guanidine, guanfacine, etc.), sedatives, opioids, mood stabilizers (e.g., valproate, lithium); or benzodiazepines, with the following exception:</p>
-<p style="margin-top:0ex; margin-bottom:1ex;">a. Low dose lorazepam may be used for sedation prior to MRI scan for those subjects requiring sedation. At the discretion of the investigator, 0.5 to 1 mg may be given orally prior to scan with a single repeat dose given if the first dose is ineffective. No more than a total of 2 mg lorazepam may be used for the MRI scan.</p>
-</li>
-<li style="margin-top:0.7ex;">Any disorder that could interfere with the absorption, distribution, metabolism or excretion of drugs (e.g. small bowel disease, Crohn's disease, celiac disease, or liver disease).</li>
-<li style="margin-top:0.7ex;">Nootropic drugs except stable AD meds (acetylcholinesterase inhibitors and memantine.</li>
-<li style="margin-top:0.7ex;">Suspected or known drug or alcohol abuse, i.e. more than approximately 60 g alcohol (approximately 1 liter of beer or 0.5 liter of wine) per day indicated by elevated MCV significantly above normal value at screening.</li>
-<li style="margin-top:0.7ex;">Suspected or known allergy to any components of the study treatments.</li>
-<li style="margin-top:0.7ex;">Enrollment in another investigational study or intake of investigational drug within the previous 30 days or five half lives of the investigational drug, whichever is longer.</li>
-<li style="margin-top:0.7ex;">Intake of drugs or substances potentially involved in clinically significant induction or inhibition of CYP3A4 or P-gp mediated drug interactions with CT1812, within 4 weeks or five half-lives of the interacting drug prior to administration of CT1812 and throughout the course of the study. Grapefruit juice should be avoided in the two weeks prior to dosing and throughout the course of the study. See Appendix A for a complete list of prohibited substances.</li>
-<li style="margin-top:0.7ex;">Exposure to immunomodulators, anti Aβ vaccines, passive immunotherapies for AD (e.g. monoclonal antibodies) within the past 180 days and/or exposure to BACE inhibitors within the past 30 days.</li>
-<li style="margin-top:0.7ex;">Anticipated use of nonsteroidal anti-inflammatory drugs (NSAIDs) on more than 14 days during the period from Baseline to Day 182.</li>
-<li style="margin-top:0.7ex;">Contraindication to undergoing an LP including, but not limited to: inability to tolerate an appropriately flexed position for the time necessary to perform an LP; international normalized ratio (INR) &gt; 1.4 or other coagulopathy; platelet count of &lt; 120,000/μL; infection at the desired lumbar puncture site; taking anti-coagulant medication within 90 days of screening (Note: low dose aspirin is permitted); degenerative arthritis of the lumbar spine; suspected non-communicating hydrocephalus or intracranial mass; prior history of spinal mass or trauma.</li>
-<li style="margin-top:0.7ex;">Any condition, which in the opinion of the investigator or the sponsor makes the subject unsuitable for inclusion.</li>
+<li style="margin-top:0.7ex;">Those taking drugs that significantly induce drug metabolizing enzymes within one month before screening (eg, barbiturate) or inhibit</li>
+<li style="margin-top:0.7ex;">Those taking medication that could affect the test within 10 days before screening</li>
+<li style="margin-top:0.7ex;">The person who is in charge of the examination of the medical institution (or the examining doctor who is delegated)</li>
+<li style="margin-top:0.7ex;">Those who have participated in the bioequivalence test or other clinical studies within 3 months prior to the administration of the test and administered the clinical trial drug</li>
+<li style="margin-top:0.7ex;">Persons with hypersensitivity to venous puncture</li>
+<li style="margin-top:0.7ex;">Screening Within the first 6 months, a person with a history of regular alcohol consumption as follows: 1 cup = 150 mL of wine or 360 mL of beer or 45 mL of distillate)</li>
+<li style="margin-top:0.7ex;">Patients with severe hepatic impairment</li>
+<li style="margin-top:0.7ex;">Patients who are hypersensitive to NSAIDs and other components of NSAID</li>
+<li style="margin-top:0.7ex;">Patients with genetic problems such as galactose intolerance, Lapp lactase deficiency or glucose-galactose malabsorption.</li>
+<li style="margin-top:0.7ex;">Patients with renal impairment (Cockcroft-Gault-type creatinine clearance &lt;50 mL / min)</li>
+<li style="margin-top:0.7ex;">Positive result of Serum test [RPR Ab (VDRL), HBsAg, HCV Ab, anti HIV (AIDS)]</li>
 </ol></div>
 </div>
 </div>
@@ -560,179 +505,16 @@ Go to 
 </div>
 <br/>
 <div class="tr-indent2" style="margin-top:2ex">
-<!--
-Choosing to participate in a study is an important personal decision. Talk with your doctor and family members or friends about deciding to join a study. 
-To learn more about this study, you or your doctor may contact the study research staff using the Contacts provided below. 
-For general information, see <a href="/ct2/about-studies/learn" target="def_win" onClick="openNewWindow('/ct2/about-studies/learn'); return false;" title="Learn About Clinical Studies - opens new window"><u>Learn About Clinical Studies.</u></a>
-<br/>
--->
-<div class="usa-alert usa-alert-warning nlm-info">
-<strong>Information from the National Library of Medicine</strong>
-<img alt="" src="/ct2/html/images/NIH_NLM_ABRV_BLK_4.png" style="width:5em; float:right;"/>
-<p>
-</p><p>
-<em>
-    To learn more about this study, you or your doctor may contact the study research staff using the contact information provided by the sponsor.
-    </em>
-</p><p>
-<em>
-    Please refer to this study by its ClinicalTrials.gov identifier (NCT number): <strong>NCT03507790</strong>
-</em>
-</p></div>
-<br/>
-<!-- contacts -->
-<div class="ct-header3" style="margin-top:2ex">Contacts</div>
-<div class="tr-table_cover">
-<table class="ct-layout_table tr-indent2">
-<caption>Layout table for location contacts</caption>
-<thead>
-<tr>
-<th id="contactName" style="visibility:hidden"></th>
-<th id="contactPhone" style="visibility:hidden"></th>
-<th id="contactEmail" style="visibility:hidden"></th>
-<th id="contactAddress" style="visibility:hidden"></th>
-</tr>
-</thead>
-<tr>
-<td headers="contactName">Contact: Jiney Asthappan</td>
-<td headers="contactPhone">914-221-6733</td>
-<td headers="contactEmail"><a href="mailto:jasthappan%40cogrx.com?subject=NCT03507790, COG0201, A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate Alzheimer's Disease.">jasthappan@cogrx.com</a></td>
-<td headers="contactAddress"></td>
-</tr>
-</table>
-</div>
-<br/>
-<!-- locations -->
-<a id="locn"></a>
-<div class="ct-header3" style="margin-top:2ex;margin-bottom:2ex;">Locations</div>
-<div class="COLLAPSE" id="COLLAPSE-Locations">
-<div class="tr-table_cover">
-<table class="ct-layout_table tr-indent2">
-<caption>Layout table for location information</caption>
-<thead>
-<tr>
-<th id="locName"></th>
-<th id="locStatus"></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="ct-header3" colspan="2" style="padding-top:2ex;">United States, Arizona</td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Imaging Endpoints</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Recruiting</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Scottsdale, Arizona, United States, 85258  </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Contact: Diana De Santiago        <a href="mailto:ddesantiago%40imagingendpoints.com?subject=NCT03507790, COG0201, A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate Alzheimer's Disease.">ddesantiago@imagingendpoints.com</a>    </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Principal Investigator: Alan Block, MD            </td></tr>
-<tr><td class="ct-header3" colspan="2" style="padding-top:2ex;">United States, California</td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">ATP Clinical Research</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Recruiting</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Costa Mesa, California, United States, 92626-4627  </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Principal Investigator: Gustavo Alva            </td></tr>
-<tr><td class="ct-header3" colspan="2" style="padding-top:2ex;">United States, Florida</td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">JEM Research Institute</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Recruiting</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Atlantis, Florida, United States, 33462  </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Contact: Julie Andrew, RN        <a href="mailto:jandrew%40jemri.net?subject=NCT03507790, COG0201, A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate Alzheimer's Disease.">jandrew@jemri.net</a>    </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Principal Investigator: Mark Goldstein, MD, CPI            </td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Charter Research</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Recruiting</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Lady Lake, Florida, United States, 32159  </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Contact: Kate Scheurich            </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Principal Investigator: Jeffrey A Norton, MD            </td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Allied Biomedical Research Institute</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Completed</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Miami, Florida, United States, 33155  </td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Compass Research LLC- Bioclinica Research</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Completed</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">The Villages, Florida, United States, 32162  </td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">ClinCloud</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Recruiting</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Viera, Florida, United States, 32940  </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Contact: Jessica Branning            </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Principal Investigator: Rosemary Laird            </td></tr>
-<tr><td class="ct-header3" colspan="2" style="padding-top:2ex;">United States, North Carolina</td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Alzheimer's Memory Center</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Recruiting</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Charlotte, North Carolina, United States, 28270  </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Contact: Jessica Porto        <a href="mailto:jporto%40amcneurology.com?subject=NCT03507790, COG0201, A Study to Evaluate the Safety and Efficacy of CT1812 in Subjects With Mild to Moderate Alzheimer's Disease.">jporto@amcneurology.com</a>    </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Principal Investigator: Mohammad Bolouri, MD            </td></tr>
-<tr><td class="ct-header3" colspan="2" style="padding-top:2ex;">United States, Ohio</td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">The Ohio State University - Wexner</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Recruiting</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Columbus, Ohio, United States, 43221-3502  </td></tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em">Principal Investigator: Douglas W Scharre, MD            </td></tr>
-<tr><td class="ct-header3" colspan="2" style="padding-top:2ex;">Australia, Victoria</td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Austin Health</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Completed</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Ivanhoe, Victoria, Australia, 3079  </td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">St Vincent's Hospital Sydney</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Completed</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Ivanhoe, Victoria, Australia, 3079  </td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Alfred Health</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Completed</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Melbourne, Victoria, Australia, 3004  </td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Melbourne Health</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Completed</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Parkville, Victoria, Australia, 3050  </td></tr>
-<tr><td class="ct-header3" colspan="2" style="padding-top:2ex;">Australia, Western Australia</td></tr>
-<tr>
-<td headers="locName" style="padding-left:2em;">Australian Alzheimer's Research Foundation</td>
-<td class="ct-header3" headers="locStatus" style="padding:1ex 0px 0px 2em;">Completed</td>
-</tr>
-<tr><td colspan="2" style="padding:0;padding-left:4em;">Nedlands, Western Australia, Australia, 6009  </td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- sponsors -->
-<div class="ct-header3" style="margin-top:2ex">Sponsors and Collaborators</div>
-<div class="tr-indent2" style="margin-top:1ex">Cognition Therapeutics</div>
-<!-- overall officials -->
-<div class="ct-header3" style="margin-top:2ex">Investigators</div>
-<div class="tr-table_cover">
-<table class="ct-layout_table tr-indent2">
-<caption>Layout table for investigator information</caption>
-<thead>
-<tr>
-<th id="role" style="visibility:hidden"></th>
-<th id="name" style="visibility:hidden"></th>
-<th id="affiliation" style="visibility:hidden"></th>
-<th id="address" style="visibility:hidden"></th>
-</tr>
-</thead>
-<tr>
-<td headers="role">Study Director:</td>
-<td headers="name">Anthony Caggiano, MD</td>
-<td headers="affiliation">Cognition Therapuetics</td>
-<td headers="address"></td>
-</tr>
-</table>
-</div>
+<!--
+Choosing to participate in a study is an important personal decision. Talk with your doctor and family members or friends about deciding to join a study. 
+To learn more about this study, you or your doctor may contact the study research staff using the Contacts provided below. 
+For general information, see <a href="/ct2/about-studies/learn" target="def_win" onClick="openNewWindow('/ct2/about-studies/learn'); return false;" title="Learn About Clinical Studies - opens new window"><u>Learn About Clinical Studies.</u></a>
+<br/>
+-->
+
+    No Contacts or Locations Provided
+
+  
 </div>
 </div>
 <!-- more_info_section -->
@@ -776,57 +558,57 @@ Go to 
 <tbody>
 <tr>
 <td class="ct-nowrap" headers="colTitle1">Responsible Party:</td>
-<td headers="colData1" style="padding-left:1em">Cognition Therapeutics</td>
+<td headers="colData1" style="padding-left:1em">Samyang Biopharmaceuticals Corporation</td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="colTitle1">ClinicalTrials.gov Identifier:</td>
 <td headers="colData1" style="padding-left:1em">
-<a class="tr-study-link" href="https://clinicaltrials.gov/show/NCT03507790" title="Current version of study NCT03507790 on ClinicalTrials.gov">NCT03507790</a>    
-
-  <script type="text/javascript">
-    <!--
-    // Scramble access to archive site -
-    // don't want crawlers directing users to outdated versions of the study
-    // this should be opaque to crawlers that don't execute javascript
-    var yyy=new Array(
-      ['<','a clas','s="tr-study','-link c', 't-now','rap" t','itle="Hist','orical vers','ions of '],
-      ['study ','NCT03507790',' on Clin','icalTrials.','go'],
-      ['v Ar','chive',' Sit','e" ','onc','lick="','openN','ewWin', 'dow(','\'/ct2/', 'history/'],
-      ['NCT03507790','\'); return', ' false;" '],
-      ['href','="/ct2/','history/','NCT03507790"','>'],
-      ['Histo','ry of C','hange','s<','/','a>']);
-    var i=0;
-    var j=0;
-    var xxx='';
-    for (i=0; i<yyy.length; i++)
-      for (j=0; j<yyy[i].length; j++)
-        xxx+=yyy[i][j];
-    document.write(xxx)
-    -->
+<a class="tr-study-link" href="https://clinicaltrials.gov/show/NCT03208218" title="Current version of study NCT03208218 on ClinicalTrials.gov">NCT03208218</a>    
+
+  <script type="text/javascript">
+    <!--
+    // Scramble access to archive site -
+    // don't want crawlers directing users to outdated versions of the study
+    // this should be opaque to crawlers that don't execute javascript
+    var yyy=new Array(
+      ['<','a clas','s="tr-study','-link c', 't-now','rap" t','itle="Hist','orical vers','ions of '],
+      ['study ','NCT03208218',' on Clin','icalTrials.','go'],
+      ['v Ar','chive',' Sit','e" ','onc','lick="','openN','ewWin', 'dow(','\'/ct2/', 'history/'],
+      ['NCT03208218','\'); return', ' false;" '],
+      ['href','="/ct2/','history/','NCT03208218"','>'],
+      ['Histo','ry of C','hange','s<','/','a>']);
+    var i=0;
+    var j=0;
+    var xxx='';
+    for (i=0; i<yyy.length; i++)
+      for (j=0; j<yyy[i].length; j++)
+        xxx+=yyy[i][j];
+    document.write(xxx)
+    -->
   </script>
 </td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="colTitle1">Other Study ID Numbers:</td>
-<td headers="colData1" style="padding-left:1em">
-                                    COG0201 <br/>
+<td headers="colData1" style="padding-left:1em">
+                                    BIBE2016-02 <br/>
 </td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="colTitle1">First Posted:</td>
-<td headers="colData1" style="padding-left:1em">April 25, 2018
-            
-          <a class="tr-study-link ct-nowrap" href="/ct2/keydates/NCT03507790" onclick="openNewWindow('/ct2/keydates/NCT03507790'); return false;" title="View key record dates for NCT03507790">Key Record Dates</a>
+<td headers="colData1" style="padding-left:1em">July 5, 2017
+            
+          <a class="tr-study-link ct-nowrap" href="/ct2/keydates/NCT03208218" onclick="openNewWindow('/ct2/keydates/NCT03208218'); return false;" title="View key record dates for NCT03208218">Key Record Dates</a>
 </td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="colTitle1">Last Update Posted:</td>
-<td headers="colData1" style="padding-left:1em">June 27, 2022
+<td headers="colData1" style="padding-left:1em">July 6, 2017
       </td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="colTitle1">Last Verified:</td>
-<td headers="colData1" style="padding-left:1em">January 2022
+<td headers="colData1" style="padding-left:1em">July 2017
       </td>
 </tr>
 <!-- Plan to Share Data -->
@@ -851,7 +633,7 @@ Go to 
 <tbody>
 <tr>
 <td class="ct-nowrap" headers="colTitle2">Studies a U.S. FDA-regulated Drug Product:</td>
-<td headers="colData2" style="padding-left:1em">Yes</td>
+<td headers="colData2" style="padding-left:1em">No</td>
 </tr>
 <tr>
 <td class="ct-nowrap" headers="colTitle2">Studies a U.S. FDA-regulated Device Product:</td>
@@ -860,7 +642,7 @@ Go to 
 </tbody>
 </table>
 <!-- keywords -->
-<div class="tr-tableLabel">Keywords provided by Cognition Therapeutics:</div>
+<div class="tr-tableLabel">Keywords provided by Samyang Biopharmaceuticals Corporation:</div>
 <div class="tr-indent3">
 <table class="ct-layout_table tr-moreInfo" style="width:100%;">
 <thead>
@@ -870,8 +652,11 @@ Go to 
 </tr>
 </thead>
 <tr>
-<td headers="keywordCol1" style="padding-left:1em;">
-    	              	          Alzheimer's Disease<br/>
+<td headers="keywordCol1" style="padding-left:1em;">
+    	              	          Evaluation of the pharmacokinetics equivalence<br/>
+    	              	          Healthy volunteers<br/>
+    	              	          Single dose over the period I and II(crossover)<br/>
+    	              	          Healthy male volunteers<br/>
 </td>
 <td></td>
 </tr>
@@ -889,25 +674,24 @@ Go to 
 </tr>
 </thead>
 <tr>
-<td headers="meshTermCol1" style="padding-left:1em;">
-                            Alzheimer Disease<br/>
-                            Dementia<br/>
-                            Brain Diseases<br/>
-                            Central Nervous System Diseases<br/>
-                            Nervous System Diseases<br/>
+<td headers="meshTermCol1" style="padding-left:1em;">
+                            Lenalidomide<br/>
+                            Immunologic Factors<br/>
+                            Physiological Effects of Drugs<br/>
+                            Angiogenesis Inhibitors<br/>
 </td>
-<td headers="meshTermCol1" style="padding-left:1em;">
-                            Tauopathies<br/>
-                            Neurodegenerative Diseases<br/>
-                            Neurocognitive Disorders<br/>
-                            Mental Disorders<br/>
+<td headers="meshTermCol1" style="padding-left:1em;">
+                            Angiogenesis Modulating Agents<br/>
+                            Growth Substances<br/>
+                            Growth Inhibitors<br/>
+                            Antineoplastic Agents<br/>
 </td>
 </tr>
 </table>
 </div>
 <br/>
-<!--
-        <span class="ct-body3">ClinicalTrials.gov processed this record on July 13, 2022</span><br/>
+<!--
+        <span class="ct-body3">ClinicalTrials.gov processed this record on July 14, 2022</span><br/>
       -->
 <br/>
 </div>
@@ -918,4 +702,5 @@ Go to 
 </div>
 </div></div>
 </div>
-{% endblock %}
+</div>
+<script src="{% static 'js/resize.js' %}"></script>{% endblock %}

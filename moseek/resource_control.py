@@ -3,22 +3,22 @@ import requests
 import re
 import boto3
 import json
-#pip install sumy
-# Importing the parser and tokenizer
-from sumy.parsers.plaintext import PlaintextParser
-from sumy.nlp.tokenizers import Tokenizer
-# Import the LexRank summarizer
-from sumy.summarizers.lex_rank import LexRankSummarizer
-#pip install nltk
-import nltk
-#download only once 
-#nltk.download('punkt')
+# #pip install sumy
+# # Importing the parser and tokenizer
+# from sumy.parsers.plaintext import PlaintextParser
+# from sumy.nlp.tokenizers import Tokenizer
+# # Import the LexRank summarizer
+# from sumy.summarizers.lex_rank import LexRankSummarizer
+# #pip install nltk
+# import nltk
+# #download only once 
+# #nltk.download('punkt')
 import math
-import sys
+# import sys
 #multithreading part, no need for extra pip install
 from threading import Thread
 from queue import Queue
-import os, json
+import os
 from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
 
@@ -28,6 +28,8 @@ from django.core.exceptions import ImproperlyConfigured
 # MOVE ALL THE WAY DOWN TO CHECK HOW TO CALLL #
 ###############################################
 
+############### Versions 1.5.3 ################
+# fixed error case in calc_date
 ############### Versions 1.5.2 ################
 # fixed format matching to frontend team
 ############### Versions 1.5.1 ################
@@ -187,8 +189,10 @@ def get_calc_date(response):
     start_date, end_date = start_time_api.split(), end_time_api.split()
 
     #change the month->the integer num
-    datetime_object, datetime_object = datetime.datetime.strptime(start_date[0], "%B"), datetime.datetime.strptime(end_date[0], "%B")
-    start_month, end_month = datetime_object.month, datetime_object.month
+    datetime_objecta, datetime_objectb = datetime.datetime.strptime(start_date[0], "%B"), datetime.datetime.strptime(end_date[0], "%B")
+    start_month, end_month = datetime_objecta.month, datetime_objectb.month
+    #print(start_month)
+    #print(end_month)
 
     for value, item in enumerate(start_date):
         if len(item) > 3:
@@ -792,6 +796,7 @@ def get_objective(response):
 
 #################################################################################################################################################
 #################################################################################################################################################
+#################################################################################################################################################
 def get_maksing(response):
     masking = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DesignModule']['DesignInfo']['DesignMaskingInfo']['DesignMasking']
     string_result = masking
@@ -800,6 +805,7 @@ def get_maksing(response):
     return(result_dictionary)
 
 
+#################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
 def get_allocation(response):
@@ -812,6 +818,7 @@ def get_allocation(response):
 
 #################################################################################################################################################
 #################################################################################################################################################
+#################################################################################################################################################
 def get_enrollment(response):
     enrollment = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DesignModule']['EnrollmentInfo']['EnrollmentCount']
     string_result = enrollment
@@ -821,6 +828,8 @@ def get_enrollment(response):
 
 
 #################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
 def get_designModel(response):
     model = response['FullStudiesResponse']['FullStudies'][0]['Study']['ProtocolSection']['DesignModule']['DesignInfo']['DesignInterventionModel']
     string_result = model
@@ -829,6 +838,7 @@ def get_designModel(response):
     return(result_dictionary)
 
 
+#################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
 def get_interventionName(response):
@@ -861,6 +871,13 @@ def get_interventionName(response):
     return(result_dictionary)
 
 
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
 def wrapper(func, arg, queue):

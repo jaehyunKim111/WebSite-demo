@@ -1,0 +1,44 @@
+{
+    "Allocation": "N/A",
+    "CompleteTime": 60,
+    "DesignModel": "Single Group Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "g.s.p. oral solution 400 mg/ml:   , ",
+                "ArmGroupLabel": "OGSP measurement",
+                "ArmGroupType": "Other",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "g.s.p. oral solution 400 mg/ml",
+                        "Duration": "",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: G.S.P. Oral Solution 400 mg/ml"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "200",
+    "InterventionName": "",
+    "Masking": "None (Open Label)",
+    "NCTID": "NCT03457311",
+    "Objective": "Clinical Study for Development of Oral Galactose Single Point (OGSP) Solution (G.S.P. Oral Solution\u00ae)",
+    "OfficialTitle": "Clinical Phase \u2162 Study for Development of Oral Galactose Single Point (OGSP) Solution (G.S.P. Oral Solution\u00ae)",
+    "PopulationBox": {
+        "Condition": "Galactose Single Point (GSP), Residual Liver Function",
+        "Gender": "All",
+        "HealthyCondition": "Accepts Healthy Volunteers",
+        "MaxAge": "85 Years",
+        "MinAge": "20 Years",
+        "Participant": "200"
+    },
+    "PopulationRatio": "",
+    "Title": "Clinical Study for Development of Oral Galactose Single Point (OGSP) Solution (G.S.P. Oral Solution\u00ae)",
+    "WashoutPeriod": ""
+}

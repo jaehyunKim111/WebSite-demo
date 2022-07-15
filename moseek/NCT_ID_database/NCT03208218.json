@@ -1,6 +1,6 @@
 {
     "Allocation": "Randomized",
-    "CompleteTime": 0,
+    "CompleteTime": 2,
     "DesignModel": "Crossover Assignment",
     "DrugInformation": {
         "ArmGroupList": [

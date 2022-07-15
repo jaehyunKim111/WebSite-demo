@@ -11,10 +11,11 @@ def originalText(nctID):
   link='''<link rel="stylesheet" href="../static/css/trial-record.css">\n
 <link rel="stylesheet" href="../static/css/w3-ct.css">\n
 <link rel="stylesheet" href="../static/css/print.css">\n'''
-  styleEnd='</div>\n'
-  trialTag1 = '<div id="trial">\n'
-  trialTag2 = '</div>\n'
+  elementTag1 = '<div id="element">\n'
+  trialTag = '<div id="trial">\n'
+  endTag = '</div>\n'
+  scriptTag = "<script src=\"{% static 'js/resize.js' %}\"></script>"
   endinhert = "{% endblock %}"
   Html_file= open("./chart/templates/chart.html","a", encoding='UTF-8')
-  Html_file.write(link + trialTag1 + str(box)+ trialTag2 + styleEnd + endinhert)
+  Html_file.write(link + elementTag1 + trialTag + str(box)+ endTag + endTag + endTag + scriptTag + endinhert)
   Html_file.close()

@@ -1,0 +1,44 @@
+{
+    "Allocation": "N/A",
+    "CompleteTime": 36,
+    "DesignModel": "Single Group Assignment",
+    "DrugInformation": {
+        "ArmGroupList": [
+            {
+                "ArmGroupDescription": "generic single tablet taf/ftc/dtg:   , ",
+                "ArmGroupLabel": "generic single tablet regimen of tenofovir alafenamide/e",
+                "ArmGroupType": "Other",
+                "InterventionDescription": [
+                    {
+                        "Dosage": "",
+                        "DrugName": "generic single tablet taf/ftc/dtg",
+                        "Duration": "",
+                        "HowToTake": ""
+                    }
+                ],
+                "InterventionList": {
+                    "ArmGroupInterventionName": [
+                        "Drug: generic single tablet TAF/FTC/DTG"
+                    ]
+                }
+            }
+        ]
+    },
+    "Enrollment": "190",
+    "InterventionName": "FTC",
+    "Masking": "None (Open Label)",
+    "NCTID": "NCT03727152",
+    "Objective": "Switching From Protease Inhibitor/Ritonavir to Generic Single Tablet Regimen of Tenofovir Alafenamide/Emtricitibine/Dolutegravir",
+    "OfficialTitle": "Maintenance of Switching From Protease Inhibitor/Ritonavir to Generic Single Tablet Regimen of Tenofovir Alafenamide/Emtricitibine/Dolutegravir in Virologically Suppressed HIV-infected Adults",
+    "PopulationBox": {
+        "Condition": "HIV",
+        "Gender": "All",
+        "HealthyCondition": "No",
+        "MaxAge": "",
+        "MinAge": "18 Years",
+        "Participant": "190"
+    },
+    "PopulationRatio": "",
+    "Title": "Switching From Protease Inhibitor/Ritonavir to Generic Single Tablet Regimen of Tenofovir Alafenamide/Emtricitibine/Dolutegravir",
+    "WashoutPeriod": ""
+}

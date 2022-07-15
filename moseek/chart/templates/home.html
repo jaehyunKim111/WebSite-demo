@@ -1,16 +1,22 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"><!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-    <link href="{% static 'img/icon.png' %}" rel="icon">   <!-- fabicon -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script><!-- bootstrap -->
-    <title>Moseek</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"><!-- bootstrap -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+  <link href="{% static 'img/icon.png' %}" rel="icon"> <!-- fabicon -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script><!-- bootstrap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Moseek</title>
 </head>
+
 <body>
   <div id="container">
     <div id="iconbox">
@@ -18,34 +24,58 @@
     </div>
     <div id="urlbox">
       <form action="{% url 'create' %}" method="POST">
-        {% csrf_token  %}
-            <div class="input-group mb-3">
-              <div class="interactive">
-                <input type="text" class="form-control" placeholder="URL 입력" name="url" aria-label="Recipient's username" aria-describedby="button-addon2" id="urlbar">  
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">모식도 생성</button>
-              </div>
-            </div>      
-          </form>
-    </div>
-      <form action="{% url 'example' %}" method="POST" class="examplebox">
-        {% csrf_token  %}
-          <ul id="list">
-            <li><input type="radio" name="ex_url" value="single"> single 예시</li>
-            <li><input type="radio" name="ex_url" value="parallel"> parallel 예시</li>
-            <li><input type="radio" name="ex_url" value="crossover"> crossover 예시</li>
-          </ul>
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">예시 모식도 생성</button>
+        {% csrf_token %}
+        <div class="input-group mb-3">
+          <div class="interactive">
+            <input type="text" class="form-control" placeholder="URL 입력" name="url" aria-label="Recipient's username"
+              aria-describedby="button-addon2" id="urlbar">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">모식도 생성</button>
+          </div>
+        </div>
       </form>
-      <div id="wrapper">
-        <footer>
-          <a href="https://www.flaticon.com/free-icons/medical-report" title="medical-report icons"
-            style="font-size: 1px;">Medical-report icons created by Triangle Squad - Flaticon</a>
-        </footer>
-      </div>
+    </div>
+    <form action="{% url 'example' %}" method="POST" class="examplebox">
+      {% csrf_token %}
+      <ul id="list">
+        <div class="w3-dropdown-hover">
+          <button name="ex_url" value="single" class="w3-button w3-black">Single Group 예시</button>
+          <div id="single" class="w3-dropdown-content w3-bar-block w3-border">
+            <button type="submit" name="NCT" value="0" class="w3-bar-item w3-button">NCT05446467</button>
+            <button type="submit" name="NCT" value="1" class="w3-bar-item w3-button">NCT03727152</button>
+            <button type="submit" name="NCT" value="2" class="w3-bar-item w3-button">NCT03457311</button>
+          </div>
+        </div>
+        <div class="w3-dropdown-hover">
+          <button name="ex_url" value="crossover" class="w3-button w3-black">Crossover 예시</button>
+          <div id="crossover" class="w3-dropdown-content w3-bar-block w3-border">
+            <button type="submit" name="NCT" value="3" class="w3-bar-item w3-button">NCT02040376</button>
+            <button type="submit" name="NCT" value="4" class="w3-bar-item w3-button">NCT04450953</button>
+            <button type="submit" name="NCT" value="5" class="w3-bar-item w3-button">NCT03208218</button>
+          </div>
+        </div>
+        <div class="w3-dropdown-hover">
+          <button name="ex_url" value="parallel" class="w3-button w3-black">Parallel 예시</button>
+          <div id="parallel" class="w3-dropdown-content w3-bar-block w3-border">
+            <button type="submit" name="NCT" value="6" class="w3-bar-item w3-button">NCT00482833</button>
+            <button type="submit" name="NCT" value="7" class="w3-bar-item w3-button">NCT03507790</button>
+            <button type="submit" name="NCT" value="8" class="w3-bar-item w3-button">NCT01723228</button>
+          </div>
+        </div>
+        <!-- <li><input type="radio" name="ex_url" value="single"> single 예시</li>
+        <li><input type="radio" name="ex_url" value="parallel"> parallel 예시</li>
+        <li><input type="radio" name="ex_url" value="crossover"> crossover 예시</li> -->
+      </ul>
+      <!-- <button class="btn btn-outline-secondary" type="submit" id="button-addon2">예시 모식도 생성</button> -->
+    </form>
+    <div id="wrapper">
+      <footer>
+        <a href="https://www.flaticon.com/free-icons/medical-report" title="medical-report icons"
+          style="font-size: 1px;">Medical-report icons created by Triangle Squad - Flaticon</a>
+      </footer>
+    </div>
   </div>
-      
+
+  <script src="{% static 'js/home.js' %}"></script>
 </body>
+
 </html>
-
-
-

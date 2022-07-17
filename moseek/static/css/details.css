@@ -1,23 +1,24 @@
-#content {
+#content { /*본문과 모식도를 한꺼번에 담을 박스*/
   margin:10px 10px auto;
-  display: flex;
-  flex-direction: row-reverse;
+  display: flex; /*flex 박스설정 -> 박스 내의 요소들의 위치조절 용이, 요소의 크기는 따로 설정 필요*/
+  flex-direction: row-reverse; /*모식도, 본문 순서를 -> 본문 모식도 순서로, 오른쪽을 먼저 기준으로 거꾸로 배치 */
+  justify-content: left; /*왼쪽 정렬 ##row-reverse설정을 해놓아서 trial이 안잘리기 위함*/
   height: 130vh;
 }
-#element {
-flex: 1 1 auto;
+#element { /*trial과 graph를 각각 감싸기*/
+flex: 1 1 auto; /*늘어나고 줄어드는 비율이 1:1 */
 height: 100%;
-width: 800px;
+width: 50vw; /* viewport의 50% 씩 */
 }
 
 #trial{
 height: 100%;
 width: 100%;
-overflow-y: auto;
-overflow-x: hidden;
+overflow-y: auto; /*y축 스크롤바 생성*/
 }
 #graph{
-overflow-x: auto;
+width: 100%;
+
 }
 
 .handler {
